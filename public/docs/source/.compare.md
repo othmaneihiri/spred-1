@@ -1,0 +1,3142 @@
+---
+title: API Reference
+
+language_tabs:
+- bash
+- javascript
+
+includes:
+
+search: true
+
+toc_footers:
+- <a href='http://github.com/mpociot/documentarian'>Documentation Powered by Documentarian</a>
+---
+<!-- START_INFO -->
+# Info
+
+Welcome to the generated API reference.
+[Get Postman Collection](http://localhost/docs/collection.json)
+
+<!-- END_INFO -->
+
+#general
+
+
+<!-- START_d7b7952e7fdddc07c978c9bdaf757acf -->
+## Register a new user.
+
+> Example request:
+
+```bash
+curl -X POST "http://localhost/api/register" 
+```
+
+```javascript
+const url = new URL("http://localhost/api/register");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST api/register`
+
+
+<!-- END_d7b7952e7fdddc07c978c9bdaf757acf -->
+
+<!-- START_c3fa189a6c95ca36ad6ac4791a873d23 -->
+## Get a JWT via given credentials.
+
+> Example request:
+
+```bash
+curl -X POST "http://localhost/api/login" 
+```
+
+```javascript
+const url = new URL("http://localhost/api/login");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST api/login`
+
+
+<!-- END_c3fa189a6c95ca36ad6ac4791a873d23 -->
+
+<!-- START_61739f3220a224b34228600649230ad1 -->
+## api/logout
+> Example request:
+
+```bash
+curl -X POST "http://localhost/api/logout" 
+```
+
+```javascript
+const url = new URL("http://localhost/api/logout");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST api/logout`
+
+
+<!-- END_61739f3220a224b34228600649230ad1 -->
+
+<!-- START_2b6e5a4b188cb183c7e59558cce36cb6 -->
+## api/user
+> Example request:
+
+```bash
+curl -X GET -G "http://localhost/api/user" 
+```
+
+```javascript
+const url = new URL("http://localhost/api/user");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (200):
+
+```json
+{}
+```
+
+### HTTP Request
+`GET api/user`
+
+
+<!-- END_2b6e5a4b188cb183c7e59558cce36cb6 -->
+
+<!-- START_109013899e0bc43247b0f00b67f889cf -->
+## api/categories
+> Example request:
+
+```bash
+curl -X GET -G "http://localhost/api/categories" 
+```
+
+```javascript
+const url = new URL("http://localhost/api/categories");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (200):
+
+```json
+{
+    "data": [
+        {
+            "id": 1,
+            "name": "Monde",
+            "created_at": "2021-07-01 07:11:50",
+            "updated_at": "2021-07-01 07:11:50",
+            "user": null,
+            "news": [
+                {
+                    "id": 1,
+                    "user_id": 1,
+                    "category_id": 1,
+                    "title": "L'expansionnisme chinois, une politique qui doit plus à la \"tradition\" qu'au Parti communiste",
+                    "description": "\nLe Parti communiste chinois fête jeudi son centenaire, dans un contexte de méfiance internationale à l'égard des velléités expansionnistes de l'empire du Milieu. Si le président chinois Xi Jinping a réitéré mercredi sa volonté de \"hisser\" son pays \"au premier rang du monde\" à l'horizon 2049, cette stratégie appartient, selon Jean-Vincent Brisset, chercheur associé à l'Iris, davantage à la \"tradition\" chinoise qu'à l'idéologie du parti.\n",
+                    "pubDate": "2021-07-01 04:38:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/87eea21e-d9b6-11eb-a648-005056a90284\/w:1024\/p:16x9\/000_9DK92X.jpg",
+                    "created_at": "2021-07-01 07:12:39",
+                    "updated_at": "2021-07-01 07:12:39"
+                },
+                {
+                    "id": 2,
+                    "user_id": 1,
+                    "category_id": 1,
+                    "title": "Covid-19 : un certificat européen pour faciliter les déplacements cet été",
+                    "description": "\nLe certificat sanitaire européen entre officiellement en vigueur jeudi. Ce document a vocation à faciliter les voyages au sein de l’Union européenne (UE) et relancer le tourisme, secteur durement affecté par la pandémie de Covid-19. Mais la propagation du variant Delta suscite des craintes. \n",
+                    "pubDate": "2021-07-01 05:42:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/47d319c4-9c69-11eb-945d-005056bff430\/w:1024\/p:16x9\/Roissy%20CDG%20Covid-19.jpg",
+                    "created_at": "2021-07-01 07:12:39",
+                    "updated_at": "2021-07-01 07:12:39"
+                },
+                {
+                    "id": 3,
+                    "user_id": 1,
+                    "category_id": 1,
+                    "title": "Concerts, prix du gaz, chômage, congé paternité : ce qui change au 1er juillet",
+                    "description": "\nFrance 24 fait le point sur les mesures qui entrent en vigueur en France à partir du 1er juillet marqué notamment par le grand retour des concerts debout, interdits depuis mars 2020.\n",
+                    "pubDate": "2021-07-01 05:51:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/ba01e774-da2f-11eb-af1c-005056a97e36\/w:1024\/p:16x9\/000_Par7430103.jpg",
+                    "created_at": "2021-07-01 07:12:39",
+                    "updated_at": "2021-07-01 07:12:39"
+                },
+                {
+                    "id": 4,
+                    "user_id": 1,
+                    "category_id": 1,
+                    "title": "Janez Jansa, le \"Maréchal Twitto\" slovène qui prend la présidence de l'Union européenne",
+                    "description": "\nJanez Jansa, le Premier ministre slovène, va prendre jeudi la présidence tournante de l'Union européenne. Peu connu du grand public, cet admirateur de Viktor Orban et de Donald Trump est surnommé “Maréchal Twitto” en référence à l’ex-dictateur yougoslave Tito et à sa propension à twitter plus vite que son ombre. \n",
+                    "pubDate": "2021-06-30 14:54:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/673e5d20-d9a7-11eb-bb91-005056a97e36\/w:1024\/p:16x9\/300621-jansa-slovenia-prime-m.jpg",
+                    "created_at": "2021-07-01 07:12:39",
+                    "updated_at": "2021-07-01 07:12:39"
+                },
+                {
+                    "id": 5,
+                    "user_id": 1,
+                    "category_id": 1,
+                    "title": "Le congé paternité de 28 jours entre en vigueur en France",
+                    "description": "\nAnnoncé en septembre par Emmanuel Macron, cet allongement du congé paternité doit permettre aux jeunes pères de s'impliquer davantage auprès de leur enfant et de réduire les inégalités entre les femmes et les hommes.\n",
+                    "pubDate": "2021-07-01 05:34:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/bed77a20-da2a-11eb-ac20-005056bf30b7\/w:1024\/p:16x9\/000_Par7661100.jpg",
+                    "created_at": "2021-07-01 07:12:39",
+                    "updated_at": "2021-07-01 07:12:39"
+                },
+                {
+                    "id": 6,
+                    "user_id": 1,
+                    "category_id": 1,
+                    "title": "Centrafrique : sept morts dans l’attaque d’une ville par des rebelles",
+                    "description": "\nUn groupe rebelle armé a attaqué lundi une ville située à 300 kilomètres de Bangui, la capitale centrafricaine. Sept personnes sont mortes, a déclaré mercredi à l'AFP le porte-parole des Casques bleus de la Mission de l'ONU en Centrafrique (Minusca). \n",
+                    "pubDate": "2021-07-01 06:20:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/532e5ada-450d-11eb-a082-005056a98db9\/w:1024\/p:16x9\/000_8XM3QV.jpg",
+                    "created_at": "2021-07-01 07:12:39",
+                    "updated_at": "2021-07-01 07:12:39"
+                },
+                {
+                    "id": 7,
+                    "user_id": 1,
+                    "category_id": 1,
+                    "title": "Afghanistan : \"Une possibilité réelle de voir les Taliban au pouvoir dans les prochains mois\"",
+                    "description": "\nAprès une percée fulgurante dans le nord-est de l'Afghanistan, les Taliban continuent de conquérir de nouveaux territoires dans le pays, alors que le retrait des troupes américaines est presque achevé. Ils espèrent provoquer un effondrement du gouvernement afghan.\n",
+                    "pubDate": "2021-06-30 13:06:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/6d387250-d99e-11eb-ac77-005056bf30b7\/w:1024\/p:16x9\/2021-06-29T113707Z_469064130_RC2AAO9KVJBY_RTRMADP_3_AFGHANISTAN-TALIBAN.JPG",
+                    "created_at": "2021-07-01 07:12:39",
+                    "updated_at": "2021-07-01 07:12:39"
+                },
+                {
+                    "id": 8,
+                    "user_id": 1,
+                    "category_id": 1,
+                    "title": "Euro-2021 : Vladimir Petkovic, sélectionneur dénigré à l'origine du plus bel exploit de la Suisse",
+                    "description": "\nIl est l'artisan en chef de l'élimination des Bleus en huitième de finale de l'Euro-2021. Le sélectionneur Vladimir Petkovic a écrit avec ses hommes la plus belle page de l'histoire du football suisse. Portrait d'un technicien qui n'a jamais fait l'unanimité dans son pays mais qui pourrait lui offrir un nouvel exploit contre l'Espagne, vendredi 2 juillet.\n",
+                    "pubDate": "2021-07-01 05:03:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/2d2f23aa-d9e1-11eb-904c-005056a97e36\/w:1024\/p:16x9\/Petkovic%281%29.jpg",
+                    "created_at": "2021-07-01 07:12:40",
+                    "updated_at": "2021-07-01 07:12:40"
+                },
+                {
+                    "id": 9,
+                    "user_id": 1,
+                    "category_id": 1,
+                    "title": "Euro-2021 : les favoris accrochés, une pluie de buts... le bilan des huitièmes de finale",
+                    "description": "\nLes huitièmes de finale de l'Euro-2021 se sont terminés, mardi, et ils n'ont pas été avares en surprises et en spectacle. De l'avalanche de buts à l'élimination de la France et des Pays-Bas, France 24 dresse le bilan de cette phase de la compétition.\n",
+                    "pubDate": "2021-06-29 21:54:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/70b9e4e0-d921-11eb-9fff-005056a90284\/w:1024\/p:16x9\/000_9DF9GL.jpg",
+                    "created_at": "2021-07-01 07:12:40",
+                    "updated_at": "2021-07-01 07:12:40"
+                },
+                {
+                    "id": 10,
+                    "user_id": 1,
+                    "category_id": 1,
+                    "title": "Euro-2021 : le calendrier et les résultats",
+                    "description": "\nDu 11 juin au 11 juillet, les 24 meilleures équipes d'Europe ont rendez-vous pour disputer l'Euro-2021 de football. Qui prendra la succession du Portugal en tant que champion d'Europe ? Retrouvez le calendrier de la compétition et tous les résultats.\n",
+                    "pubDate": "2021-06-11 09:48:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/750e4ace-ca0b-11eb-b3c3-005056a98db9\/w:1024\/p:16x9\/main-F24-FR.png",
+                    "created_at": "2021-07-01 07:12:40",
+                    "updated_at": "2021-07-01 07:12:40"
+                },
+                {
+                    "id": 11,
+                    "user_id": 1,
+                    "category_id": 1,
+                    "title": "Algérie : le ministre des Finances Aïmene Benabderrahmane nommé Premier ministre",
+                    "description": "\nLe ministre algérien des Finances Aïmene Benabderrahmane a été désigné Premier ministre mercredi, en remplacement d'Abdelaziz Djerad, à la suite des élections législatives anticipées du 12 juin. Le président Tebboune souhaite ainsi enrayer la grave crise économique qui mine la première économie du Maghreb.\n",
+                    "pubDate": "2021-06-30 14:19:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/410b24c4-d9b3-11eb-95e6-005056bfb2b6\/w:1024\/p:16x9\/000_9DL6DF%20%281%29.jpg",
+                    "created_at": "2021-07-01 07:12:40",
+                    "updated_at": "2021-07-01 07:12:40"
+                },
+                {
+                    "id": 12,
+                    "user_id": 1,
+                    "category_id": 1,
+                    "title": "Covid-19 : les tests seront payants en France à partir du 7 juillet pour les touristes étrangers",
+                    "description": "\nLes tests de détection du Covid-19 deviendront payants pour les touristes étrangers venant en France, à partir du le 7 juillet. Ils seront facturés à hauteur de 49 euros pour les PCR et 29 euros pour les antigéniques. Le gouvernement envisage également de ne plus rembourser les tests \"de confort\" aux Français.\n",
+                    "pubDate": "2021-06-30 17:30:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/a4af7dca-d9d3-11eb-94ae-005056a90284\/w:1024\/p:16x9\/Covid-tests-payant.jpg",
+                    "created_at": "2021-07-01 07:12:40",
+                    "updated_at": "2021-07-01 07:12:40"
+                },
+                {
+                    "id": 13,
+                    "user_id": 1,
+                    "category_id": 1,
+                    "title": "Donald Rumsfeld, secrétaire à la Défense du président George W. Bush, est mort à 88 ans",
+                    "description": "\nDonald Rumsfeld, ancien secrétaire à la Défense et pilier de l'administration américaine sous George W. Bush, est décédé à 88 ans dans l'État du Nouveau-Mexique, a annoncé, mercredi 30 juin, sa famille dans un communiqué.\n",
+                    "pubDate": "2021-06-30 19:49:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/d27d309c-d9da-11eb-a9b7-005056a97e36\/w:1024\/p:16x9\/Donald%20Rumsfeld.jpg",
+                    "created_at": "2021-07-01 07:12:40",
+                    "updated_at": "2021-07-01 07:12:40"
+                },
+                {
+                    "id": 14,
+                    "user_id": 1,
+                    "category_id": 1,
+                    "title": "Covid-19 en France : levée des dernières restrictions, mais crainte d'une 4e vague à la rentrée",
+                    "description": "\nFin des jauges dans les cinémas, restaurants ou magasins : les dernières restrictions ont été levées, mercredi 30 juin, en France, en dépit d'une montée des inquiétudes sur une quatrième vague de Covid-19 après l'été, sous l'effet du variant Delta, beaucoup plus contagieux.\n",
+                    "pubDate": "2021-06-30 16:07:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/162fe458-d9bb-11eb-b6a2-005056bf30b7\/w:1024\/p:16x9\/AP21160479396529.jpg",
+                    "created_at": "2021-07-01 07:12:40",
+                    "updated_at": "2021-07-01 07:12:40"
+                },
+                {
+                    "id": 15,
+                    "user_id": 1,
+                    "category_id": 1,
+                    "title": "Forum de l'ONU : 40 milliards de dollars pour promouvoir l'égalité femmes-hommes",
+                    "description": "\nLe \"Forum génération égalité\", une conférence de l'ONU sur l'égalité des sexes, s'est ouvert mercredi à Paris, et 40 milliards de dollars d'investissements ont déjà été rassemblés. Emmanuel Macron et le secrétaire général de l'ONU Antonio Guterres avaient dénoncé en préambule le \"vent mauvais\" de \"forces patriarcales\" qui menace de faire régresser les droits des femmes dans le monde.\n",
+                    "pubDate": "2021-06-30 12:11:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/542d6698-d9cc-11eb-a76b-005056bfb2b6\/w:1024\/p:16x9\/2021-06-30T144804Z_939827373_RC22BO9P2F2X_RTRMADP_3_FRANCE-GENDER-EQUALITY.JPG",
+                    "created_at": "2021-07-01 07:12:40",
+                    "updated_at": "2021-07-01 07:12:40"
+                },
+                {
+                    "id": 16,
+                    "user_id": 1,
+                    "category_id": 1,
+                    "title": "Bill Cosby sort de prison après l'annulation de sa condamnation pour agression sexuelle",
+                    "description": "\nAprès près de trois ans de prison, Bill Cosby est libre. La Cour suprême de Pennsylvanie a annulé mercredi la condamnation de l'acteur américain pour agression sexuelle. Une décision technique, sur la forme et non sur le fond du dossier.\n",
+                    "pubDate": "2021-06-30 20:47:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/602cd274-d9e2-11eb-9623-005056bf30b7\/w:1024\/p:16x9\/AP21181606734915.jpg",
+                    "created_at": "2021-07-01 07:12:40",
+                    "updated_at": "2021-07-01 07:12:40"
+                },
+                {
+                    "id": 17,
+                    "user_id": 1,
+                    "category_id": 1,
+                    "title": "La spectatrice qui a provoqué une chute dans le peloton en garde à vue",
+                    "description": "\nLa spectatrice qui a causé avec sa pancarte la chute de très nombreux cyclistes du Tour de France, dont plusieurs ont été blessés, samedi en Bretagne, a été placée mercredi en garde à vue.\n",
+                    "pubDate": "2021-06-30 15:26:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/20efee8c-d9b2-11eb-bb43-005056bf30b7\/w:1024\/p:16x9\/000_9D86N3.jpg",
+                    "created_at": "2021-07-01 07:12:40",
+                    "updated_at": "2021-07-01 07:12:40"
+                },
+                {
+                    "id": 18,
+                    "user_id": 1,
+                    "category_id": 1,
+                    "title": "Euro-2021 : quelles sont les affiches des quarts de finale ?",
+                    "description": "\nLes huitièmes de finale se sont achevés mardi 29 juin. Les huit quarts-de-finaliste sont désormais connus. Après avoir défait le Portugal, la Belgique a droit à un deuxième choc face à l'Italie.\n",
+                    "pubDate": "2021-06-29 21:39:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/e13a921e-d45d-11eb-aed3-005056a98db9\/w:1024\/p:16x9\/000_9BD248.jpg",
+                    "created_at": "2021-07-01 07:12:40",
+                    "updated_at": "2021-07-01 07:12:40"
+                },
+                {
+                    "id": 19,
+                    "user_id": 1,
+                    "category_id": 1,
+                    "title": "Au Canada, une canicule historique fait plusieurs dizaines de morts",
+                    "description": "\nLa vague de chaleur qui s'abat sur l'ouest du Canada a provoqué la mort de dizaines personnes ces derniers jours, ont annoncé les autorités. Un nouveau record de chaleur absolu a été établi dans le pays avec près de 50°C au nord-est de Vancouver.\n",
+                    "pubDate": "2021-06-30 05:40:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/9adb6adc-d962-11eb-8e83-005056a90284\/w:1024\/p:16x9\/000_9DK4CV.jpg",
+                    "created_at": "2021-07-01 07:12:40",
+                    "updated_at": "2021-07-01 07:12:40"
+                },
+                {
+                    "id": 20,
+                    "user_id": 1,
+                    "category_id": 1,
+                    "title": "Pogacar gagne le contre-la-montre, Van Der Poel garde le maillot jaune",
+                    "description": "\nLe tenant du titre Tadej Pogacar a frappé un grand coup en remportant la 5e étape du Tour de France qui se disputait sous la forme d'un contre-la-montre individuel. L'autre belle performance de la journée c'est celle de Mathieu van der Poel qui a terminé 5e de l'étape, ce qui lui permet de conserver sa tunique jaune pour seulement 8 secondes.\n",
+                    "pubDate": "2021-06-30 16:28:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/02f5e234-d9bb-11eb-aa42-005056a90284\/w:1024\/p:16x9\/000_9DL7BM.jpg",
+                    "created_at": "2021-07-01 07:12:40",
+                    "updated_at": "2021-07-01 07:12:40"
+                },
+                {
+                    "id": 21,
+                    "user_id": 1,
+                    "category_id": 1,
+                    "title": "L'obésité des jeunes en forte progression en France",
+                    "description": "\nUne enquête publiée mercredi révèle que l'obésité a presque doublé chez les 18-24 ans en France. Chez les adultes, près de la moitié de la population française est concernée par l'obésité ou le surpoids.\n",
+                    "pubDate": "2021-06-30 15:48:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/023d584e-d9b2-11eb-ad55-005056bfb2b6\/w:1024\/p:16x9\/000_9L0VP.jpg",
+                    "created_at": "2021-07-01 07:12:40",
+                    "updated_at": "2021-07-01 07:12:40"
+                },
+                {
+                    "id": 22,
+                    "user_id": 1,
+                    "category_id": 1,
+                    "title": "RD Congo : une attaque kamikaze, une première, aggrave l’angoisse générale à Béni",
+                    "description": "\nLa vie reprenait timidement dans la ville de Béni, dans l’est de la République démocratique du Congo, ce mercredi 30 juin. C’est la fin du couvre-feu de 48 heures décrété dimanche par les autorités locales après les explosions de bombes artisanales dont un kamikaze qui ont secoué plusieurs quartiers de la capitale de la province du Nord-Kivu au cours du week-end. Un mode opératoire jamais vu, dans cette région touchée par des massacres depuis une vingtaine d’années.\n",
+                    "pubDate": "2021-06-30 17:17:00",
+                    "thumbnail_url": "https:\/\/s.observers.france24.com\/media\/display\/2b8ecfd6-d9c4-11eb-a9b9-005056a90284\/w:1024\/p:16x9\/RD%20Congo%20B%C3%A9ni.jpg",
+                    "created_at": "2021-07-01 07:12:41",
+                    "updated_at": "2021-07-01 07:12:41"
+                },
+                {
+                    "id": 23,
+                    "user_id": 1,
+                    "category_id": 1,
+                    "title": "Guerre des Balkans : deux ex-chefs espions serbes condamnés par la justice internationale",
+                    "description": "\nDeux figures clé du régime nationaliste de Slobodan Milosevic ont été condamnés à 12 ans de prison chacun mercredi par la justice internationale à la Haye aux Pays-Bas pour crimes contre l'humanité et crimes de guerre. Après avoir été acquittés en 2013, ils étaient à nouveau jugés pour leur rôle dans l'organisation et le financement de groupes paramilitaires qui ont semé la terreur et la mort après l'implosion de la Yougoslavie, en 1991. \n",
+                    "pubDate": "2021-06-30 08:09:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/e5bbf234-d975-11eb-bae0-005056bf30b7\/w:1024\/p:16x9\/AP962464399316.jpg",
+                    "created_at": "2021-07-01 07:12:41",
+                    "updated_at": "2021-07-01 07:12:41"
+                },
+                {
+                    "id": 24,
+                    "user_id": 1,
+                    "category_id": 1,
+                    "title": "Covid-19 en France : une quatrième vague moins forte à la rentrée, selon le Pr Delfraissy",
+                    "description": "\nLa France devrait connaître une quatrième vague de contaminations au Covid-19 en raison de la propagation du variant Delta mais elle sera plus \"nuancée\" que les trois premières en raison du développement de la vaccination, a estimé mercredi Jean-François Delfraissy, le président du Conseil scientifique.\n",
+                    "pubDate": "2021-06-30 09:27:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/94201102-d980-11eb-ad89-005056a97e36\/w:1024\/p:16x9\/AP21168567633367.jpg",
+                    "created_at": "2021-07-01 07:12:41",
+                    "updated_at": "2021-07-01 07:12:41"
+                },
+                {
+                    "id": 25,
+                    "user_id": 1,
+                    "category_id": 1,
+                    "title": "Immeuble effondré en Floride : les sauveteurs dans l'attente d'un \"miracle\"",
+                    "description": "\nAlors que le président Joe Biden est attendu jeudi à Surfside, les sauveteurs continuent leur travail acharné, mais après six jours de recherches les chances de retrouver des survivants s'amenuisent. Le dernier bilan fait état de 12 morts et 149 personnes portées disparues. Le reportage de Matthieu Mabin, notre envoyé spécial en Floride aux États-Unis.\n",
+                    "pubDate": "2021-06-30 06:06:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/6d969e02-d967-11eb-ae2e-005056bf30b7\/w:1024\/p:16x9\/thumbnail%20%287%29.jpg",
+                    "created_at": "2021-07-01 07:12:41",
+                    "updated_at": "2021-07-01 07:12:41"
+                },
+                {
+                    "id": 26,
+                    "user_id": 1,
+                    "category_id": 1,
+                    "title": "Après 70 ans de lutte, la Chine a réussi a éradiquer le paludisme",
+                    "description": "\nC'est officiel, la Chine est définitivement débarrassée du paludisme, a annoncé l'OMS mercredi. Le pays, qui recensait 30 millions de cas par an dans les années 1940, n'a pas signalé un seul cas indigène depuis 2017.\n",
+                    "pubDate": "2021-06-30 13:32:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/475505cc-d9a2-11eb-b307-005056a97e36\/w:1024\/p:16x9\/000_APH2002100409937.jpg",
+                    "created_at": "2021-07-01 07:12:41",
+                    "updated_at": "2021-07-01 07:12:41"
+                },
+                {
+                    "id": 27,
+                    "user_id": 1,
+                    "category_id": 1,
+                    "title": "Covid-19 : Kim Jong-un limoge des responsables nord-coréens après un \"grave incident\"",
+                    "description": "\nLe numéro un nord-coréen Kim Jong-un a réprimandé des hauts responsables au pouvoir à Pyongyang pour des manquements dans la lutte contre l'épidémie qui ont entraîné un \"incident grave\" et mis en danger la sécurité du pays et de sa population, a rapporté mercredi l'agence de presse officielle nord-coréenne.\n",
+                    "pubDate": "2021-06-30 11:11:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/9c39c082-d98e-11eb-a99f-005056a97e36\/w:1024\/p:16x9\/000_9DK47K.jpg",
+                    "created_at": "2021-07-01 07:12:41",
+                    "updated_at": "2021-07-01 07:12:41"
+                },
+                {
+                    "id": 28,
+                    "user_id": 1,
+                    "category_id": 1,
+                    "title": "Anne Hidalgo annonce la fermeture aux toxicomanes d'un parc du nord de Paris",
+                    "description": "\nLa maire de Paris Anne Hidalgo a assuré, mardi, que les toxicomanes allaient quitter le jardin d'Éole, un parc dans lequel ils avaient été autorisés à venir consommer de la drogue, essentiellement du crack. Elle souhaite rendre ce lieu aux habitants, en expliquant que différents projets sont à l'étude pour prendre en charge les toxicomanes.\n",
+                    "pubDate": "2021-06-30 09:28:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/a3d97fac-cf5d-11eb-a367-005056bfd1d9\/w:1024\/p:16x9\/DSC_5732.jpg",
+                    "created_at": "2021-07-01 07:12:41",
+                    "updated_at": "2021-07-01 07:12:41"
+                },
+                {
+                    "id": 29,
+                    "user_id": 1,
+                    "category_id": 1,
+                    "title": "Santé : Emmanuel Macron annonce un plan de 7 milliards pour la recherche et l’innovation",
+                    "description": "\nAlors que le système de santé français a été mis à rude épreuve par la pandémie, Emmanuel Macron a annoncé, mardi, un plan d'investissement de l'ordre de sept milliards d'euros pour favoriser l’innovation afin de faire de la France un leader européen à l'horizon 2030. \n",
+                    "pubDate": "2021-06-30 06:19:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/809e2b4e-1943-11eb-bac9-005056a98db9\/w:1024\/p:16x9\/db8f293fe10d924fb4427704908f11c7d4df2e37.jpg",
+                    "created_at": "2021-07-01 07:12:41",
+                    "updated_at": "2021-07-01 07:12:41"
+                },
+                {
+                    "id": 30,
+                    "user_id": 1,
+                    "category_id": 1,
+                    "title": "En Côte d'Ivoire, la vie quotidienne rythmée par les coupures d'électricité",
+                    "description": "\nVoilà plus plusieurs semaines que la Côte d'Ivoire vit avec des coupures d'électricité quotidiennes. Une situation exceptionnelle dans ce pays qui se veut un leader régional dans ce secteur énergétique et qui n'a pas connu telle situation depuis les années 80. Les particuliers comme les entreprises doivent composer tant bien que mal avec cette difficulté.\n",
+                    "pubDate": "2021-06-30 07:05:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/865964d6-d96e-11eb-a4d8-005056a97e36\/w:1024\/p:16x9\/thumbnail%20%281%29.jpg",
+                    "created_at": "2021-07-01 07:12:41",
+                    "updated_at": "2021-07-01 07:12:41"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Europe",
+            "created_at": "2021-07-01 07:11:51",
+            "updated_at": "2021-07-01 07:11:51",
+            "user": null,
+            "news": [
+                {
+                    "id": 31,
+                    "user_id": 1,
+                    "category_id": 2,
+                    "title": "Covid-19 : un certificat européen pour faciliter les déplacements cet été",
+                    "description": "\nLe certificat sanitaire européen entre officiellement en vigueur jeudi. Ce document a vocation à faciliter les voyages au sein de l’Union européenne (UE) et relancer le tourisme, secteur durement affecté par la pandémie de Covid-19. Mais la propagation du variant Delta suscite des craintes. \n",
+                    "pubDate": "2021-07-01 05:42:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/47d319c4-9c69-11eb-945d-005056bff430\/w:1024\/p:16x9\/Roissy%20CDG%20Covid-19.jpg",
+                    "created_at": "2021-07-01 07:18:41",
+                    "updated_at": "2021-07-01 07:18:41"
+                },
+                {
+                    "id": 32,
+                    "user_id": 1,
+                    "category_id": 2,
+                    "title": "Forum Génération égalité : les droits des femmes à l'honneur",
+                    "description": "\nLe Forum Génération égalité, un sommet pour l'égalité, commence mercredi 30 juin. Il aura lieu pendant trois jours sous l'égide de l'ONU, de la France et du Mexique. Une cérémonie à laquelle assistent le secrétaire général des Nations unies Antonio Guterres, Hillary Clinton, mais aussi Kamala Harris en visioconférence, et deux prix Nobel de la paix. Tous appelleront à un plan d'accélération mondial des droits des femmes. Des engagements financiers devraient être annoncés.\n",
+                    "pubDate": "2021-06-30 18:06:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/33732280-d9cc-11eb-bb1c-005056bf30b7\/w:1024\/p:16x9\/photo%20forum%20egalit%C3%A9001.jpg",
+                    "created_at": "2021-07-01 07:18:41",
+                    "updated_at": "2021-07-01 07:18:41"
+                },
+                {
+                    "id": 33,
+                    "user_id": 1,
+                    "category_id": 2,
+                    "title": "Janez Jansa, le \"Maréchal Twitto\" slovène qui prend la présidence de l'Union européenne",
+                    "description": "\nJanez Jansa, le Premier ministre slovène, va prendre jeudi la présidence tournante de l'Union européenne. Peu connu du grand public, cet admirateur de Viktor Orban et de Donald Trump est surnommé “Maréchal Twitto” en référence à l’ex-dictateur yougoslave Tito et à sa propension à twitter plus vite que son ombre. \n",
+                    "pubDate": "2021-06-30 14:54:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/673e5d20-d9a7-11eb-bb91-005056a97e36\/w:1024\/p:16x9\/300621-jansa-slovenia-prime-m.jpg",
+                    "created_at": "2021-07-01 07:18:41",
+                    "updated_at": "2021-07-01 07:18:41"
+                },
+                {
+                    "id": 34,
+                    "user_id": 1,
+                    "category_id": 2,
+                    "title": "Guerre des Balkans : deux ex-chefs espions serbes condamnés par la justice internationale",
+                    "description": "\nDeux figures clé du régime nationaliste de Slobodan Milosevic ont été condamnés à 12 ans de prison chacun mercredi par la justice internationale à la Haye aux Pays-Bas pour crimes contre l'humanité et crimes de guerre. Après avoir été acquittés en 2013, ils étaient à nouveau jugés pour leur rôle dans l'organisation et le financement de groupes paramilitaires qui ont semé la terreur et la mort après l'implosion de la Yougoslavie, en 1991. \n",
+                    "pubDate": "2021-06-30 08:09:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/e5bbf234-d975-11eb-bae0-005056bf30b7\/w:1024\/p:16x9\/AP962464399316.jpg",
+                    "created_at": "2021-07-01 07:18:41",
+                    "updated_at": "2021-07-01 07:18:41"
+                },
+                {
+                    "id": 35,
+                    "user_id": 1,
+                    "category_id": 2,
+                    "title": "Afghanistan : l’Allemagne annonce avoir finalisé le retrait de ses troupes",
+                    "description": "\nLes derniers soldats allemands ont quitté l’Afghanistan, a annoncé mardi soir la ministre de la Défense, dans le cadre du retrait accéléré des contingents de l'Otan, dont celui des États-Unis déjà largement effectif. \n",
+                    "pubDate": "2021-06-30 05:31:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/4816a99e-d951-11eb-a756-005056bf30b7\/w:1024\/p:16x9\/2021-06-29T202449Z_1063218774_RC2KAO99XORY_RTRMADP_3_AFGHANISTAN-GERMANY-MILITARY-WITHDRAWAL.JPG",
+                    "created_at": "2021-07-01 07:18:42",
+                    "updated_at": "2021-07-01 07:18:42"
+                },
+                {
+                    "id": 36,
+                    "user_id": 1,
+                    "category_id": 2,
+                    "title": "Variant Delta : la gestion des frontières divise les Européens",
+                    "description": "\nParis et Berlin s’inquiètent de l’afflux des touristes britanniques dans le sud de l’Europe et plaident pour un effort de coordination, alors que le variant Delta du Covid-19 continue sa progression inexorable sur le continent.\n",
+                    "pubDate": "2021-06-28 21:53:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/f1646b10-d840-11eb-8fcc-005056bf87d6\/w:1024\/p:16x9\/000_9DD7P8.jpg",
+                    "created_at": "2021-07-01 07:18:42",
+                    "updated_at": "2021-07-01 07:18:42"
+                },
+                {
+                    "id": 37,
+                    "user_id": 1,
+                    "category_id": 2,
+                    "title": "Londres : les pompiers parviennent à maîtriser un spectaculaire incendie",
+                    "description": "\nUn incendie géant dans le centre de Londres a nécessité, lundi 28 juin, l'intervention d'une centaine de pompiers et entraîné l'évacuation d'une station de train et de métro.\n",
+                    "pubDate": "2021-06-28 16:08:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/94a48198-d828-11eb-877d-005056a98db9\/w:1024\/p:16x9\/london-fire.JPG",
+                    "created_at": "2021-07-01 07:18:42",
+                    "updated_at": "2021-07-01 07:18:42"
+                },
+                {
+                    "id": 38,
+                    "user_id": 1,
+                    "category_id": 2,
+                    "title": "La Biélorussie riposte aux sanctions et rappelle son ambassadeur auprès de l'UE",
+                    "description": "\nEn signe de protestation contre les sanctions adoptées à son encontre, la Biélorussie a annoncé lundi qu'elle rappelait son ambassadeur auprès de l'Union européenne pour \"consultations\" et \"invité\" le chef de la délégation européenne à Minsk à retourner à Bruxelles. Le pays suspend aussi sa participation au partenariat oriental de l'UE.\n",
+                    "pubDate": "2021-06-28 15:37:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/44aa0d28-8d2f-11eb-afe2-005056bff430\/w:1024\/p:16x9\/000_94R6DK.jpg",
+                    "created_at": "2021-07-01 07:18:42",
+                    "updated_at": "2021-07-01 07:18:42"
+                },
+                {
+                    "id": 39,
+                    "user_id": 1,
+                    "category_id": 2,
+                    "title": "Covid-19 : le point sur le pass sanitaire européen",
+                    "description": "\nLe pass sanitaire européen sera activé à partir de jeudi 1er juillet, sous forme de QR code, valable dans tous les États membres de l'Union européenne. Il permettra aux voyageurs de circuler facilement dans plus de 30 pays. Plus d'explications avec nos chroniqueurs. \n",
+                    "pubDate": "2021-06-28 13:56:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/a88b2c84-d814-11eb-9e9a-005056a964fe\/w:1024\/p:16x9\/PASS-SANITAIRE1.jpg",
+                    "created_at": "2021-07-01 07:18:42",
+                    "updated_at": "2021-07-01 07:18:42"
+                },
+                {
+                    "id": 40,
+                    "user_id": 1,
+                    "category_id": 2,
+                    "title": "Suède : le Premier ministre démissionne faute de majorité pour gouverner",
+                    "description": "\nAprès des tractations infructueuses pour obtenir une majorité, le Premier ministre suédois Stefan Löfven a remis sa démission, lundi, préférant cette option à la convocation d’élections anticipées. \n",
+                    "pubDate": "2021-06-28 11:52:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/d134ab4a-d802-11eb-bdc7-005056a98db9\/w:1024\/p:16x9\/5a45edf3d6cf72e19984b056e73f43122ed68477.jpg",
+                    "created_at": "2021-07-01 07:18:42",
+                    "updated_at": "2021-07-01 07:18:42"
+                },
+                {
+                    "id": 41,
+                    "user_id": 1,
+                    "category_id": 2,
+                    "title": "80 ans après le terrifiant pogrom de Iași, la Roumanie se confronte à son passé antisémite",
+                    "description": "\nLe 28 juin 1941, l'horreur s'abat sur les juifs de la ville de Iași, en Moldavie roumaine. En l'espace de neuf jours, plus de 13 000 d'entre eux sont massacrés au cours de l'un des pires pogroms de la Seconde Guerre mondiale, initié sous l'ordre du dictateur Ion Antonescu. Quatre-vingt ans plus tard, la Roumanie essaie enfin de regarder en face cette page effrayante de son histoire.\n",
+                    "pubDate": "2021-06-28 08:21:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/a98fddda-d744-11eb-9a6f-005056a98db9\/w:1024\/p:16x9\/122.jpg",
+                    "created_at": "2021-07-01 07:18:42",
+                    "updated_at": "2021-07-01 07:18:42"
+                },
+                {
+                    "id": 42,
+                    "user_id": 1,
+                    "category_id": 2,
+                    "title": "Scandales du Covid-19 : ces politiques poussés à la démission",
+                    "description": "\nLe ministre britannique de la Santé, Matt Hancock, a annoncé samedi sa démission après s'être vu reprocher le non respect des restrictions sanitaires. Comme lui, plusieurs personnalités politiques ont dû quitter leurs fonctions à la suite de scandales liés à la pandémie de Covid-19. Tour d’horizon.\n",
+                    "pubDate": "2021-06-27 17:35:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/dd926980-d7e0-11eb-a623-005056bfd1d9\/w:1024\/p:16x9\/uk-3.jpg",
+                    "created_at": "2021-07-01 07:18:42",
+                    "updated_at": "2021-07-01 07:18:42"
+                },
+                {
+                    "id": 43,
+                    "user_id": 1,
+                    "category_id": 2,
+                    "title": "Royaume-Uni : Matt Hancock, le ministre de la Santé, démissionne",
+                    "description": "\nLe ministre britannique de la Santé, Matt Hancock, a annoncé sa démission samedi, reconnaissant avoir enfreint des mesures sanitaires contre le Covid-19. Des images publiées dans la presse l'ont en effet montré en train d'embrasser une conseillère, à une période où les accolades étaient interdites.\n",
+                    "pubDate": "2021-06-26 18:03:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/6c89f41a-d6a5-11eb-94f9-005056a964fe\/w:1024\/p:16x9\/2021-06-06T085317Z_1169524032_RC2WUN9RYJMT_RTRMADP_3_BRITAIN-POLITICS.JPG",
+                    "created_at": "2021-07-01 07:18:42",
+                    "updated_at": "2021-07-01 07:18:42"
+                },
+                {
+                    "id": 44,
+                    "user_id": 1,
+                    "category_id": 2,
+                    "title": "Covid-19 : ville hôte de l'Euro-2021, Saint-Pétersbourg fait face à une flambée de l'épidémie",
+                    "description": "\nAlors qu'elle accueille actuellement des matches de l'Euro-2021, la ville russe de Saint-Pétersbourg a enregistré, samedi, 107 décès au cours des dernières vingt-quatre heure. Il s'agit du bilan quotidien le plus élevé de décès dus au Covid-19 dans le pays depuis le début de la crise sanitaire. \n",
+                    "pubDate": "2021-06-26 12:56:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/4a9c9928-d67a-11eb-a282-005056a98db9\/w:1024\/p:16x9\/000_9CQ9GD.jpg",
+                    "created_at": "2021-07-01 07:18:42",
+                    "updated_at": "2021-07-01 07:18:42"
+                },
+                {
+                    "id": 45,
+                    "user_id": 1,
+                    "category_id": 2,
+                    "title": "Enrico Letta : \"L'Union européenne doit être nette et dure avec la Hongrie\"",
+                    "description": "\nAlors que vient de se tenir un Sommet européen dont l'ordre du jour allait de la crise du Covid, à la relation avec la Russie en passant par la question de la Hongrie et du respect de l'Etat de Droit, nous recevons Enrico Letta, Secrétaire national du Parti démocrate en Italie, parti social-démocrate qui soutient le gouvernement de Mario Draghi. Ancien Président du Conseil italien et bon connaisseur de Bruxelles, il décrypte avec nous cette actualité européenne.\n",
+                    "pubDate": "2021-06-26 10:57:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/b798c0ba-d5b2-11eb-b0ec-005056bf87d6\/w:1024\/p:16x9\/LETTA%20FR%202.jpg",
+                    "created_at": "2021-07-01 07:18:42",
+                    "updated_at": "2021-07-01 07:18:42"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "France",
+            "created_at": "2021-07-01 07:11:51",
+            "updated_at": "2021-07-01 07:11:51",
+            "user": null,
+            "news": [
+                {
+                    "id": 46,
+                    "user_id": 1,
+                    "category_id": 3,
+                    "title": "Concerts, prix du gaz, chômage, congé paternité : ce qui change au 1er juillet",
+                    "description": "\nFrance 24 fait le point sur les mesures qui entrent en vigueur en France à partir du 1er juillet marqué notamment par le grand retour des concerts debout, interdits depuis mars 2020.\n",
+                    "pubDate": "2021-07-01 05:51:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/ba01e774-da2f-11eb-af1c-005056a97e36\/w:1024\/p:16x9\/000_Par7430103.jpg",
+                    "created_at": "2021-07-01 07:19:03",
+                    "updated_at": "2021-07-01 07:19:03"
+                },
+                {
+                    "id": 47,
+                    "user_id": 1,
+                    "category_id": 3,
+                    "title": "Le congé paternité de 28 jours entre en vigueur en France",
+                    "description": "\nAnnoncé en septembre par Emmanuel Macron, cet allongement du congé paternité doit permettre aux jeunes pères de s'impliquer davantage auprès de leur enfant et de réduire les inégalités entre les femmes et les hommes.\n",
+                    "pubDate": "2021-07-01 05:34:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/bed77a20-da2a-11eb-ac20-005056bf30b7\/w:1024\/p:16x9\/000_Par7661100.jpg",
+                    "created_at": "2021-07-01 07:19:03",
+                    "updated_at": "2021-07-01 07:19:03"
+                },
+                {
+                    "id": 48,
+                    "user_id": 1,
+                    "category_id": 3,
+                    "title": "Covid-19 : les tests seront payants en France à partir du 7 juillet pour les touristes étrangers",
+                    "description": "\nLes tests de détection du Covid-19 deviendront payants pour les touristes étrangers venant en France, à partir du le 7 juillet. Ils seront facturés à hauteur de 49 euros pour les PCR et 29 euros pour les antigéniques. Le gouvernement envisage également de ne plus rembourser les tests \"de confort\" aux Français.\n",
+                    "pubDate": "2021-06-30 17:30:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/a4af7dca-d9d3-11eb-94ae-005056a90284\/w:1024\/p:16x9\/Covid-tests-payant.jpg",
+                    "created_at": "2021-07-01 07:19:03",
+                    "updated_at": "2021-07-01 07:19:03"
+                },
+                {
+                    "id": 49,
+                    "user_id": 1,
+                    "category_id": 3,
+                    "title": "Covid-19 en France : levée des dernières restrictions, mais crainte d'une 4e vague à la rentrée",
+                    "description": "\nFin des jauges dans les cinémas, restaurants ou magasins : les dernières restrictions ont été levées, mercredi 30 juin, en France, en dépit d'une montée des inquiétudes sur une quatrième vague de Covid-19 après l'été, sous l'effet du variant Delta, beaucoup plus contagieux.\n",
+                    "pubDate": "2021-06-30 16:07:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/162fe458-d9bb-11eb-b6a2-005056bf30b7\/w:1024\/p:16x9\/AP21160479396529.jpg",
+                    "created_at": "2021-07-01 07:19:03",
+                    "updated_at": "2021-07-01 07:19:03"
+                },
+                {
+                    "id": 50,
+                    "user_id": 1,
+                    "category_id": 3,
+                    "title": "L'obésité des jeunes en forte progression en France",
+                    "description": "\nUne enquête publiée mercredi révèle que l'obésité a presque doublé chez les 18-24 ans en France. Chez les adultes, près de la moitié de la population française est concernée par l'obésité ou le surpoids.\n",
+                    "pubDate": "2021-06-30 15:48:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/023d584e-d9b2-11eb-ad55-005056bfb2b6\/w:1024\/p:16x9\/000_9L0VP.jpg",
+                    "created_at": "2021-07-01 07:19:03",
+                    "updated_at": "2021-07-01 07:19:03"
+                },
+                {
+                    "id": 51,
+                    "user_id": 1,
+                    "category_id": 3,
+                    "title": "La spectatrice qui a provoqué une chute dans le peloton en garde à vue",
+                    "description": "\nLa spectatrice qui a causé avec sa pancarte la chute de très nombreux cyclistes du Tour de France, dont plusieurs ont été blessés, samedi en Bretagne, a été placée mercredi en garde à vue.\n",
+                    "pubDate": "2021-06-30 15:26:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/20efee8c-d9b2-11eb-bb43-005056bf30b7\/w:1024\/p:16x9\/000_9D86N3.jpg",
+                    "created_at": "2021-07-01 07:19:03",
+                    "updated_at": "2021-07-01 07:19:03"
+                },
+                {
+                    "id": 52,
+                    "user_id": 1,
+                    "category_id": 3,
+                    "title": "Forum de l'ONU : 40 milliards de dollars pour promouvoir l'égalité femmes-hommes",
+                    "description": "\nLe \"Forum génération égalité\", une conférence de l'ONU sur l'égalité des sexes, s'est ouvert mercredi à Paris, et 40 milliards de dollars d'investissements ont déjà été rassemblés. Emmanuel Macron et le secrétaire général de l'ONU Antonio Guterres avaient dénoncé en préambule le \"vent mauvais\" de \"forces patriarcales\" qui menace de faire régresser les droits des femmes dans le monde.\n",
+                    "pubDate": "2021-06-30 12:11:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/542d6698-d9cc-11eb-a76b-005056bfb2b6\/w:1024\/p:16x9\/2021-06-30T144804Z_939827373_RC22BO9P2F2X_RTRMADP_3_FRANCE-GENDER-EQUALITY.JPG",
+                    "created_at": "2021-07-01 07:19:03",
+                    "updated_at": "2021-07-01 07:19:03"
+                },
+                {
+                    "id": 53,
+                    "user_id": 1,
+                    "category_id": 3,
+                    "title": "Présidentielle 2022 : les candidatures se multiplient",
+                    "description": "\nEn France, les grandes manœuvres ont commencé. Le second tour des élections régionales marque le top départ des ambitions présidentielles. À droite, Xavier Bertrand, Valérie Pécresse et Laurent Wauquiez affûtent leurs armes. Éric Piolle, le maire de Grenoble, annonce sa candidature à la primaire d'EELV. Au Parti socialiste, Anne Hidalgo réfléchit... Mais quel sera le mode de désignation des candidats ? Roselyne Febvre en parle avec David Revault-d'Allonnes et Laetitia Krupa.\n",
+                    "pubDate": "2021-06-30 10:55:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/b127bb82-d98b-11eb-a55f-005056bfb2b6\/w:1024\/p:16x9\/FR%20NEWS%20SEMAINE30_06_2021%2009_59_30.jpg",
+                    "created_at": "2021-07-01 07:19:03",
+                    "updated_at": "2021-07-01 07:19:03"
+                },
+                {
+                    "id": 54,
+                    "user_id": 1,
+                    "category_id": 3,
+                    "title": "Luc Bronner : \"La passion française pour la politique est toujours là\"",
+                    "description": "\nLuc Bronner est grand reporter au journal Le Monde, dont il a dirigé les rédactions pendant cinq ans. Il y a quelques mois, il s'est lancé dans un tour de France, avec l'idée de prendre le pouls du pays dans ce moment plus que particulier, entre une pandémie et une élection présidentielle. Qu'en a-t-il retenu ? Quelles photographies de la société rapporte-t-il de ses reportages ? Rencontre.\n",
+                    "pubDate": "2021-06-30 10:12:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/9a053e80-d96c-11eb-9baa-005056bf30b7\/w:1024\/p:16x9\/FRAN210630-0816-Live_CS0816.jpg",
+                    "created_at": "2021-07-01 07:19:03",
+                    "updated_at": "2021-07-01 07:19:03"
+                },
+                {
+                    "id": 55,
+                    "user_id": 1,
+                    "category_id": 3,
+                    "title": "Anne Hidalgo annonce la fermeture aux toxicomanes d'un parc du nord de Paris",
+                    "description": "\nLa maire de Paris Anne Hidalgo a assuré, mardi, que les toxicomanes allaient quitter le jardin d'Éole, un parc dans lequel ils avaient été autorisés à venir consommer de la drogue, essentiellement du crack. Elle souhaite rendre ce lieu aux habitants, en expliquant que différents projets sont à l'étude pour prendre en charge les toxicomanes.\n",
+                    "pubDate": "2021-06-30 09:28:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/a3d97fac-cf5d-11eb-a367-005056bfd1d9\/w:1024\/p:16x9\/DSC_5732.jpg",
+                    "created_at": "2021-07-01 07:19:04",
+                    "updated_at": "2021-07-01 07:19:04"
+                },
+                {
+                    "id": 56,
+                    "user_id": 1,
+                    "category_id": 3,
+                    "title": "Covid-19 en France : une quatrième vague moins forte à la rentrée, selon le Pr Delfraissy",
+                    "description": "\nLa France devrait connaître une quatrième vague de contaminations au Covid-19 en raison de la propagation du variant Delta mais elle sera plus \"nuancée\" que les trois premières en raison du développement de la vaccination, a estimé mercredi Jean-François Delfraissy, le président du Conseil scientifique.\n",
+                    "pubDate": "2021-06-30 09:27:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/94201102-d980-11eb-ad89-005056a97e36\/w:1024\/p:16x9\/AP21168567633367.jpg",
+                    "created_at": "2021-07-01 07:19:04",
+                    "updated_at": "2021-07-01 07:19:04"
+                },
+                {
+                    "id": 57,
+                    "user_id": 1,
+                    "category_id": 3,
+                    "title": "Santé : Emmanuel Macron annonce un plan de 7 milliards pour la recherche et l’innovation",
+                    "description": "\nAlors que le système de santé français a été mis à rude épreuve par la pandémie, Emmanuel Macron a annoncé, mardi, un plan d'investissement de l'ordre de sept milliards d'euros pour favoriser l’innovation afin de faire de la France un leader européen à l'horizon 2030. \n",
+                    "pubDate": "2021-06-30 06:19:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/809e2b4e-1943-11eb-bac9-005056a98db9\/w:1024\/p:16x9\/db8f293fe10d924fb4427704908f11c7d4df2e37.jpg",
+                    "created_at": "2021-07-01 07:19:04",
+                    "updated_at": "2021-07-01 07:19:04"
+                },
+                {
+                    "id": 58,
+                    "user_id": 1,
+                    "category_id": 3,
+                    "title": "PMA pour toutes : que change la loi de bioéthique ?",
+                    "description": "\nC'était une promesse de campagne d'Emmanuel Macron. La loi de bioéthique vient d'être adoptée ce mardi à l'Assemblée nationale. Elle prévoit notamment l'élargissement de la procréation médicalement assistée (PMA) aux couples lesbiens et aux femmes seules, et non plus aux seuls couples hétérosexuels souffrant de problèmes d'infertilité. Autre changement majeur : la levée de l'anonymat des donneurs de sperme ou donneuses d'ovocytes, et la possibilité de conserver ses gamètes par congélation.\n",
+                    "pubDate": "2021-06-29 18:19:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/fbe246e2-d904-11eb-8870-005056a90284\/w:1024\/p:16x9\/DEBATFR001-65.jpg",
+                    "created_at": "2021-07-01 07:19:04",
+                    "updated_at": "2021-07-01 07:19:04"
+                },
+                {
+                    "id": 59,
+                    "user_id": 1,
+                    "category_id": 3,
+                    "title": "Le Parlement français adopte la loi de bioéthique et ouvre la PMA à toutes les femmes",
+                    "description": "\nAu terme de près de deux ans de navette, le Parlement a adopté définitivement, mardi, le projet de loi de bioéthique et sa mesure emblématique d'ouverture de la procréation médicalement assistée (PMA) aux couples de femmes et aux femmes célibataires. Les députés ont adopté la version définitive du texte par 326 voix contre 115.\n",
+                    "pubDate": "2021-06-29 16:43:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/ae4faba8-d8fb-11eb-b009-005056a90284\/w:1024\/p:16x9\/Assemblee%20nationale.jpg",
+                    "created_at": "2021-07-01 07:19:04",
+                    "updated_at": "2021-07-01 07:19:04"
+                },
+                {
+                    "id": 60,
+                    "user_id": 1,
+                    "category_id": 3,
+                    "title": "Allongement du congé paternité : quel impact sur l’égalité hommes-femmes ?",
+                    "description": "\nÀ compter du 1er juillet, la durée du congé paternité en France passe de 14 à 28 jours, dont sept obligatoires. Quelles incidences cette réforme peut-elle avoir sur les inégalités entre les sexes ? Éléments de réponse.\n",
+                    "pubDate": "2021-06-29 15:55:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/e7205102-d8d9-11eb-8499-005056bf30b7\/w:1024\/p:16x9\/000_APP2001123136882.jpg",
+                    "created_at": "2021-07-01 07:19:04",
+                    "updated_at": "2021-07-01 07:19:04"
+                },
+                {
+                    "id": 61,
+                    "user_id": 1,
+                    "category_id": 3,
+                    "title": "La ville de Paris inaugure sa première colocation pour seniors LGBT+",
+                    "description": "\nC'est une première à Paris : un appartement en colocation pour les seniors LGBTQI+, mis à disposition par la municipalité, en partenariat avec les associations Basiliade et GreyPRIDE. Pour les quatre hommes qui y vivent, il s'agit d'une alternative nécessaire à la maison de retraite, souvent synonyme d’un “retour au placard”. La ville de Paris affirme qu'elle travaille à la mise en place d'un plus grand nombre de ces appartements en colocation. Un reportage de Claire Rush et Juliette Montilly.\n",
+                    "pubDate": "2021-06-29 12:47:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/5f445262-d8d2-11eb-80d3-005056a97e36\/w:1024\/p:16x9\/169miniature.jpg",
+                    "created_at": "2021-07-01 07:19:04",
+                    "updated_at": "2021-07-01 07:19:04"
+                },
+                {
+                    "id": 62,
+                    "user_id": 1,
+                    "category_id": 3,
+                    "title": "Régionales en France : prime aux sortants et abstention record",
+                    "description": "\nEn France, l'abstention sort grande gagnante du second tour des élections régionales. Près de 66% d'électeurs n'ont pas voté. La prime est donnée aux sortants du parti Les Républicains et du Parti socialiste. Ce scrutin marque aussi l'échec du Rassemblement national et la déroute du parti présidentiel La République en marche. Quels enseignements peut-on tirer de ces élections locales et en particulier pour la présidentielle qui se tiendra dans moins de dix mois ?\n",
+                    "pubDate": "2021-06-28 18:33:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/ce8fa3a2-d83b-11eb-b040-005056bfd1d9\/w:1024\/p:16x9\/DEBATFR001-64.jpg",
+                    "created_at": "2021-07-01 07:19:04",
+                    "updated_at": "2021-07-01 07:19:04"
+                },
+                {
+                    "id": 63,
+                    "user_id": 1,
+                    "category_id": 3,
+                    "title": "Pourquoi le scrutin des régionales ne dit presque rien sur la présidentielle de 2022",
+                    "description": "\nMême si certains, à droite comme à gauche, aimeraient voir dans les résultats des régionales une préfiguration de la présidentielle, les résultats du scrutin de dimanche ne permettent de tirer en réalité aucune conclusion. Bien au contraire, tout reste à faire dans la course à l’Élysée.\n",
+                    "pubDate": "2021-06-28 16:52:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/bd512dfe-d827-11eb-897b-005056bfd1d9\/w:1024\/p:16x9\/MarineLePen-EmmanuelMacron-2017.jpg",
+                    "created_at": "2021-07-01 07:19:04",
+                    "updated_at": "2021-07-01 07:19:04"
+                },
+                {
+                    "id": 64,
+                    "user_id": 1,
+                    "category_id": 3,
+                    "title": "Jérémie Peltier : \"On vit dans un moment apathique vis à vis de la démocratie\"",
+                    "description": "\nDirecteur des études de la Fondation Jean Jaurès, Jérémie Peltier livre son analyse au lendemain du second tour des élections régionales en France, largement boudées par les Français. Il voit dans l’abstention massive qui a marqué ce scrutin une manifestation d'un désintérêt pour le débat public qui rend \"obsolète le rite républicain du vote dans l’isoloir\". Pour lui, \"ce vote avait une dimension collective\", aujourd’hui peu compatible avec \"l'individualisation de la société\".\n",
+                    "pubDate": "2021-06-28 11:01:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/673b04c8-d7da-11eb-8bf3-005056bfd1d9\/w:1024\/p:16x9\/FRAN210628-0816-Live_CS0816.jpg",
+                    "created_at": "2021-07-01 07:19:04",
+                    "updated_at": "2021-07-01 07:19:04"
+                },
+                {
+                    "id": 65,
+                    "user_id": 1,
+                    "category_id": 3,
+                    "title": "Le cannabis, une plante aux multiples usages",
+                    "description": "\nLe cannabis est à l'origine de nombreux usages. On connaît son effet psychotrope, mais moins son utilisation médicale et thérapeutique. Un Français sur deux se prononce pour la dépénalisation du cannabis, alors que 900 000 personnes en fumeraient quotidiennement. Une campagne d'expérimentation du cannabis à usage médical a été lancée, fin mars, au CHU de Clermont-Ferrand. Nous retrouvons Nicolas Autier, médecin-psychiatre spécialisé en pharmacologie médicale, qui mène cette expérience. \n",
+                    "pubDate": "2021-06-28 09:13:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/5a6d3d7c-d5bb-11eb-b4ee-005056a964fe\/w:1024\/p:16x9\/FR%20MG%20C%20EN%20FRANCE%20EMISSION%20CANNABIS%20NO%20MIX.Consolidated.01%2CVideo%20Mixdown%2C1.jpg",
+                    "created_at": "2021-07-01 07:19:04",
+                    "updated_at": "2021-07-01 07:19:04"
+                },
+                {
+                    "id": 66,
+                    "user_id": 1,
+                    "category_id": 3,
+                    "title": "Régionales 2021 : réélu, Renaud Muselier prive l'extrême droite d'une victoire en Paca",
+                    "description": "\nLe Rassemblement national a échoué, dimanche, en Paca, seule région que le parti d’extrême droite semblait pouvoir remporter. En ballotage défavorable après le premier tour, le président LR sortant en Provence-Alpes-Côte d'Azur Renaud Muselier a été réélu.\n",
+                    "pubDate": "2021-06-28 09:00:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/b44657ba-d783-11eb-b9f2-005056bfd1d9\/w:1024\/p:16x9\/c07fb95141ba8ebdf487782c627a1ac2a5e39cc7.jpg",
+                    "created_at": "2021-07-01 07:19:04",
+                    "updated_at": "2021-07-01 07:19:04"
+                },
+                {
+                    "id": 67,
+                    "user_id": 1,
+                    "category_id": 3,
+                    "title": "Régionales en France : \"Des élections sans surprise ni électeurs\"",
+                    "description": "\nÀ la Une de la presse, ce lundi 28 juin : les réactions aux résultats du second tour, hier, des départementales et des régionales en France. Un scrutin marqué, une nouvelle fois, par une abstention quasi record, à un an de la présidentielle.\n",
+                    "pubDate": "2021-06-28 04:46:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/c9c1e73e-d7ca-11eb-8727-005056a964fe\/w:1024\/p:16x9\/DLS%20RDP%20LE%20MEDIAPART.png.jpg",
+                    "created_at": "2021-07-01 07:19:04",
+                    "updated_at": "2021-07-01 07:19:04"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Afrique",
+            "created_at": "2021-07-01 07:11:51",
+            "updated_at": "2021-07-01 07:11:51",
+            "user": null,
+            "news": [
+                {
+                    "id": 68,
+                    "user_id": 1,
+                    "category_id": 4,
+                    "title": "Centrafrique : sept morts dans l’attaque d’une ville par des rebelles",
+                    "description": "\nUn groupe rebelle armé a attaqué lundi une ville située à 300 kilomètres de Bangui, la capitale centrafricaine. Sept personnes sont mortes, a déclaré mercredi à l'AFP le porte-parole des Casques bleus de la Mission de l'ONU en Centrafrique (Minusca). \n",
+                    "pubDate": "2021-07-01 06:20:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/532e5ada-450d-11eb-a082-005056a98db9\/w:1024\/p:16x9\/000_8XM3QV.jpg",
+                    "created_at": "2021-07-01 07:19:27",
+                    "updated_at": "2021-07-01 07:19:27"
+                },
+                {
+                    "id": 69,
+                    "user_id": 1,
+                    "category_id": 4,
+                    "title": "Remaniement au Burkina Faso : le président Kaboré gère le portefeuille de la Défense",
+                    "description": "\nIl était attendu par la population, le remaniement au Burkina Faso a bien eu lieu, mercredi 30 juin. Le président Roch Marc Christian Kaboré gère désormais le portefeuille de la Défense, après une vague d'attaques terroristes visant des civils et provoquant la colère de la population. Les détails dans ce journal avec Kalidou Sy.\n",
+                    "pubDate": "2021-06-30 21:15:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/239de108-d9e8-11eb-93db-005056a97e36\/w:1024\/p:16x9\/XX%20NW%20HAB%20ROCH%20KABORE.jpg",
+                    "created_at": "2021-07-01 07:19:27",
+                    "updated_at": "2021-07-01 07:19:27"
+                },
+                {
+                    "id": 70,
+                    "user_id": 1,
+                    "category_id": 4,
+                    "title": "Algérie : le ministre des Finances Aïmene Benabderrahmane nommé Premier ministre",
+                    "description": "\nLe ministre algérien des Finances Aïmene Benabderrahmane a été désigné Premier ministre mercredi, en remplacement d'Abdelaziz Djerad, à la suite des élections législatives anticipées du 12 juin. Le président Tebboune souhaite ainsi enrayer la grave crise économique qui mine la première économie du Maghreb.\n",
+                    "pubDate": "2021-06-30 14:19:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/410b24c4-d9b3-11eb-95e6-005056bfb2b6\/w:1024\/p:16x9\/000_9DL6DF%20%281%29.jpg",
+                    "created_at": "2021-07-01 07:19:27",
+                    "updated_at": "2021-07-01 07:19:27"
+                },
+                {
+                    "id": 71,
+                    "user_id": 1,
+                    "category_id": 4,
+                    "title": "En Côte d'Ivoire, la vie quotidienne rythmée par les coupures d'électricité",
+                    "description": "\nVoilà plus plusieurs semaines que la Côte d'Ivoire vit avec des coupures d'électricité quotidiennes. Une situation exceptionnelle dans ce pays qui se veut un leader régional dans ce secteur énergétique et qui n'a pas connu telle situation depuis les années 80. Les particuliers comme les entreprises doivent composer tant bien que mal avec cette difficulté.\n",
+                    "pubDate": "2021-06-30 07:05:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/865964d6-d96e-11eb-a4d8-005056a97e36\/w:1024\/p:16x9\/thumbnail%20%281%29.jpg",
+                    "created_at": "2021-07-01 07:19:27",
+                    "updated_at": "2021-07-01 07:19:27"
+                },
+                {
+                    "id": 72,
+                    "user_id": 1,
+                    "category_id": 4,
+                    "title": "Jacob Zuma, ancien président de l’Afrique du Sud, condamné à 15 mois de prison",
+                    "description": "\nL’ancien président sud-africain Jacob Zuma a été condamné à 15 ans de prison par la Cour constitutionnelle pour outrage à la justice. Depuis 2018, une commission est chargée d’enquêter sur la corruption qui a éclaboussé ses neuf années au pouvoir.\n",
+                    "pubDate": "2021-06-29 21:47:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/7a33228c-d914-11eb-88d7-005056bf30b7\/w:1024\/p:16x9\/I2.jpg",
+                    "created_at": "2021-07-01 07:19:27",
+                    "updated_at": "2021-07-01 07:19:27"
+                },
+                {
+                    "id": 73,
+                    "user_id": 1,
+                    "category_id": 4,
+                    "title": "En Éthiopie, les forces du Tigré poursuivent leur progression face à l'armée fédérale",
+                    "description": "\nMalgré l'annonce la veille d'un \"cessez-le-feu unilatéral\" par le gouvernement éthiopien après la perte de la principale ville tigréenne, les rebelles ont poursuivi mardi leur progression. Les autorités dissidentes de la région du Tigré ont assuré que leur lutte allait \"s'intensifier\" jusqu'à ce que tous les \"ennemis\" quittent la région.\n",
+                    "pubDate": "2021-06-29 20:10:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/3fd00076-d912-11eb-83b4-005056a90284\/w:1024\/p:16x9\/Mekele-new-m.jpg",
+                    "created_at": "2021-07-01 07:19:27",
+                    "updated_at": "2021-07-01 07:19:27"
+                },
+                {
+                    "id": 74,
+                    "user_id": 1,
+                    "category_id": 4,
+                    "title": "Au Burkina Faso, deux jihadistes présumés mis en examen après l'attaque de Solhan",
+                    "description": "\nDeux jihadistes présumés accusés d'avoir joué un rôle clé dans l'attaque du village de Solhan, qui a fait au moins 132 morts dans la nuit du 4 au 5 juin, ont été mis en examen pour \"terrorisme\", a annoncé mardi le procureur du Burkina Faso.\n",
+                    "pubDate": "2021-06-29 14:46:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/3452696e-d8e5-11eb-8c20-005056a90284\/w:1024\/p:16x9\/2021-06-08T141122Z_1487002432_RC2OVN9QJ5RE_RTRMADP_3_BURKINA-SECURITY.JPG",
+                    "created_at": "2021-07-01 07:19:27",
+                    "updated_at": "2021-07-01 07:19:27"
+                },
+                {
+                    "id": 75,
+                    "user_id": 1,
+                    "category_id": 4,
+                    "title": "L’hommage de Faustin Linyekula aux victimes congolaises de la Grande Guerre",
+                    "description": "\nAvec \"Statue of Loss\", le chorégraphe et metteur en scène Faustin Linyekula, fondateur des célèbres Studios Kabako, érige un monument éphémère, chorégraphique et musical à la mémoire des soldats congolais qui combattirent en Belgique contre les troupes allemandes pendant la Première Guerre mondiale, et que les livres d'Histoire ont oublié. Une performance présentée les 25 et 26 juin dans le cadre unique du Panthéon, à Paris. Il nous parle de sa volonté de s'affranchir du regard colonial et transmettre une autre Histoire du Congo.\n",
+                    "pubDate": "2021-06-29 14:38:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/6f957b6c-d8d4-11eb-9308-005056bfb2b6\/w:1024\/p:16x9\/FRMG%20AFRIQUE%20HEBDO%20LINYEKU%200626%20%282021%29_%20Ep%20%2048.transfer.jpg",
+                    "created_at": "2021-07-01 07:19:27",
+                    "updated_at": "2021-07-01 07:19:27"
+                },
+                {
+                    "id": 76,
+                    "user_id": 1,
+                    "category_id": 4,
+                    "title": "Mali : l'ONU déplore \"l'impunité généralisée\" des violations des droits humains",
+                    "description": "\nLa Haute-Commissaire de l'ONU aux droits de l'Homme, Michelle Bachelet, a jugé mardi \"profondément préoccupante\" l'augmentation des violations des droits humains depuis août 2020 au Mali. \"L'impunité généralisée\" constitue un risque grave pour la protection des civils, a-t-elle prévenu dans un communiqué.\n",
+                    "pubDate": "2021-06-29 13:47:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/79e107d6-d8dd-11eb-a033-005056a97e36\/w:1024\/p:16x9\/mali%20Onu%20-%2029-06.jpg",
+                    "created_at": "2021-07-01 07:19:28",
+                    "updated_at": "2021-07-01 07:19:28"
+                },
+                {
+                    "id": 77,
+                    "user_id": 1,
+                    "category_id": 4,
+                    "title": "Centrafrique : l'ONU pointe des exactions commises par des \"instructeurs\" russes",
+                    "description": "\nDans un rapport annuel, l'ONU dénonce des \"violations du droit humanitaire international\" commises par des \"instructeurs\" russes en Centrafrique, avec les forces armées. \n",
+                    "pubDate": "2021-06-29 09:26:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/bcb7dbac-d8bf-11eb-af03-005056bf30b7\/w:1024\/p:16x9\/Russia%20Central%20African%20Republic.jpg",
+                    "created_at": "2021-07-01 07:19:28",
+                    "updated_at": "2021-07-01 07:19:28"
+                },
+                {
+                    "id": 78,
+                    "user_id": 1,
+                    "category_id": 4,
+                    "title": "Afrique du Sud : l'ex-président Jacob Zuma condamné à 15 mois de prison pour outrage à la justice",
+                    "description": "\nLa Cour constitutionnelle sud-africaine a condamné, mardi, l'ancien président Jacob Zuma à 15 mois de prison pour outrage à la justice après son refus de comparaître devant une commission anticorruption.\n",
+                    "pubDate": "2021-06-29 09:20:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/01b6360e-b6dd-11eb-b817-005056bf87d6\/w:1024\/p:16x9\/000_99W7XP.jpg",
+                    "created_at": "2021-07-01 07:19:28",
+                    "updated_at": "2021-07-01 07:19:28"
+                },
+                {
+                    "id": 79,
+                    "user_id": 1,
+                    "category_id": 4,
+                    "title": "\"Il fallait écarter un homme gênant\" : Laurent Gbagbo revient sur son jugement par la CPI",
+                    "description": "\nDe retour dans son village natal de Mama, dans le centre-ouest de la Côte d'Ivoire, l'ancien président Laurent Gbagbo a évoqué, lundi, son jugement par la Cour pénale internationale.\n",
+                    "pubDate": "2021-06-29 08:30:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/66435d8a-d8b2-11eb-91f6-005056a90284\/w:1024\/p:16x9\/000_9DF4E7.jpg",
+                    "created_at": "2021-07-01 07:19:28",
+                    "updated_at": "2021-07-01 07:19:28"
+                },
+                {
+                    "id": 80,
+                    "user_id": 1,
+                    "category_id": 4,
+                    "title": "Double attaque terroriste à Béni en RDC : marchés, écoles et églises fermées pour 48h",
+                    "description": "\nLe groupe terroriste Etat islamique a revendiqué une double attaque à Béni en RDC qui a eu lieu dimanche. Les autorités congolaises ont décrété ce lundi la fermeture des marchés, écoles et églises pour une durée de 48 heures.\n",
+                    "pubDate": "2021-06-28 20:53:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/d35b56e4-d852-11eb-9c8f-005056a98db9\/w:1024\/p:16x9\/I1-1.jpg",
+                    "created_at": "2021-07-01 07:19:28",
+                    "updated_at": "2021-07-01 07:19:28"
+                },
+                {
+                    "id": 81,
+                    "user_id": 1,
+                    "category_id": 4,
+                    "title": "Éthiopie : le gouvernement décrète un \"cessez-le-feu unilatéral\" au Tigré",
+                    "description": "\nLe gouvernement éthiopien a décrété lundi un \"cessez-le-feu unilatéral et inconditionnel\" au Tigré, selon plusieurs médias d'État. Cette décision intervient après que les forces loyales aux anciennes autorités de la région ont repris la capitale, Mekele. Les rebelles, de leur côté, ont annoncé leur intention d'\"intensifier\" les combats.\n",
+                    "pubDate": "2021-06-28 17:42:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/a3467512-d832-11eb-a3cd-005056a964fe\/w:1024\/p:16x9\/Mekele.jpg",
+                    "created_at": "2021-07-01 07:19:28",
+                    "updated_at": "2021-07-01 07:19:28"
+                },
+                {
+                    "id": 82,
+                    "user_id": 1,
+                    "category_id": 4,
+                    "title": "RD Congo : après plusieurs attaques, les autorités ferment les marchés, écoles et églises",
+                    "description": "\nAu lendemain de l'explosion de deux bombes artisanales dans la ville de Beni, dont une à l'intérieur d'une église, les autorités ont décrété la fermeture des marchés, des églises et des écoles pour éviter de nouvelles attaques du groupe rebelle ADF.\n",
+                    "pubDate": "2021-06-28 12:19:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/e9bdb0c6-d807-11eb-9e45-005056a98db9\/w:1024\/p:16x9\/000_1P33X2-1.jpg",
+                    "created_at": "2021-07-01 07:19:28",
+                    "updated_at": "2021-07-01 07:19:28"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Moyen-Orient",
+            "created_at": "2021-07-01 07:11:51",
+            "updated_at": "2021-07-01 07:11:51",
+            "user": null,
+            "news": [
+                {
+                    "id": 83,
+                    "user_id": 1,
+                    "category_id": 5,
+                    "title": "Lod, en Israël : une \"ville mixte\" devenue grand fossé",
+                    "description": "\nEn Israël, la ville de Lod, à 10 km de Tel-Aviv, est fragilisée pour longtemps par les violences qui l’ont récemment secouée. En mai, alors que les tensions s’intensifient entre Israël et le Hamas, une manifestation de soutien aux Palestiniens de Jérusalem-Est dégénère. Cette cité mixte de 77 000 habitants, où Juifs et Arabes ont toujours cohabité, s'embrase. Le bilan est lourd : 1 mort dans chaque camp, des synagogues incendiées, un cimetière musulman vandalisé, une centaine de personnes arrêtées. Depuis, le calme est revenu, mais pour combien de temps ?\n",
+                    "pubDate": "2021-06-30 15:16:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/ff531782-d9a1-11eb-bebf-005056bfb2b6\/w:1024\/p:16x9\/FREEZE%20ISRAEL.jpg",
+                    "created_at": "2021-07-01 07:21:04",
+                    "updated_at": "2021-07-01 07:21:04"
+                },
+                {
+                    "id": 84,
+                    "user_id": 1,
+                    "category_id": 5,
+                    "title": "Être transgenre au Yémen : violences, intimidations et menaces",
+                    "description": "\nAu sommaire d’Express Orient cette semaine, le Yémen, où être transgenre, c’est être confronté.e à la violence, aux menaces de mort et aux pressions de toutes sortes. Pour beaucoup, quitter le pays apparaît comme la seule issue. Sanam Shantyaei, journaliste à France 24, a pu parler à Ritaj, une femme transgenre yéménite, désormais réfugiée en France.\n",
+                    "pubDate": "2021-06-30 09:55:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/6b0a3d48-d8e4-11eb-b184-005056bfb2b6\/w:1024\/p:16x9\/middle%20east%20matters%20yemen%20web.jpg",
+                    "created_at": "2021-07-01 07:21:04",
+                    "updated_at": "2021-07-01 07:21:04"
+                },
+                {
+                    "id": 85,
+                    "user_id": 1,
+                    "category_id": 5,
+                    "title": "Au Liban, la hausse de 30 % des prix des carburants plonge un peu plus le pays dans le chaos",
+                    "description": "\nÀ la suite d'une levée partielle des subventions accordées par l'État, les prix des carburants ont augmenté, mardi, de plus de 30 % au Liban, un pays en plein effondrement économique et enregistrant une dépréciation record de la monnaie nationale sur le marché noir.\n",
+                    "pubDate": "2021-06-29 16:21:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/1b8e1474-d8ee-11eb-bb31-005056a97e36\/w:1024\/p:16x9\/LEBANON-CRISIS-FUEL.jpg",
+                    "created_at": "2021-07-01 07:21:04",
+                    "updated_at": "2021-07-01 07:21:04"
+                },
+                {
+                    "id": 86,
+                    "user_id": 1,
+                    "category_id": 5,
+                    "title": "Irak : des funérailles symboliques pour des miliciens pro-Iran tués dans des raids américains",
+                    "description": "\nSous les cris \"Mort à l'Amérique\" et \"Vengeance pour les martyrs\", des milliers de personnes se sont rassemblées, mardi, à Bagdad, pour des funérailles symboliques en hommage aux victimes d'un raid américain dans la nuit de samedi à dimanche. \n",
+                    "pubDate": "2021-06-29 12:05:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/9aeef166-d8cb-11eb-8966-005056bf30b7\/w:1024\/p:16x9\/000_9DG6XL.jpg",
+                    "created_at": "2021-07-01 07:21:05",
+                    "updated_at": "2021-07-01 07:21:05"
+                },
+                {
+                    "id": 87,
+                    "user_id": 1,
+                    "category_id": 5,
+                    "title": "Canal Istanbul : le projet \"fou\" et controversé du président turc Recep Tayyip Erdogan",
+                    "description": "\nEn posant la première pierre du pont Sazlidere, l’un des six viaducs qui enjambera le Canal Istanbul, le président turc a lancé samedi ce qu'il désigne comme son \"projet fou\" : le percement d’un canal entre la mer Noire et la mer de Marmara, qui suscite en Turquie méfiance et inquiétude. Notre correspondant d'Istanbul fait le point.\n",
+                    "pubDate": "2021-06-29 08:26:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/cb5f55d0-d820-11eb-99be-005056bfd1d9\/w:1024\/p:16x9\/000_98Y6ZU.jpg",
+                    "created_at": "2021-07-01 07:21:05",
+                    "updated_at": "2021-07-01 07:21:05"
+                },
+                {
+                    "id": 88,
+                    "user_id": 1,
+                    "category_id": 5,
+                    "title": "Le chef de la diplomatie israélienne entame une visite historique aux Émirats arabes unis",
+                    "description": "\nLe chef de la diplomatie israélienne, Yaïr Lapid, effectue, mardi, une visite officielle aux Émirats arabes unis. Il est le premier ministre israélien à se rendre dans la monarchie du Golfe, un an après la normalisation des relations entre les deux pays. \n",
+                    "pubDate": "2021-06-29 08:13:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/d13f5f20-d8c2-11eb-9b11-005056a90284\/w:1024\/p:16x9\/000_9DG7HQ.jpg",
+                    "created_at": "2021-07-01 07:21:05",
+                    "updated_at": "2021-07-01 07:21:05"
+                },
+                {
+                    "id": 89,
+                    "user_id": 1,
+                    "category_id": 5,
+                    "title": "En Syrie, des milices pro-iraniennes répliquent aux raids américains",
+                    "description": "\nDes milices pro-Téhéran ont lancé, lundi soir, des projectiles sur une base militaire américaine de l'est de la Syrie, en représailles aux raids américains de la veille. La coalition internationale antijihadiste, menée par Washington, a aussitôt répliqué par \"des tirs à l'artillerie lourde\".\n",
+                    "pubDate": "2021-06-29 00:51:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/e889a4e6-d873-11eb-af84-005056a98db9\/w:1024\/p:16x9\/000_9DE9MU.jpg",
+                    "created_at": "2021-07-01 07:21:05",
+                    "updated_at": "2021-07-01 07:21:05"
+                },
+                {
+                    "id": 90,
+                    "user_id": 1,
+                    "category_id": 5,
+                    "title": "L'Égypte, la Jordanie et l'Irak se réunissent en sommet tripartite à Bagdad",
+                    "description": "\nL'Égypte, la Jordanie et l'Irak ont affirmé leur volonté de renforcer leur coopération face aux défis régionaux, dimanche, à Bagdad. Ce sommet tripartite marquait la première visite d'un chef d'État égyptien dans le pays en trois décennies.  \n",
+                    "pubDate": "2021-06-28 06:49:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/680a1cec-d7d8-11eb-891a-005056a964fe\/w:1024\/p:16x9\/000_9DB7MK.jpg",
+                    "created_at": "2021-07-01 07:21:05",
+                    "updated_at": "2021-07-01 07:21:05"
+                },
+                {
+                    "id": 91,
+                    "user_id": 1,
+                    "category_id": 5,
+                    "title": "L'Irak dénonce les frappes américaines meurtrières sur son sol contre des milices pro-iraniennes",
+                    "description": "\nDes frappes américaines meurtrières ont été portées, dimanche, contre des milices pro-iraniennes en Irak et en Syrie, en riposte à la multiplication des attaques de drones contre leurs intérêts en Irak. Bagdad dénonce avec force une \"violation flagrante\" de sa souveraineté.\n",
+                    "pubDate": "2021-06-28 06:16:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/3e931886-d7a2-11eb-bbc2-005056bf87d6\/w:1024\/p:16x9\/2021-06-21T154343Z_1400492095_RC235O9CVEIF_RTRMADP_3_SWISS-DEFENCE-FIGHTER.JPG",
+                    "created_at": "2021-07-01 07:21:05",
+                    "updated_at": "2021-07-01 07:21:05"
+                },
+                {
+                    "id": 92,
+                    "user_id": 1,
+                    "category_id": 5,
+                    "title": "Yaïr Lapid exprime à Anthony Blinken ses \"fortes réserves\" sur le nucléaire iranien",
+                    "description": "\nLe nouveau chef de la diplomatie israélienne Yaïr Lapid a fait part à son homologue américain, dimanche lors d’une première rencontre à Rome, des \"fortes réserves\" de l'État hébreu concernant les négociations pour relancer l'accord sur le nucléaire iranien, tout en souhaitant un dialogue renforcé avec Washington. \n",
+                    "pubDate": "2021-06-28 05:56:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/c9bd8508-d76c-11eb-9d49-005056a98db9\/w:1024\/p:16x9\/2021-06-27T165857Z_1570936971_RC249O9WSX6I_RTRMADP_3_USA-ISRAEL-BLINKEN-LAPID.JPG",
+                    "created_at": "2021-07-01 07:21:05",
+                    "updated_at": "2021-07-01 07:21:05"
+                },
+                {
+                    "id": 93,
+                    "user_id": 1,
+                    "category_id": 5,
+                    "title": "Nucléaire iranien : Téhéran refuse de transmettre les images de ses sites à l'AIEA",
+                    "description": "\nAlors que l'accord de surveillance des activités nucléaires de l'Iran a expiré vendredi, Téhéran a annoncé dimanche que l'Agence internationale de l'énergie automatique (AIEA) n'aurait aucun accès aux données collectées par les caméras à l'intérieur des installations nucléaires.\n",
+                    "pubDate": "2021-06-27 13:36:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/a41b13f6-aeb9-11ea-ba40-005056bf87d6\/w:1024\/p:16x9\/ef0f2d34414f365a5d60b41fb3fca0a6e5fa7dd5.jpg",
+                    "created_at": "2021-07-01 07:21:05",
+                    "updated_at": "2021-07-01 07:21:05"
+                },
+                {
+                    "id": 94,
+                    "user_id": 1,
+                    "category_id": 5,
+                    "title": "Yémen : plus de 110 morts en trois jours dans des combats pour le contrôle de Marib",
+                    "description": "\nLa guerre continue de faire rage au Yémen pour le contrôle de Marib, dernier bastion du pouvoir dans le nord du pays. Les violents combats opposant les forces gouvernementales soutenues, par l'Arabie saoudite, et les rebelles Houthis ont fait, plus d'une centaine de morts en trois jours, selon un nouveau bilan établi dimanche.\n",
+                    "pubDate": "2021-06-27 09:29:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/9387d460-d727-11eb-a32a-005056bfd1d9\/w:1024\/p:16x9\/AP21171382906317%20%281%29.jpg",
+                    "created_at": "2021-07-01 07:21:05",
+                    "updated_at": "2021-07-01 07:21:05"
+                },
+                {
+                    "id": 95,
+                    "user_id": 1,
+                    "category_id": 5,
+                    "title": "Cisjordanie : colère après la mort d'un militant, le ministre du Travail va démissionner",
+                    "description": "\nDes affrontements entre manifestants et forces de sécurité palestiniennes ont éclaté samedi en Cisjordanie occupée, au troisième jour de protestations déclenchées par la mort du militant palestinien Nizar Banat, connu pour ses vidéos critiquant l'Autorité palestinienne. Les manifestants appellent au départ de son président, Mahmoud Abbas.\n",
+                    "pubDate": "2021-06-27 08:07:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/de9a8db2-d71d-11eb-a327-005056a98db9\/w:1024\/p:16x9\/West%20Bank%20protest.jpg",
+                    "created_at": "2021-07-01 07:21:05",
+                    "updated_at": "2021-07-01 07:21:05"
+                },
+                {
+                    "id": 96,
+                    "user_id": 1,
+                    "category_id": 5,
+                    "title": "Sommet de l'UE : le sort des réfugiés syriens en Turquie de retour sur la table des négociations",
+                    "description": "\nAlors que le conflit en Syrie se poursuit, l'accord de 2016 sur l'immigration signé entre l'Union européenne et la Turquie attend d'être renouvelé. Si cet engagement financier a permis d'améliorer les conditions de vie des réfugiés syriens en Turquie, les blocages persistent tant sur les plans humanitaire que diplomatique. \n",
+                    "pubDate": "2021-06-26 10:08:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/7ea602ae-d5f3-11eb-93b1-005056a964fe\/w:1024\/p:16x9\/AP21145447576536%20%281%29.jpg",
+                    "created_at": "2021-07-01 07:21:05",
+                    "updated_at": "2021-07-01 07:21:05"
+                },
+                {
+                    "id": 97,
+                    "user_id": 1,
+                    "category_id": 5,
+                    "title": "Kurdistan irakien: le combat quotidien de Rewaz Faiq à la tête du Parlement",
+                    "description": "\nDans les pays du Moyen-Orient, seules deux femmes sont présidentes de Parlement : Fawzia Zainal au Bahreïn et Rewaz Faiq au Kurdistan irakien. Cette dernière a été élue en 2019 dans cette région autonome d'Irak. Dans une société qui reste largement patriarcale et conservatrice, la vie parlementaire est semée d'embûches pour Rewaz Faiq qui doit aussi faire face au manque de soutien au sein de son propre parti. \n",
+                    "pubDate": "2021-06-23 10:35:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/a2c6d842-d40a-11eb-bac4-005056bf87d6\/w:1024\/p:16x9\/XX%20MG%20FREEZE%20IRAQ%20KURDISTAN%20SPEAKER%20PORTRAIT.jpg",
+                    "created_at": "2021-07-01 07:21:06",
+                    "updated_at": "2021-07-01 07:21:06"
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "name": "Amériques",
+            "created_at": "2021-07-01 07:11:51",
+            "updated_at": "2021-07-01 07:11:51",
+            "user": null,
+            "news": [
+                {
+                    "id": 98,
+                    "user_id": 1,
+                    "category_id": 6,
+                    "title": "Au Canada, un \"dôme de chaleur\" à l'origine d'une canicule meurtrière",
+                    "description": "\nDans l'ouest du Canada, la région de Vancouver connaît une vague de chaleur aussi inédite que meurtrière. Le thermomètre affiche 49,5 °C. Un record absolu pour le pays. Ces derniers jours, au moins 130 personnes sont mortes subitement. Les conséquences d'un phénomène météorologique appelé \"dôme de chaleur\".\n",
+                    "pubDate": "2021-07-01 06:59:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/82ba7618-d9ae-11eb-a623-005056a90284\/w:1024\/p:16x9\/CAP%20AMERIQUES%20CANADA%20WEB.jpg",
+                    "created_at": "2021-07-01 07:21:26",
+                    "updated_at": "2021-07-01 07:21:26"
+                },
+                {
+                    "id": 99,
+                    "user_id": 1,
+                    "category_id": 6,
+                    "title": "Bill Cosby sort de prison après l'annulation de sa condamnation pour agression sexuelle",
+                    "description": "\nAprès près de trois ans de prison, Bill Cosby est libre. La Cour suprême de Pennsylvanie a annulé mercredi la condamnation de l'acteur américain pour agression sexuelle. Une décision technique, sur la forme et non sur le fond du dossier.\n",
+                    "pubDate": "2021-06-30 20:47:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/602cd274-d9e2-11eb-9623-005056bf30b7\/w:1024\/p:16x9\/AP21181606734915.jpg",
+                    "created_at": "2021-07-01 07:21:26",
+                    "updated_at": "2021-07-01 07:21:26"
+                },
+                {
+                    "id": 100,
+                    "user_id": 1,
+                    "category_id": 6,
+                    "title": "Donald Rumsfeld, secrétaire à la Défense du président George W. Bush, est mort à 88 ans",
+                    "description": "\nDonald Rumsfeld, ancien secrétaire à la Défense et pilier de l'administration américaine sous George W. Bush, est décédé à 88 ans dans l'État du Nouveau-Mexique, a annoncé, mercredi 30 juin, sa famille dans un communiqué.\n",
+                    "pubDate": "2021-06-30 19:49:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/d27d309c-d9da-11eb-a9b7-005056a97e36\/w:1024\/p:16x9\/Donald%20Rumsfeld.jpg",
+                    "created_at": "2021-07-01 07:21:26",
+                    "updated_at": "2021-07-01 07:21:26"
+                },
+                {
+                    "id": 101,
+                    "user_id": 1,
+                    "category_id": 6,
+                    "title": "Immeuble effondré en Floride : les sauveteurs dans l'attente d'un \"miracle\"",
+                    "description": "\nAlors que le président Joe Biden est attendu jeudi à Surfside, les sauveteurs continuent leur travail acharné, mais après six jours de recherches les chances de retrouver des survivants s'amenuisent. Le dernier bilan fait état de 12 morts et 149 personnes portées disparues. Le reportage de Matthieu Mabin, notre envoyé spécial en Floride aux États-Unis.\n",
+                    "pubDate": "2021-06-30 06:06:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/6d969e02-d967-11eb-ae2e-005056bf30b7\/w:1024\/p:16x9\/thumbnail%20%287%29.jpg",
+                    "created_at": "2021-07-01 07:21:26",
+                    "updated_at": "2021-07-01 07:21:26"
+                },
+                {
+                    "id": 102,
+                    "user_id": 1,
+                    "category_id": 6,
+                    "title": "Au Canada, une canicule historique fait plusieurs dizaines de morts",
+                    "description": "\nLa vague de chaleur qui s'abat sur l'ouest du Canada a provoqué la mort de dizaines personnes ces derniers jours, ont annoncé les autorités. Un nouveau record de chaleur absolu a été établi dans le pays avec près de 50°C au nord-est de Vancouver.\n",
+                    "pubDate": "2021-06-30 05:40:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/9adb6adc-d962-11eb-8e83-005056a90284\/w:1024\/p:16x9\/000_9DK4CV.jpg",
+                    "created_at": "2021-07-01 07:21:26",
+                    "updated_at": "2021-07-01 07:21:26"
+                },
+                {
+                    "id": 103,
+                    "user_id": 1,
+                    "category_id": 6,
+                    "title": "L'ouest du Canada et des États-Unis sous un \"dôme de chaleur\" historique",
+                    "description": "\nDans les villes américaines de Portland et Seattle, tout comme dans les alentours de la ville canadienne de Vancouver, la température a atteint lundi son plus haut niveau jamais enregistré. Cette vague de chaleur, due à de hautes pressions qui emprisonnent l'air chaud dans la région, doit durer toute la semaine.\n",
+                    "pubDate": "2021-06-29 01:31:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/8745f67a-d7bb-11eb-bff7-005056a98db9\/w:1024\/p:16x9\/2021-06-28T023953Z_1341417105_RC299O9L7ZTT_RTRMADP_3_USA-WEATHER-HEATWAVE.JPG",
+                    "created_at": "2021-07-01 07:21:26",
+                    "updated_at": "2021-07-01 07:21:26"
+                },
+                {
+                    "id": 104,
+                    "user_id": 1,
+                    "category_id": 6,
+                    "title": "La Cour suprême du Mexique dépénalise la marijuana",
+                    "description": "\nAu Mexique, où sévissent de puissants cartels, la Cour suprême a dépénalisé lundi l'usage de cannabis à des fins récréatives. Le Congrès doit encore légiférer sur la question.\n",
+                    "pubDate": "2021-06-28 23:46:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/e6081850-d86a-11eb-aa84-005056a98db9\/w:1024\/p:16x9\/000_94M9CL.jpg",
+                    "created_at": "2021-07-01 07:21:26",
+                    "updated_at": "2021-07-01 07:21:26"
+                },
+                {
+                    "id": 105,
+                    "user_id": 1,
+                    "category_id": 6,
+                    "title": "Joe Biden reçoit le président israélien Reuven Rivlin à Washington",
+                    "description": "\nAvant une prochaine visite du Premier ministre israélien Naftali Bennett aux États-Unis, le président américain Joe Biden a reçu, lundi, le chef de l'État israélien Reuven Rivlin à la Maison Blanche. Au menu des discussions entre les deux hommes : le dossier du nucléaire iranien.\n",
+                    "pubDate": "2021-06-28 23:30:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/2a07d124-d868-11eb-90a5-005056bf87d6\/w:1024\/p:16x9\/063_1325969676.jpg",
+                    "created_at": "2021-07-01 07:21:26",
+                    "updated_at": "2021-07-01 07:21:26"
+                },
+                {
+                    "id": 106,
+                    "user_id": 1,
+                    "category_id": 6,
+                    "title": "L’ONU appelle les États à prendre des mesures contre le \"racisme systémique\"",
+                    "description": "\nLes États \"doivent cesser de nier\" le racisme et commencer \"à le démanteler\", a exhorté lundi Michelle Bachelet, Haute-commissaire de l'ONU aux droits de l'Homme, quelques jours après la condamnation aux États-Unis du policier qui a tué George Floyd. \n",
+                    "pubDate": "2021-06-28 10:16:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/c1ea27a0-d37a-11eb-af5d-005056bfd1d9\/w:1024\/p:16x9\/c991f54eefecc97e84ced8a9d0309c53c8ad7d4c.jpg",
+                    "created_at": "2021-07-01 07:21:26",
+                    "updated_at": "2021-07-01 07:21:26"
+                },
+                {
+                    "id": 107,
+                    "user_id": 1,
+                    "category_id": 6,
+                    "title": "Découverte de corps d’enfants autochtones :  comme si le Canada \"se réveillait d'une longue amnésie\"",
+                    "description": "\nAu Canada, la découverte de restes de plusieurs centaines d'enfants à proximité d'anciens pensionnats autochtones a provoqué stupeur et indignation dans le pays. Au-delà des hommages, certains appellent à une réelle prise de conscience afin de renverser \"l’invisibilisation\" des Premières Nations.\n",
+                    "pubDate": "2021-06-28 06:46:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/8119b3e2-d750-11eb-b58e-005056bfd1d9\/w:1024\/p:16x9\/000_9BG7CA.jpg",
+                    "created_at": "2021-07-01 07:21:26",
+                    "updated_at": "2021-07-01 07:21:26"
+                },
+                {
+                    "id": 108,
+                    "user_id": 1,
+                    "category_id": 6,
+                    "title": "Canada : un \"dôme de chaleur\" provoque des températures record",
+                    "description": "\nTrois provinces et deux territoires arctiques surplombés par un \"dôme de chaleur\" dans l'ouest canadien ont battu, dimanche, de nouveaux records de températures, déclenchant des alertes à la chaleur.  \n",
+                    "pubDate": "2021-06-28 05:31:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/961b9952-d7cf-11eb-b255-005056bfd1d9\/w:1024\/p:16x9\/AP18186747347546%20%281%29.jpg",
+                    "created_at": "2021-07-01 07:21:26",
+                    "updated_at": "2021-07-01 07:21:26"
+                },
+                {
+                    "id": 109,
+                    "user_id": 1,
+                    "category_id": 6,
+                    "title": "Haïti : toujours plus loin dans le chaos",
+                    "description": "\nHaïti connaît une crise politique majeure sur fond d’insécurité et de marasme économique. Tandis que la Haut-Commissaire des Nations unies aux droits de l’Homme, Michelle Bachelet, s’est dite extrêmement préoccupée par le niveau d'insécurité, l’ONG Médecin Sans Frontières alerte sur des affrontements armés et les braquages qui mettent en péril ses activités médicales. Des gangs s’affrontent à Port-au-Prince.\n",
+                    "pubDate": "2021-06-27 21:37:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/8c7ff6aa-d78d-11eb-9c92-005056a98db9\/w:1024\/p:16x9\/HAITI%20BIS.jpg",
+                    "created_at": "2021-07-01 07:21:27",
+                    "updated_at": "2021-07-01 07:21:27"
+                },
+                {
+                    "id": 110,
+                    "user_id": 1,
+                    "category_id": 6,
+                    "title": "Immeuble effondré en Floride : le bilan s'alourdit, les recherches se poursuivent",
+                    "description": "\nLes recherches se poursuivaient, dimanche, quatre jours après l'effondrement d'un immeuble résidentiel près de Miami, aux États-Unis. De nouvelles victimes ont été retrouvées dans les décombres, a annoncé la maire.\n",
+                    "pubDate": "2021-06-27 16:14:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/23673622-d75d-11eb-a00a-005056a98db9\/w:1024\/p:16x9\/000_9DB43C.jpg",
+                    "created_at": "2021-07-01 07:21:27",
+                    "updated_at": "2021-07-01 07:21:27"
+                },
+                {
+                    "id": 111,
+                    "user_id": 1,
+                    "category_id": 6,
+                    "title": "Donald Trump revient sur le devant de la scène avec un grand meeting dans l’Ohio",
+                    "description": "\nDevant des milliers de partisans, Donald Trump a lancé samedi soir dans l'Ohio la bataille pour les élections de mi-mandat. Pour son grand retour sur scène depuis qu'il a quitté la Maison Blanche, l'ex-président américain a abordé ses thèmes favoris : immigration et élection \"volée\".\n",
+                    "pubDate": "2021-06-27 05:58:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/efb0106a-d707-11eb-90bc-005056bfd1d9\/w:1024\/p:16x9\/000_9DA7KC.jpg",
+                    "created_at": "2021-07-01 07:21:27",
+                    "updated_at": "2021-07-01 07:21:27"
+                },
+                {
+                    "id": 112,
+                    "user_id": 1,
+                    "category_id": 6,
+                    "title": "Immeuble effondré en Floride : les recherches se poursuivent, l'état du bâtiment en question",
+                    "description": "\nLes recherches se poursuivaient, samedi, trois jours après l'effondrement d'un immeuble résidentiel près de Miami, aux États-Unis, tandis que des \"dommages structurels majeurs\" sur le bâtiment sont pointés du doigt. \n",
+                    "pubDate": "2021-06-26 15:44:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/e1d82f9c-d692-11eb-8884-005056a964fe\/w:1024\/p:16x9\/000_9D84FY.jpg",
+                    "created_at": "2021-07-01 07:21:27",
+                    "updated_at": "2021-07-01 07:21:27"
+                }
+            ]
+        },
+        {
+            "id": 7,
+            "name": "Asie Pacifique",
+            "created_at": "2021-07-01 07:11:51",
+            "updated_at": "2021-07-01 07:11:51",
+            "user": null,
+            "news": [
+                {
+                    "id": 113,
+                    "user_id": 1,
+                    "category_id": 7,
+                    "title": "Chine : Xi Jinping célèbre le centenaire du Parti sur la place Tiananmen",
+                    "description": "\nLe président chinois Xi Jinping a salué jeudi le \"nouveau monde\" créé par le peuple chinois à l'occasion d'une cérémonie organisée à Pékin pour célébrer le centenaire de la création du Parti communiste.\n",
+                    "pubDate": "2021-07-01 07:20:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/6dca17ac-da32-11eb-a56b-005056a90284\/w:1024\/p:16x9\/3cbdebc29234771b3e3a945b167678d839502b6c.jpg",
+                    "created_at": "2021-07-01 07:21:47",
+                    "updated_at": "2021-07-01 07:21:47"
+                },
+                {
+                    "id": 114,
+                    "user_id": 1,
+                    "category_id": 7,
+                    "title": "L'expansionnisme chinois, une politique qui doit plus à la \"tradition\" qu'au Parti communiste",
+                    "description": "\nLe Parti communiste chinois fête jeudi son centenaire, dans un contexte de méfiance internationale à l'égard des velléités expansionnistes de l'empire du Milieu. Si le président chinois Xi Jinping a réitéré mercredi sa volonté de \"hisser\" son pays \"au premier rang du monde\" à l'horizon 2049, cette stratégie appartient, selon Jean-Vincent Brisset, chercheur associé à l'Iris, davantage à la \"tradition\" chinoise qu'à l'idéologie du parti.\n",
+                    "pubDate": "2021-07-01 04:38:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/87eea21e-d9b6-11eb-a648-005056a90284\/w:1024\/p:16x9\/000_9DK92X.jpg",
+                    "created_at": "2021-07-01 07:21:47",
+                    "updated_at": "2021-07-01 07:21:47"
+                },
+                {
+                    "id": 115,
+                    "user_id": 1,
+                    "category_id": 7,
+                    "title": "Après 70 ans de lutte, la Chine a réussi a éradiquer le paludisme",
+                    "description": "\nC'est officiel, la Chine est définitivement débarrassée du paludisme, a annoncé l'OMS mercredi. Le pays, qui recensait 30 millions de cas par an dans les années 1940, n'a pas signalé un seul cas indigène depuis 2017.\n",
+                    "pubDate": "2021-06-30 13:32:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/475505cc-d9a2-11eb-b307-005056a97e36\/w:1024\/p:16x9\/000_APH2002100409937.jpg",
+                    "created_at": "2021-07-01 07:21:47",
+                    "updated_at": "2021-07-01 07:21:47"
+                },
+                {
+                    "id": 116,
+                    "user_id": 1,
+                    "category_id": 7,
+                    "title": "Afghanistan : \"Une possibilité réelle de voir les Taliban au pouvoir dans les prochains mois\"",
+                    "description": "\nAprès une percée fulgurante dans le nord-est de l'Afghanistan, les Taliban continuent de conquérir de nouveaux territoires dans le pays, alors que le retrait des troupes américaines est presque achevé. Ils espèrent provoquer un effondrement du gouvernement afghan.\n",
+                    "pubDate": "2021-06-30 13:06:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/6d387250-d99e-11eb-ac77-005056bf30b7\/w:1024\/p:16x9\/2021-06-29T113707Z_469064130_RC2AAO9KVJBY_RTRMADP_3_AFGHANISTAN-TALIBAN.JPG",
+                    "created_at": "2021-07-01 07:21:47",
+                    "updated_at": "2021-07-01 07:21:47"
+                },
+                {
+                    "id": 117,
+                    "user_id": 1,
+                    "category_id": 7,
+                    "title": "Covid-19 : Kim Jong-un limoge des responsables nord-coréens après un \"grave incident\"",
+                    "description": "\nLe numéro un nord-coréen Kim Jong-un a réprimandé des hauts responsables au pouvoir à Pyongyang pour des manquements dans la lutte contre l'épidémie qui ont entraîné un \"incident grave\" et mis en danger la sécurité du pays et de sa population, a rapporté mercredi l'agence de presse officielle nord-coréenne.\n",
+                    "pubDate": "2021-06-30 11:11:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/9c39c082-d98e-11eb-a99f-005056a97e36\/w:1024\/p:16x9\/000_9DK47K.jpg",
+                    "created_at": "2021-07-01 07:21:47",
+                    "updated_at": "2021-07-01 07:21:47"
+                },
+                {
+                    "id": 118,
+                    "user_id": 1,
+                    "category_id": 7,
+                    "title": "Afghanistan : les ONG poursuivent leurs activités malgré une situation sécuritaire \"inquiétante\"",
+                    "description": "\nL'angoisse monte en Afghanistan, face à la progression éclair des Taliban dans plusieurs zones et le risque de voir le pays basculer dans une guerre civile. Pour autant, les ONG et institutions d'aide humanitaire maintiennent leur présence sur place. Certaines déplorent le départ de leurs employés afghans.\n",
+                    "pubDate": "2021-06-29 12:44:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/c51db696-d8c8-11eb-b506-005056bf30b7\/w:1024\/p:16x9\/2021-06-24T014043Z_1717260605_RC2D6O9KTJUO_RTRMADP_3_AFGHANISTAN-TALIBAN-RALLY.JPG",
+                    "created_at": "2021-07-01 07:21:47",
+                    "updated_at": "2021-07-01 07:21:47"
+                },
+                {
+                    "id": 119,
+                    "user_id": 1,
+                    "category_id": 7,
+                    "title": "Japon : jugés à Tokyo, deux complices de Carlos Ghosn regrettent de l'avoir aidé à fuir",
+                    "description": "\nAccusés d'avoir participé à l'exfiltration de Carlos Ghosn du Japon, les deux Américains Michael Taylor et de son fils Peter ont dit, mardi, regretter l'aide qu'ils ont apporté à l'ancien PDG de Nissan. Les deux complices ont présenté leurs excuses.\n",
+                    "pubDate": "2021-06-29 12:02:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/98208f0a-d8ce-11eb-9be7-005056a90284\/w:1024\/p:16x9\/AP21180330484569.jpg",
+                    "created_at": "2021-07-01 07:21:47",
+                    "updated_at": "2021-07-01 07:21:47"
+                },
+                {
+                    "id": 120,
+                    "user_id": 1,
+                    "category_id": 7,
+                    "title": "Inde : quand le gouvernement promeut des remèdes miracles face au Covid-19",
+                    "description": "\nEn Inde, avec la pandémie, la promotion des pseudosciences et des remèdes miracles a explosé dans les médias comme sur les réseaux sociaux. L’un des principaux lobbyistes de la médecine alternative n’est autre que... le gouvernement nationaliste hindou de Narendra Modi, bien décidé à remettre au goût du jour des pratiques issues de l'hindouisme telles que l'ayurveda. Face aux risques de tromperie encourus par les citoyens, l'Association des médecins indiens s’inquiète. \n",
+                    "pubDate": "2021-06-28 13:22:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/7fbd8bd6-d809-11eb-8596-005056bfd1d9\/w:1024\/p:16x9\/XX%20NW%20OOV%20ECRAN%20FREEZE%20INDE%20PSEUDOSCIENCES.jpg",
+                    "created_at": "2021-07-01 07:21:47",
+                    "updated_at": "2021-07-01 07:21:47"
+                },
+                {
+                    "id": 121,
+                    "user_id": 1,
+                    "category_id": 7,
+                    "title": "Australie : les autorités reconfinent la ville de Sydney à cause du variant Delta",
+                    "description": "\nFace à la progression du variant Delta, les autorités australiennes ont décrété samedi un reconfinement total de la ville de Sydney, métropole la plus importante d'Australie avec plus de cinq millions d'habitants. \n",
+                    "pubDate": "2021-06-26 06:12:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/d94c3904-d642-11eb-bcb7-005056bfd1d9\/w:1024\/p:16x9\/Sydney%20Street.jpg",
+                    "created_at": "2021-07-01 07:21:47",
+                    "updated_at": "2021-07-01 07:21:47"
+                },
+                {
+                    "id": 122,
+                    "user_id": 1,
+                    "category_id": 7,
+                    "title": "Nucléaire iranien : Paris et Washington augmentent la pression sur Téhéran",
+                    "description": "\nLes États-Unis et la France ont mis en garde vendredi le nouveau pouvoir iranien. Si Téhéran veut revenir dans l'accord de Vienne sur le nucléaire, les autorités devront rapidement prendre des \"décisions courageuses et fortes\". \n",
+                    "pubDate": "2021-06-25 14:03:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/107abc98-d5b7-11eb-a1de-005056bf87d6\/w:1024\/p:16x9\/000_9D48PW.jpg",
+                    "created_at": "2021-07-01 07:21:47",
+                    "updated_at": "2021-07-01 07:21:47"
+                },
+                {
+                    "id": 123,
+                    "user_id": 1,
+                    "category_id": 7,
+                    "title": "Les Hongkongais s'arrachent la dernière édition du journal pro-démocratie Apple Daily",
+                    "description": "\nLes habitants de Hong Kong se sont précipités vers les kiosques à journaux jeudi pour acheter la dernière édition du journal pro-démocratie Apple Daily, contraint par les autorités de mettre un terme à ses 26 années d'existence.\n",
+                    "pubDate": "2021-06-24 06:26:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/6c85c866-d4a9-11eb-b021-005056bfd1d9\/w:1024\/p:16x9\/Hong%20Kong%20Apple%20Daily.jpg",
+                    "created_at": "2021-07-01 07:21:47",
+                    "updated_at": "2021-07-01 07:21:47"
+                },
+                {
+                    "id": 124,
+                    "user_id": 1,
+                    "category_id": 7,
+                    "title": "Covid-19 : des rebonds de contaminations font douter de l'efficacité des vaccins chinois",
+                    "description": "\nPlusieurs pays qui ont mené des campagnes de vaccination de grande ampleur en utilisant les vaccins chinois sont actuellement confrontés à un regain du nombre de contaminations. Pour certains, c’est la preuve que les molécules mises au point en Chine sont moins efficaces que ce qu’on pouvait croire. Pour d’autres, la situation sur le terrain est plus complexe. \n",
+                    "pubDate": "2021-06-23 16:50:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/0492e3ba-d436-11eb-83d4-005056a964fe\/w:1024\/p:16x9\/230621-sinovac-chine-vaccin-m.jpg",
+                    "created_at": "2021-07-01 07:21:47",
+                    "updated_at": "2021-07-01 07:21:47"
+                },
+                {
+                    "id": 125,
+                    "user_id": 1,
+                    "category_id": 7,
+                    "title": "Hong Kong : bâillonné par Pékin, le journal prodémocratie Apple Daily cessera de paraître dès jeudi",
+                    "description": "\nLe journal hongkongais Apple Daily a annoncé mercredi qu'il cesserait de paraître à partir de jeudi. Il y a moins d'une semaine, ce quotidien très critique envers Pékin et soutien de la première heure du mouvement prodémocratie a vu ses actifs gelés et cinq de ses dirigeants arrêtés.\n",
+                    "pubDate": "2021-06-23 09:19:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/68ae3870-d401-11eb-9d10-005056a98db9\/w:1024\/p:16x9\/000_9CX3ZV.jpg",
+                    "created_at": "2021-07-01 07:21:48",
+                    "updated_at": "2021-07-01 07:21:48"
+                },
+                {
+                    "id": 126,
+                    "user_id": 1,
+                    "category_id": 7,
+                    "title": "Le premier procès pour non-respect de la loi sur la sécurité nationale débute à Hong Kong",
+                    "description": "\nLe premier procès d'une personne poursuivie pour avoir enfreint la loi sur la sécurité nationale se tient mercredi à Hong Kong. L'accusé, Tong Ying-kit, a plaidé non coupable à l'ouverture de son procès, près d'un an après avoir été accusé d'avoir foncé en moto sur des agents lors d'un rassemblement, alors qu'il portait un drapeau sur lequel un slogan contestataire était écrit.\n",
+                    "pubDate": "2021-06-23 07:55:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/e28158c0-d3da-11eb-a12b-005056bf87d6\/w:1024\/p:16x9\/hong%20kong.jpeg",
+                    "created_at": "2021-07-01 07:21:48",
+                    "updated_at": "2021-07-01 07:21:48"
+                },
+                {
+                    "id": 127,
+                    "user_id": 1,
+                    "category_id": 7,
+                    "title": "Armée américaine en Afghanistan : possible retard du départ avec l'avancée des Taliban",
+                    "description": "\"Les récentes percées\" militaires des talibans en Afghanistan sont \"préoccupantes\", a affirmé mardi 22 juin au Conseil de sécurité de l'ONU sa représentante dans ce pays, Deborah Lyons, en jugeant que leur positionnement vise à s'emparer des capitales provinciales.",
+                    "pubDate": "2021-06-22 15:52:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/bb21c526-d371-11eb-a9f8-005056a98db9\/w:1024\/p:16x9\/FR_20210622_163047_163323_CS.jpg",
+                    "created_at": "2021-07-01 07:21:48",
+                    "updated_at": "2021-07-01 07:21:48"
+                }
+            ]
+        },
+        {
+            "id": 8,
+            "name": "Économie",
+            "created_at": "2021-07-01 07:11:51",
+            "updated_at": "2021-07-01 07:11:51",
+            "user": null,
+            "news": [
+                {
+                    "id": 128,
+                    "user_id": 1,
+                    "category_id": 8,
+                    "title": "Antitrust : revers en justice pour les autorités américaines face à Facebook",
+                    "description": "\nL'autorité américaine de la concurrence ainsi que 48 États et territoires américains ont perdu, lundi, une manche en justice face à Facebook, qu'ils accusent de pratiques anti-concurrentielles. Résultat : l'action du groupe est montée en flèche.\n",
+                    "pubDate": "2021-06-29 01:44:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/18195856-d86e-11eb-ab26-005056bf87d6\/w:1024\/p:16x9\/74c0ce041124363521369a870e11b85f765b607c.jpg",
+                    "created_at": "2021-07-01 07:22:13",
+                    "updated_at": "2021-07-01 07:22:13"
+                },
+                {
+                    "id": 129,
+                    "user_id": 1,
+                    "category_id": 8,
+                    "title": "Pourquoi les ovnis reviennent à la mode aux États-Unis",
+                    "description": "\nLe Pentagone a remis vendredi un rapport très attendu sur les observations de \"phénomènes aérospatiaux non-identifés\". Il ne contient pas de révélation explosive, mais le fait que ce rapport ait pu voir le jour est un exploit en soi. \n",
+                    "pubDate": "2021-06-26 07:30:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/1e0f67c4-d5c5-11eb-8ae8-005056a964fe\/w:1024\/p:16x9\/250621-ufo-us-pentagon-m.jpg",
+                    "created_at": "2021-07-01 07:22:13",
+                    "updated_at": "2021-07-01 07:22:13"
+                },
+                {
+                    "id": 130,
+                    "user_id": 1,
+                    "category_id": 8,
+                    "title": "Quand le port de Yantian s'enraie, le commerce mondial déraille",
+                    "description": "\nLa fermeture du port chinois de Yantian, pendant près de deux semaines, a déjà eu un impact plus important sur le commerce mondial que l'incident du Canal de Suez en mars dernier. Moins médiatisé que les déboires de l'\"Ever Given\", ce blocage pourrait cependant avoir des conséquences jusqu’à la fin de l'année.\n",
+                    "pubDate": "2021-06-22 15:40:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/83c7c152-d367-11eb-8570-005056bfd1d9\/w:1024\/p:16x9\/220621-yantian-port-m.jpg",
+                    "created_at": "2021-07-01 07:22:13",
+                    "updated_at": "2021-07-01 07:22:13"
+                },
+                {
+                    "id": 131,
+                    "user_id": 1,
+                    "category_id": 8,
+                    "title": "La Commission européenne lance une enquête contre Google pour des pratiques anticoncurrentielles",
+                    "description": "\nLa Commission européenne a annoncé, mardi, ouvrir une enquête contre Google pour des pratiques anticoncurrentielles dans le secteur de la publicité en ligne. \n",
+                    "pubDate": "2021-06-22 12:19:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/45fdec02-d344-11eb-a970-005056a964fe\/w:1024\/p:16x9\/6a851d8ce52d8dfdd5422e2571b2ee243dbfca29.jpg",
+                    "created_at": "2021-07-01 07:22:13",
+                    "updated_at": "2021-07-01 07:22:13"
+                },
+                {
+                    "id": 132,
+                    "user_id": 1,
+                    "category_id": 8,
+                    "title": "VivaTech : comment la \"start up nation\" a survécu à la crise sanitaire",
+                    "description": "\nLe salon VivaTech est l’occasion, depuis mercredi, de prouver que la crise sanitaire n'a pas fermé le robinet à innovation des start-up françaises. L'année 2020 a même été l’une des années les plus fastes pour un écosystème qui intéresse de plus en plus les investisseurs étrangers.\n",
+                    "pubDate": "2021-06-18 09:07:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/8f267f3c-cfae-11eb-a6dd-005056bf87d6\/w:1024\/p:16x9\/170621-viva-startup-m.jpg",
+                    "created_at": "2021-07-01 07:22:13",
+                    "updated_at": "2021-07-01 07:22:13"
+                },
+                {
+                    "id": 133,
+                    "user_id": 1,
+                    "category_id": 8,
+                    "title": "La tech africaine fait son show à Vivatech",
+                    "description": "\nDédié aux innovations numériques, le salon Vivatech, qui se tient cette année à Paris du 16 au 19 juin, fait la part belle à la tech africaine. La RDC y est notamment bien représentée, et un moment d'échange virtuel avec le président Félix Tshisekedi était prévu ce vendredi. Son gouvernement, en collaboration avec la Banque mondiale, veut injecter 100 millions de dollars à terme dans le numérique. Un secteur en pleine croissance en Afrique, le nombre de levées de fonds ayant atteint un record en 2020 sur le continent. Décryptage.\n",
+                    "pubDate": "2021-06-18 10:23:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/59c4bf74-d009-11eb-8be5-005056bfd1d9\/w:1024\/p:16x9\/VIVATECH%2006H.jpg",
+                    "created_at": "2021-07-01 07:22:13",
+                    "updated_at": "2021-07-01 07:22:13"
+                },
+                {
+                    "id": 134,
+                    "user_id": 1,
+                    "category_id": 8,
+                    "title": "Priscille Deborah, première Française \"bionique\" : \"Je veux donner de l’espoir aux autres\"",
+                    "description": "\nPassée tout près de la mort voilà quinze ans à la suite d'une tentative de suicide, Priscille Deborah a été amputée de ses deux jambes et d'un bras. Elle a été la première patiente, en France, à recevoir un bras bionique - sorte de prothèse pionnière qu'elle a appris à contrôler par la pensée. Une prouesse scientifique et une véritable \"renaissance\" qu'elle racontent dans son livre, \"Une vie à inventer\" (éd. Albin Michel), au terme desquelles elle a réalisé le rêve qu’elle s’était autrefois \"interdit\" : devenir artiste-peintre professionnelle.\n",
+                    "pubDate": "2021-06-18 11:07:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/2af97546-ceaa-11eb-af8b-005056bfd1d9\/w:1024\/p:16x9\/FR%20NW%20PGM%20ENTRETIEN%20PRISCILLE%20DEBORAH%2016%20JUIN.jpg",
+                    "created_at": "2021-07-01 07:22:13",
+                    "updated_at": "2021-07-01 07:22:13"
+                },
+                {
+                    "id": 135,
+                    "user_id": 1,
+                    "category_id": 8,
+                    "title": "VivaTech : un salon hybride pour des innovations de sortie de crise sanitaire",
+                    "description": "\nC’est le premier grand salon à se tenir en partie en présentiel en France depuis plus d’un an. L’édition 2021 de VivaTech, la grand-messe parisienne de l’innovation technologique, s'est ouverte mercredi sous un format \"hybride\", avec des start-up qui hésitent entre tirer un trait sur la parenthèse du Covid-19 et profiter des tendances que la pandémie a fait émerger.\n",
+                    "pubDate": "2021-06-17 07:43:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/1d1d2d40-cee2-11eb-8a68-005056bf87d6\/w:1024\/p:16x9\/160621-vivatech-m.jpg",
+                    "created_at": "2021-07-01 07:22:13",
+                    "updated_at": "2021-07-01 07:22:13"
+                },
+                {
+                    "id": 136,
+                    "user_id": 1,
+                    "category_id": 8,
+                    "title": "Ferocious Kitten : les cyberespions qui veulent tout savoir sur les internautes iraniens",
+                    "description": "\nActifs depuis au moins 2015, Ferocious Kitten est un groupe de cyberespionnage beaucoup plus discret que les autres en Iran. Il dispose d’outils très efficaces pour tout savoir de l’activité des internautes iraniens, d’après un rapport de la société Kaspersky que France 24 a pu consulter.\n",
+                    "pubDate": "2021-06-16 10:19:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/934ca1d6-cdf1-11eb-9f17-005056a98db9\/w:1024\/p:16x9\/iran-hacking-picture-id1201299221.jpg",
+                    "created_at": "2021-07-01 07:22:13",
+                    "updated_at": "2021-07-01 07:22:13"
+                },
+                {
+                    "id": 137,
+                    "user_id": 1,
+                    "category_id": 8,
+                    "title": "En France, la croissance s'accélère mais des risques persistent",
+                    "description": "\nAvec la réouverture des restaurants, commerces et lieux culturels, les Français retrouvent un semblant de vie normale et consomment à nouveau. Les prévisions de croissance s'améliorent : le PIB devrait progresser de 5,8 % cette année et dépasser, dès le début de l'année 2022, son niveau d'avant crise, selon les prévisions de la Banque de France. Comment expliquer ce rebond de croissance ? Quels sont les risques qui persistent ? Et comment s'en sortent les autres pays européens ? Décryptage.\n",
+                    "pubDate": "2021-06-15 08:14:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/303728a2-7eef-11ea-909c-005056bf87d6\/w:1024\/p:16x9\/69115b235c843b0eab206347a0819d44cd05749d.jpg",
+                    "created_at": "2021-07-01 07:22:14",
+                    "updated_at": "2021-07-01 07:22:14"
+                },
+                {
+                    "id": 138,
+                    "user_id": 1,
+                    "category_id": 8,
+                    "title": "Le G7 lance un plan d'infrastructures pour contrer les \"routes de la soie\" chinoises",
+                    "description": "\nLes dirigeants des grandes puissances du G7 se retrouvent, samedi 12 juin, pour une deuxième journée qui fait la part belle aux leçons à tirer de la pandémie et à la promotion d'un plan mondial sur les infrastructures afin d'aider les pays défavorisés courtisés par le projet chinois des nouvelles \"routes de la soie\".\n",
+                    "pubDate": "2021-06-12 05:01:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/1cf61756-cac2-11eb-9da6-005056a964fe\/w:1024\/p:16x9\/959431cf2dd428c579c4b6d5b8927a6ebe44f61e.jpg",
+                    "created_at": "2021-07-01 07:22:14",
+                    "updated_at": "2021-07-01 07:22:14"
+                },
+                {
+                    "id": 139,
+                    "user_id": 1,
+                    "category_id": 8,
+                    "title": "Brexit : les saucisses de la discorde entre Londres et Bruxelles",
+                    "description": "\nLa bataille actuelle entre Londres et Bruxelles autour de l’application du Brexit en Irlande du Nord est, à bien des égards, illustrée par les tensions autour d’une éventuelle future interdiction des exportations de saucisses britanniques vers Belfast. Un vrai casse-tête pour Boris Johnson et l'Union européenne.\n",
+                    "pubDate": "2021-06-10 16:25:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/d119bb8c-c9f7-11eb-9d2b-005056a98db9\/w:1024\/p:16x9\/100621-johnson-sausageOK-m.jpg",
+                    "created_at": "2021-07-01 07:22:14",
+                    "updated_at": "2021-07-01 07:22:14"
+                },
+                {
+                    "id": 140,
+                    "user_id": 1,
+                    "category_id": 8,
+                    "title": "Dieselgate : Citroën également mis en examen pour fraude en France",
+                    "description": "\nCitroën a été mis en examen jeudi en France, dans l'enquête sur la fraude aux contrôles antipollution des anciennes générations de moteurs diesel, rejoignant ainsi les constructeurs Volkswagen, Renault et Peugeot.   \n",
+                    "pubDate": "2021-06-10 16:48:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/63aed304-ca04-11eb-9f30-005056bf87d6\/w:1024\/p:16x9\/7c9d0cba98571d5b3d59072a22b0f2c3d1fdbba8.jpg",
+                    "created_at": "2021-07-01 07:22:14",
+                    "updated_at": "2021-07-01 07:22:14"
+                },
+                {
+                    "id": 141,
+                    "user_id": 1,
+                    "category_id": 8,
+                    "title": "La Chine sous pression technologique de Washington",
+                    "description": "\nLe plan américain, approuvé par le Sénat mardi, pour contrer la Chine dans le domaine technologique n’est pas juste un énième chapitre du conflit commercial sino-américain. C’est un tournant majeur qui pourrait avoir des implications profondes pour Pékin expliquent plusieurs experts interrogés par France 24.\n",
+                    "pubDate": "2021-06-09 16:24:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/60220862-c939-11eb-aa5a-005056bff430\/w:1024\/p:16x9\/090621-semiconducteur-m.jpg",
+                    "created_at": "2021-07-01 07:22:14",
+                    "updated_at": "2021-07-01 07:22:14"
+                },
+                {
+                    "id": 142,
+                    "user_id": 1,
+                    "category_id": 8,
+                    "title": "Amazon, Reddit, Spotify... victimes d'une panne informatique, désormais résolue",
+                    "description": "\nDe nombreux sites web ont été victimes d'une panne massive, mardi matin. À l'origine du problème, la société américaine Fastly, qui propose à des éditeurs de sites internet de les aider à diffuser leurs contenus à l'échelle internationale, en hébergeant des sites miroirs du site original un peu partout dans le monde. \n",
+                    "pubDate": "2021-06-08 15:03:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/2327495e-c862-11eb-8050-005056bf87d6\/w:1024\/p:16x9\/000_8VE8TP.jpg",
+                    "created_at": "2021-07-01 07:22:14",
+                    "updated_at": "2021-07-01 07:22:14"
+                }
+            ]
+        },
+        {
+            "id": 9,
+            "name": "Sports",
+            "created_at": "2021-07-01 07:11:51",
+            "updated_at": "2021-07-01 07:11:51",
+            "user": null,
+            "news": [
+                {
+                    "id": 143,
+                    "user_id": 1,
+                    "category_id": 9,
+                    "title": "Euro-2021 : la France éliminée, quel avenir pour les Bleus ?",
+                    "description": "\nAprès deux semaines et demi de compétition, l’heure est au premier bilan. L’échec des Bleus, éliminés en huitièmes de finale. Des tensions en interne, l’avenir de Didier Deschamps en question. Vous retrouverez aussi les tops et les flops de nos deux consultants, Patrick Juillard, journaliste pour le site internet Foot 365, et Sylvère Henry Cissé, consultant spécialiste en football. \n",
+                    "pubDate": "2021-07-01 06:36:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/cdbf8386-da37-11eb-877c-005056a97e36\/w:1024\/p:16x9\/Journal%20de%20l%27Euro.jpg",
+                    "created_at": "2021-07-01 07:22:31",
+                    "updated_at": "2021-07-01 07:22:31"
+                },
+                {
+                    "id": 144,
+                    "user_id": 1,
+                    "category_id": 9,
+                    "title": "Pogacar gagne le contre-la-montre, Van Der Poel garde le maillot jaune",
+                    "description": "\nLe tenant du titre Tadej Pogacar a frappé un grand coup en remportant la 5e étape du Tour de France qui se disputait sous la forme d'un contre-la-montre individuel. L'autre belle performance de la journée c'est celle de Mathieu van der Poel qui a terminé 5e de l'étape, ce qui lui permet de conserver sa tunique jaune pour seulement 8 secondes.\n",
+                    "pubDate": "2021-06-30 16:28:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/02f5e234-d9bb-11eb-aa42-005056a90284\/w:1024\/p:16x9\/000_9DL7BM.jpg",
+                    "created_at": "2021-07-01 07:22:31",
+                    "updated_at": "2021-07-01 07:22:31"
+                },
+                {
+                    "id": 145,
+                    "user_id": 1,
+                    "category_id": 9,
+                    "title": "La spectatrice qui a provoqué une chute dans le peloton en garde à vue",
+                    "description": "\nLa spectatrice qui a causé avec sa pancarte la chute de très nombreux cyclistes du Tour de France, dont plusieurs ont été blessés, samedi en Bretagne, a été placée mercredi en garde à vue.\n",
+                    "pubDate": "2021-06-30 15:26:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/20efee8c-d9b2-11eb-bb43-005056bf30b7\/w:1024\/p:16x9\/000_9D86N3.jpg",
+                    "created_at": "2021-07-01 07:22:31",
+                    "updated_at": "2021-07-01 07:22:31"
+                },
+                {
+                    "id": 146,
+                    "user_id": 1,
+                    "category_id": 9,
+                    "title": "Euro-2021 : les favoris accrochés, une pluie de buts... le bilan des huitièmes de finale",
+                    "description": "\nLes huitièmes de finale de l'Euro-2021 se sont terminés, mardi, et ils n'ont pas été avares en surprises et en spectacle. De l'avalanche de buts à l'élimination de la France et des Pays-Bas, France 24 dresse le bilan de cette phase de la compétition.\n",
+                    "pubDate": "2021-06-29 21:54:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/70b9e4e0-d921-11eb-9fff-005056a90284\/w:1024\/p:16x9\/000_9DF9GL.jpg",
+                    "created_at": "2021-07-01 07:22:31",
+                    "updated_at": "2021-07-01 07:22:31"
+                },
+                {
+                    "id": 147,
+                    "user_id": 1,
+                    "category_id": 9,
+                    "title": "Euro-2021 : vainqueur de la Suède au finish, l'Ukraine se qualifie pour les quarts de finale",
+                    "description": "\nAu bout de la prolongation, l'Ukraine a battu in extremis la Suède 2 à 1 pour devenir le huitième et dernier qualifié pour les quarts de finale de l'Euro-2021.\n",
+                    "pubDate": "2021-06-29 21:34:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/d3b70288-d914-11eb-aa10-005056bfb2b6\/w:1024\/p:16x9\/000_9DJ8G2.jpg",
+                    "created_at": "2021-07-01 07:22:31",
+                    "updated_at": "2021-07-01 07:22:31"
+                },
+                {
+                    "id": 148,
+                    "user_id": 1,
+                    "category_id": 9,
+                    "title": "Euro-2021 : quelles sont les affiches des quarts de finale ?",
+                    "description": "\nLes huitièmes de finale se sont achevés mardi 29 juin. Les huit quarts-de-finaliste sont désormais connus. Après avoir défait le Portugal, la Belgique a droit à un deuxième choc face à l'Italie.\n",
+                    "pubDate": "2021-06-29 21:39:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/e13a921e-d45d-11eb-aed3-005056a98db9\/w:1024\/p:16x9\/000_9BD248.jpg",
+                    "created_at": "2021-07-01 07:22:31",
+                    "updated_at": "2021-07-01 07:22:31"
+                },
+                {
+                    "id": 149,
+                    "user_id": 1,
+                    "category_id": 9,
+                    "title": "Euro-2021 : dans son temple de Wembley, l’Angleterre élimine l’Allemagne",
+                    "description": "\nLa sélection anglaise a remporté le choc face à la Mannschaft allemande mardi à Wembley grâce à l’inévitable Raheem Sterling et son capitaine-buteur retrouvé, Harry Kane (2-0). Après cette victoire acquise dans une ambiance folle, les Three Lions poursuivent leur route dans cet Euro-2021. Ils affronteront la Suède ou l’Ukraine au tour suivant.\n",
+                    "pubDate": "2021-06-29 13:44:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/ac67fe32-d903-11eb-8e91-005056a90284\/w:1024\/p:16x9\/000_9DJ2VJ.jpg",
+                    "created_at": "2021-07-01 07:22:31",
+                    "updated_at": "2021-07-01 07:22:31"
+                },
+                {
+                    "id": 150,
+                    "user_id": 1,
+                    "category_id": 9,
+                    "title": "Wimbledon : blessée et en larmes, Serena Williams abandonne dès le premier tour",
+                    "description": "\nSerena Williams a dû jeter l'éponge mardi lors de son match du premier tour de Wimbledon face à la Biélorusse Aliaksandra Sasnovich. Blessée à une cuisse et incapable de poursuivre la rencontre, l'Américaine a quitté le court en pleurs.\n",
+                    "pubDate": "2021-06-29 19:32:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/87449eca-d90e-11eb-b060-005056bf30b7\/w:1024\/p:16x9\/000_9DJ7UQ.jpg",
+                    "created_at": "2021-07-01 07:22:31",
+                    "updated_at": "2021-07-01 07:22:31"
+                },
+                {
+                    "id": 151,
+                    "user_id": 1,
+                    "category_id": 9,
+                    "title": "Le revenant Cavendish remporte la 4e étape au sprint, van der Poel reste en jaune",
+                    "description": "\nMark Cavendish s'est imposé à l'issue d'un sprint massif à Fougères lors de la 4e étape du Tour de France 2021. Mathieu van der Poel conserve son maillot jaune. Une étape marquée par une grève symbolique du peloton après les chutes de la veille.\n",
+                    "pubDate": "2021-06-29 15:09:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/35ed56aa-d8ed-11eb-aad6-005056a97e36\/w:1024\/p:16x9\/789232381a7a90ba0a35ea209f5b2a22b65cf967.jpg",
+                    "created_at": "2021-07-01 07:22:31",
+                    "updated_at": "2021-07-01 07:22:31"
+                },
+                {
+                    "id": 152,
+                    "user_id": 1,
+                    "category_id": 9,
+                    "title": "Euro-2021 : le capitaine Lloris n’a pas suffi pour sauver les Bleus",
+                    "description": "\nHugo Lloris est apparu touché par l’élimination de l’équipe de France en huitièmes de finale face à la Suisse, lundi à Bucarest (3-3, 5 tirs au but à 4). Le gardien, qui avait relancé les Bleus en sortant un penalty en seconde période, ne le cache pas : cet échec \"fait mal\". Il appelle à la remobilisation immédiate.\n",
+                    "pubDate": "2021-06-28 22:42:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/dbbb957e-d861-11eb-a08d-005056a964fe\/w:1024\/p:16x9\/000_9DF7PR.jpg",
+                    "created_at": "2021-07-01 07:22:31",
+                    "updated_at": "2021-07-01 07:22:31"
+                },
+                {
+                    "id": 153,
+                    "user_id": 1,
+                    "category_id": 9,
+                    "title": "Euro-2021 : au bout de la nuit, la Suisse brise les rêves de l'équipe de France",
+                    "description": "\nAu terme d'une rencontre haletante et indécise jusqu'au bout, l'équipe de France s'est inclinée face à la \"Nati\" suisse en huitième de finale de l'Euro-2021 lundi (3-3, 5 tirs au but à 4). Les champions du monde, fébriles en défense, sont passés par tous les états avant de déposer les armes à Bucarest. En quarts de finale, les Suisses affronteront l'Espagne.\n",
+                    "pubDate": "2021-06-28 16:00:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/80bafcca-d85a-11eb-bebd-005056bf87d6\/w:1024\/p:16x9\/000_9DF8N3.jpg",
+                    "created_at": "2021-07-01 07:22:31",
+                    "updated_at": "2021-07-01 07:22:31"
+                },
+                {
+                    "id": 154,
+                    "user_id": 1,
+                    "category_id": 9,
+                    "title": "Des blessures à la défaite : comment les Bleus ont perdu le fil de leur Euro",
+                    "description": "\nL'Euro-2021 s'est arrêté prématurément lundi pour l'équipe de France face à la Suisse en huitième de finale. La conclusion d'un mois mouvementé entre tensions internes, pépins physiques et prestations en deça des standards des Bleus.\n",
+                    "pubDate": "2021-06-28 22:29:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/b0617c42-d85f-11eb-9bb6-005056a964fe\/w:1024\/p:16x9\/000_9DF9LR.jpg",
+                    "created_at": "2021-07-01 07:22:31",
+                    "updated_at": "2021-07-01 07:22:31"
+                },
+                {
+                    "id": 155,
+                    "user_id": 1,
+                    "category_id": 9,
+                    "title": "Euro-2021 : Angleterre-Allemagne, classique tendu entre cadors en plein doute",
+                    "description": "\nLes Three Lions et la Nationalmannschaft se retrouvent à Wembley pour un huitième de finale chargés de sentiments contrastés et souvenirs douloureux. Les deux sélections sont ambitieuses, mais le premier tour a quelque peu douché cet enthousiasme. Mardi soir, l'une d'elles restera à quai avec beaucoup de questionnements en tête.\n",
+                    "pubDate": "2021-06-28 21:53:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/93ed6d8e-d821-11eb-836a-005056a98db9\/w:1024\/p:16x9\/000_9DA924.jpg",
+                    "created_at": "2021-07-01 07:22:31",
+                    "updated_at": "2021-07-01 07:22:31"
+                },
+                {
+                    "id": 156,
+                    "user_id": 1,
+                    "category_id": 9,
+                    "title": "Euro-2021: l’Espagne terrasse la Croatie au terme d’un match fou",
+                    "description": "\nAu terme d'un match plein de suspense, l’Espagne est venue à bout des vice-champions du monde croates lundi à Copenhague. La rencontre, disputée sur un rythme endiablé, a vu la Roja s’imposer à l’arrachée malgré la persévérance d’une Croatie courageuse (5–3 après prolongation). Les Espagnols défieront la France ou la Suisse en quarts.\n",
+                    "pubDate": "2021-06-28 18:34:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/d97ea62a-d834-11eb-96e3-005056bfd1d9\/w:1024\/p:16x9\/000_9DE4LE.jpg",
+                    "created_at": "2021-07-01 07:22:31",
+                    "updated_at": "2021-07-01 07:22:31"
+                },
+                {
+                    "id": 157,
+                    "user_id": 1,
+                    "category_id": 9,
+                    "title": "Euro-2021 : la France à la recherche de la bonne formule face à la Suisse",
+                    "description": "\nAprès une phase de groupes traversée laborieusement par l'équipe de France, les Bleus retrouvent la saveur des matches à élimination directe lundi face à la Suisse. Contre la \"Nati\", Didier Deschamps va devoir trouver la bonne formule, entre bricolage en défense en raison des blessures et besoin d'enfin faire briller son attaque.\n",
+                    "pubDate": "2021-06-27 21:12:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/51b4ca3e-d74a-11eb-9eda-005056a964fe\/w:1024\/p:16x9\/000_9CZ87H.jpg",
+                    "created_at": "2021-07-01 07:22:32",
+                    "updated_at": "2021-07-01 07:22:32"
+                },
+                {
+                    "id": 158,
+                    "user_id": 1,
+                    "category_id": 9,
+                    "title": "Euro-2021 : la France éliminée, quel avenir pour les Bleus ?",
+                    "description": "\nAprès deux semaines et demi de compétition, l’heure est au premier bilan. L’échec des Bleus, éliminés en huitièmes de finale. Des tensions en interne, l’avenir de Didier Deschamps en question. Vous retrouverez aussi les tops et les flops de nos deux consultants, Patrick Juillard, journaliste pour le site internet Foot 365, et Sylvère Henry Cissé, consultant spécialiste en football. \n",
+                    "pubDate": "2021-07-01 06:36:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/cdbf8386-da37-11eb-877c-005056a97e36\/w:1024\/p:16x9\/Journal%20de%20l%27Euro.jpg",
+                    "created_at": "2021-07-01 07:24:03",
+                    "updated_at": "2021-07-01 07:24:03"
+                },
+                {
+                    "id": 159,
+                    "user_id": 1,
+                    "category_id": 9,
+                    "title": "Pogacar gagne le contre-la-montre, Van Der Poel garde le maillot jaune",
+                    "description": "\nLe tenant du titre Tadej Pogacar a frappé un grand coup en remportant la 5e étape du Tour de France qui se disputait sous la forme d'un contre-la-montre individuel. L'autre belle performance de la journée c'est celle de Mathieu van der Poel qui a terminé 5e de l'étape, ce qui lui permet de conserver sa tunique jaune pour seulement 8 secondes.\n",
+                    "pubDate": "2021-06-30 16:28:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/02f5e234-d9bb-11eb-aa42-005056a90284\/w:1024\/p:16x9\/000_9DL7BM.jpg",
+                    "created_at": "2021-07-01 07:24:03",
+                    "updated_at": "2021-07-01 07:24:03"
+                },
+                {
+                    "id": 160,
+                    "user_id": 1,
+                    "category_id": 9,
+                    "title": "La spectatrice qui a provoqué une chute dans le peloton en garde à vue",
+                    "description": "\nLa spectatrice qui a causé avec sa pancarte la chute de très nombreux cyclistes du Tour de France, dont plusieurs ont été blessés, samedi en Bretagne, a été placée mercredi en garde à vue.\n",
+                    "pubDate": "2021-06-30 15:26:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/20efee8c-d9b2-11eb-bb43-005056bf30b7\/w:1024\/p:16x9\/000_9D86N3.jpg",
+                    "created_at": "2021-07-01 07:24:03",
+                    "updated_at": "2021-07-01 07:24:03"
+                },
+                {
+                    "id": 161,
+                    "user_id": 1,
+                    "category_id": 9,
+                    "title": "Euro-2021 : les favoris accrochés, une pluie de buts... le bilan des huitièmes de finale",
+                    "description": "\nLes huitièmes de finale de l'Euro-2021 se sont terminés, mardi, et ils n'ont pas été avares en surprises et en spectacle. De l'avalanche de buts à l'élimination de la France et des Pays-Bas, France 24 dresse le bilan de cette phase de la compétition.\n",
+                    "pubDate": "2021-06-29 21:54:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/70b9e4e0-d921-11eb-9fff-005056a90284\/w:1024\/p:16x9\/000_9DF9GL.jpg",
+                    "created_at": "2021-07-01 07:24:03",
+                    "updated_at": "2021-07-01 07:24:03"
+                },
+                {
+                    "id": 162,
+                    "user_id": 1,
+                    "category_id": 9,
+                    "title": "Euro-2021 : vainqueur de la Suède au finish, l'Ukraine se qualifie pour les quarts de finale",
+                    "description": "\nAu bout de la prolongation, l'Ukraine a battu in extremis la Suède 2 à 1 pour devenir le huitième et dernier qualifié pour les quarts de finale de l'Euro-2021.\n",
+                    "pubDate": "2021-06-29 21:34:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/d3b70288-d914-11eb-aa10-005056bfb2b6\/w:1024\/p:16x9\/000_9DJ8G2.jpg",
+                    "created_at": "2021-07-01 07:24:03",
+                    "updated_at": "2021-07-01 07:24:03"
+                },
+                {
+                    "id": 163,
+                    "user_id": 1,
+                    "category_id": 9,
+                    "title": "Euro-2021 : quelles sont les affiches des quarts de finale ?",
+                    "description": "\nLes huitièmes de finale se sont achevés mardi 29 juin. Les huit quarts-de-finaliste sont désormais connus. Après avoir défait le Portugal, la Belgique a droit à un deuxième choc face à l'Italie.\n",
+                    "pubDate": "2021-06-29 21:39:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/e13a921e-d45d-11eb-aed3-005056a98db9\/w:1024\/p:16x9\/000_9BD248.jpg",
+                    "created_at": "2021-07-01 07:24:03",
+                    "updated_at": "2021-07-01 07:24:03"
+                },
+                {
+                    "id": 164,
+                    "user_id": 1,
+                    "category_id": 9,
+                    "title": "Euro-2021 : dans son temple de Wembley, l’Angleterre élimine l’Allemagne",
+                    "description": "\nLa sélection anglaise a remporté le choc face à la Mannschaft allemande mardi à Wembley grâce à l’inévitable Raheem Sterling et son capitaine-buteur retrouvé, Harry Kane (2-0). Après cette victoire acquise dans une ambiance folle, les Three Lions poursuivent leur route dans cet Euro-2021. Ils affronteront la Suède ou l’Ukraine au tour suivant.\n",
+                    "pubDate": "2021-06-29 13:44:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/ac67fe32-d903-11eb-8e91-005056a90284\/w:1024\/p:16x9\/000_9DJ2VJ.jpg",
+                    "created_at": "2021-07-01 07:24:03",
+                    "updated_at": "2021-07-01 07:24:03"
+                },
+                {
+                    "id": 165,
+                    "user_id": 1,
+                    "category_id": 9,
+                    "title": "Wimbledon : blessée et en larmes, Serena Williams abandonne dès le premier tour",
+                    "description": "\nSerena Williams a dû jeter l'éponge mardi lors de son match du premier tour de Wimbledon face à la Biélorusse Aliaksandra Sasnovich. Blessée à une cuisse et incapable de poursuivre la rencontre, l'Américaine a quitté le court en pleurs.\n",
+                    "pubDate": "2021-06-29 19:32:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/87449eca-d90e-11eb-b060-005056bf30b7\/w:1024\/p:16x9\/000_9DJ7UQ.jpg",
+                    "created_at": "2021-07-01 07:24:03",
+                    "updated_at": "2021-07-01 07:24:03"
+                },
+                {
+                    "id": 166,
+                    "user_id": 1,
+                    "category_id": 9,
+                    "title": "Le revenant Cavendish remporte la 4e étape au sprint, van der Poel reste en jaune",
+                    "description": "\nMark Cavendish s'est imposé à l'issue d'un sprint massif à Fougères lors de la 4e étape du Tour de France 2021. Mathieu van der Poel conserve son maillot jaune. Une étape marquée par une grève symbolique du peloton après les chutes de la veille.\n",
+                    "pubDate": "2021-06-29 15:09:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/35ed56aa-d8ed-11eb-aad6-005056a97e36\/w:1024\/p:16x9\/789232381a7a90ba0a35ea209f5b2a22b65cf967.jpg",
+                    "created_at": "2021-07-01 07:24:03",
+                    "updated_at": "2021-07-01 07:24:03"
+                },
+                {
+                    "id": 167,
+                    "user_id": 1,
+                    "category_id": 9,
+                    "title": "Euro-2021 : le capitaine Lloris n’a pas suffi pour sauver les Bleus",
+                    "description": "\nHugo Lloris est apparu touché par l’élimination de l’équipe de France en huitièmes de finale face à la Suisse, lundi à Bucarest (3-3, 5 tirs au but à 4). Le gardien, qui avait relancé les Bleus en sortant un penalty en seconde période, ne le cache pas : cet échec \"fait mal\". Il appelle à la remobilisation immédiate.\n",
+                    "pubDate": "2021-06-28 22:42:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/dbbb957e-d861-11eb-a08d-005056a964fe\/w:1024\/p:16x9\/000_9DF7PR.jpg",
+                    "created_at": "2021-07-01 07:24:03",
+                    "updated_at": "2021-07-01 07:24:03"
+                },
+                {
+                    "id": 168,
+                    "user_id": 1,
+                    "category_id": 9,
+                    "title": "Euro-2021 : au bout de la nuit, la Suisse brise les rêves de l'équipe de France",
+                    "description": "\nAu terme d'une rencontre haletante et indécise jusqu'au bout, l'équipe de France s'est inclinée face à la \"Nati\" suisse en huitième de finale de l'Euro-2021 lundi (3-3, 5 tirs au but à 4). Les champions du monde, fébriles en défense, sont passés par tous les états avant de déposer les armes à Bucarest. En quarts de finale, les Suisses affronteront l'Espagne.\n",
+                    "pubDate": "2021-06-28 16:00:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/80bafcca-d85a-11eb-bebd-005056bf87d6\/w:1024\/p:16x9\/000_9DF8N3.jpg",
+                    "created_at": "2021-07-01 07:24:03",
+                    "updated_at": "2021-07-01 07:24:03"
+                },
+                {
+                    "id": 169,
+                    "user_id": 1,
+                    "category_id": 9,
+                    "title": "Des blessures à la défaite : comment les Bleus ont perdu le fil de leur Euro",
+                    "description": "\nL'Euro-2021 s'est arrêté prématurément lundi pour l'équipe de France face à la Suisse en huitième de finale. La conclusion d'un mois mouvementé entre tensions internes, pépins physiques et prestations en deça des standards des Bleus.\n",
+                    "pubDate": "2021-06-28 22:29:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/b0617c42-d85f-11eb-9bb6-005056a964fe\/w:1024\/p:16x9\/000_9DF9LR.jpg",
+                    "created_at": "2021-07-01 07:24:03",
+                    "updated_at": "2021-07-01 07:24:03"
+                },
+                {
+                    "id": 170,
+                    "user_id": 1,
+                    "category_id": 9,
+                    "title": "Euro-2021 : Angleterre-Allemagne, classique tendu entre cadors en plein doute",
+                    "description": "\nLes Three Lions et la Nationalmannschaft se retrouvent à Wembley pour un huitième de finale chargés de sentiments contrastés et souvenirs douloureux. Les deux sélections sont ambitieuses, mais le premier tour a quelque peu douché cet enthousiasme. Mardi soir, l'une d'elles restera à quai avec beaucoup de questionnements en tête.\n",
+                    "pubDate": "2021-06-28 21:53:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/93ed6d8e-d821-11eb-836a-005056a98db9\/w:1024\/p:16x9\/000_9DA924.jpg",
+                    "created_at": "2021-07-01 07:24:03",
+                    "updated_at": "2021-07-01 07:24:03"
+                },
+                {
+                    "id": 171,
+                    "user_id": 1,
+                    "category_id": 9,
+                    "title": "Euro-2021: l’Espagne terrasse la Croatie au terme d’un match fou",
+                    "description": "\nAu terme d'un match plein de suspense, l’Espagne est venue à bout des vice-champions du monde croates lundi à Copenhague. La rencontre, disputée sur un rythme endiablé, a vu la Roja s’imposer à l’arrachée malgré la persévérance d’une Croatie courageuse (5–3 après prolongation). Les Espagnols défieront la France ou la Suisse en quarts.\n",
+                    "pubDate": "2021-06-28 18:34:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/d97ea62a-d834-11eb-96e3-005056bfd1d9\/w:1024\/p:16x9\/000_9DE4LE.jpg",
+                    "created_at": "2021-07-01 07:24:03",
+                    "updated_at": "2021-07-01 07:24:03"
+                },
+                {
+                    "id": 172,
+                    "user_id": 1,
+                    "category_id": 9,
+                    "title": "Euro-2021 : la France à la recherche de la bonne formule face à la Suisse",
+                    "description": "\nAprès une phase de groupes traversée laborieusement par l'équipe de France, les Bleus retrouvent la saveur des matches à élimination directe lundi face à la Suisse. Contre la \"Nati\", Didier Deschamps va devoir trouver la bonne formule, entre bricolage en défense en raison des blessures et besoin d'enfin faire briller son attaque.\n",
+                    "pubDate": "2021-06-27 21:12:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/51b4ca3e-d74a-11eb-9eda-005056a964fe\/w:1024\/p:16x9\/000_9CZ87H.jpg",
+                    "created_at": "2021-07-01 07:24:03",
+                    "updated_at": "2021-07-01 07:24:03"
+                }
+            ]
+        },
+        {
+            "id": 10,
+            "name": "Culture",
+            "created_at": "2021-07-01 07:11:51",
+            "updated_at": "2021-07-01 07:11:51",
+            "user": null,
+            "news": [
+                {
+                    "id": 173,
+                    "user_id": 1,
+                    "category_id": 10,
+                    "title": "\"Sous le ciel d'Alice\" et de Chloé Mazlo",
+                    "description": "\nDans ce nouveau numéro de \"À l'affiche\" 100% cinéma, Thomas Baurez et Axelle Simon rencontrent Chloé Mazlo, la jeune réalisatrice de \"Sous le ciel d'Alice\". Un premier long-métrage qui revient, à travers son regard coloré et décalé, sur la guerre civile au Liban dans les années 70. Focus aussi sur \"My Zoé\", le septième film de Julie Delpy en tant que réalisatrice, et \"Teddy\", un film de loup-garou campé dans les Pyrénées.\n",
+                    "pubDate": "2021-06-30 13:37:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/463cf57c-d9a3-11eb-9ead-005056a97e36\/w:1024\/p:16x9\/FR%20NW%20PKG%20WB%20AFFICHE%20RUSTINE%20CINEMA_frame_1499.jpg",
+                    "created_at": "2021-07-01 07:28:33",
+                    "updated_at": "2021-07-01 07:28:33"
+                },
+                {
+                    "id": 174,
+                    "user_id": 1,
+                    "category_id": 10,
+                    "title": "Isabelle Adjani, ses liens avec l’Algérie",
+                    "description": "\nDans ce numéro de \"À l’Affiche\", nous avons le plaisir de recevoir Isabelle Adjani et la réalisatrice Yamina Benguigui. Avec \"Sœurs\", cette dernière signe un film mêlant l'intime à la grande Histoire, dans lequel Isabelle Adjani incarne une dramaturge franco-algérienne décidée à révéler au grand jour ses blessures familiales. L'occasion pour la plus primée des actrices françaises de se confier sur ses liens avec l'Algérie. Avec cinq César et deux prix d'interprétation à Cannes à son actif, elle vibre toujours d'une passion intacte pour le cinéma.\n",
+                    "pubDate": "2021-06-29 13:14:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/aebd88f8-d8d8-11eb-88c8-005056a90284\/w:1024\/p:16x9\/patricelli%20ADAJANI.jpg",
+                    "created_at": "2021-07-01 07:28:34",
+                    "updated_at": "2021-07-01 07:28:34"
+                },
+                {
+                    "id": 175,
+                    "user_id": 1,
+                    "category_id": 10,
+                    "title": "Djaïli Amadou Amal : \"Le mariage forcé reste la violence la plus pernicieuse qui soit\"",
+                    "description": "\nDjaïli Amadou Amal est camerounaise et écrivaine. Son roman, \"Les impatientes\" (éd. Emmanuelle Collas), qui dresse quatre portraits de femmes africaines confrontées à la domination des hommes, n'en finit plus de récolter des prix dans le monde entier depuis sa sortie en 2020... et d'éveiller les consciences sur la condition des femmes au Sahel. Rencontre.\n",
+                    "pubDate": "2021-06-29 11:27:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/63fb07e2-d8a5-11eb-9c72-005056a97e36\/w:1024\/p:16x9\/FRAN210629-0816-Live_CS0816.jpg",
+                    "created_at": "2021-07-01 07:28:34",
+                    "updated_at": "2021-07-01 07:28:34"
+                },
+                {
+                    "id": 176,
+                    "user_id": 1,
+                    "category_id": 10,
+                    "title": "El Señor Igor, grillot moderne, festif et conscient",
+                    "description": "\nDans ce tout nouveau numéro 100% musique, \"À l'Affiche\" accueille l'artiste d'origine béninoise El Señor Igor, venu présenter son nouveau projet, \"Appeler la police\". Nous rendrons aussi hommage au chanteur camerounais Wes Madiko, au percussionniste guinéen Mamady Keita ainsi qu'à la cantatrice martiniquaise Christiane Eda-Pierre, tous trois récemment disparus.\n",
+                    "pubDate": "2021-06-28 11:54:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/37c1546a-d800-11eb-a004-005056a964fe\/w:1024\/p:16x9\/IGOR%20EL%20SENOR.jpg",
+                    "created_at": "2021-07-01 07:28:34",
+                    "updated_at": "2021-07-01 07:28:34"
+                },
+                {
+                    "id": 177,
+                    "user_id": 1,
+                    "category_id": 10,
+                    "title": "L’Algérino, de Marseille à la lune",
+                    "description": "\nRendez-vous avec le rappeur L’Algérino à l’occasion de la sortie de son nouvel album Moonlight. Retour sur son incroyable carrière qui lui a permis de cumuler en 20 ans plus de 2,4 milliards de vues de ses clips, trois singles d’or, un single diamant, un single platine, un disque d’or et 7,6 millions d’abonnés sur YouTube. Dans cet épisode, Idriss Aberkane offre la vidéo surprise.\n",
+                    "pubDate": "2021-06-26 14:50:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/16d612a8-d58b-11eb-9f0a-005056a964fe\/w:1024\/p:16x9\/VIGNETTE%20YOUTUBE-43.jpg",
+                    "created_at": "2021-07-01 07:28:34",
+                    "updated_at": "2021-07-01 07:28:34"
+                },
+                {
+                    "id": 178,
+                    "user_id": 1,
+                    "category_id": 10,
+                    "title": "Le Paris des Arts de Bartabas",
+                    "description": "\nCette semaine, notre invité est l'écuyer d'exception, chorégraphe, metteur en scène, auteur et réalisateur Bartabas. Il nous emmène dans les coulisses des deux institutions qu'il dirige : le théâtre équestre Zingaro et l'académie équestre nationale de Versailles. Puis, une rencontre en musique avec le pianiste virtuose Alexandre Tharaud avec qui Bartabas a collaboré dans le cadre de son spectacle \"Récital équestre\".\n",
+                    "pubDate": "2021-06-26 14:02:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/94f83714-d587-11eb-b2b7-005056a964fe\/w:1024\/p:16x9\/1%20-%20ASSEMBLAGE%20PDA%20BARTABAS%20PAD.jpg",
+                    "created_at": "2021-07-01 07:28:34",
+                    "updated_at": "2021-07-01 07:28:34"
+                },
+                {
+                    "id": 179,
+                    "user_id": 1,
+                    "category_id": 10,
+                    "title": "Échappée culturelle en Corse",
+                    "description": "\nCette île française de la mer Méditerranée est réputée aussi bien pour ses paysages que pour la richesse de son patrimoine et de ses traditions. Suivez-nous à travers les routes sinueuses de l'ile de Beauté, d'Ajaccio, la capitale, jusqu'au bassin de la plaine orientale, à la découverte de toutes les facettes de la culture de la Corse.\n",
+                    "pubDate": "2021-06-25 12:45:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/8e9ef68c-d5af-11eb-b9a6-005056bfd1d9\/w:1024\/p:16x9\/FRMG%20A%20L%27AFFICHE%20CORSE%200625%20%282021%29-%20Ep%20223_frame_9013.jpg",
+                    "created_at": "2021-07-01 07:28:34",
+                    "updated_at": "2021-07-01 07:28:34"
+                },
+                {
+                    "id": 180,
+                    "user_id": 1,
+                    "category_id": 10,
+                    "title": "Le comédien Samir Guesmi passe derrière la caméra avec \"Ibrahim\"",
+                    "description": "\nMultiprimé au festival du film francophone d'Angoulême, \"Ibrahim\" raconte l'histoire d'un fils calme, posé et aimant envers son père, incarné par le réalisateur du film, Samir Guesmi. Cet homme courbe l'échine pour joindre les deux bouts et offrir à son fils une vie décente. Mais Ibrahim est jeune et fait aussi des bêtises... Samir Guesmi revient dans une interview sur le genèse de son premier long-métrage. \n",
+                    "pubDate": "2021-06-24 13:43:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/b62c1368-d4da-11eb-a366-005056bfd1d9\/w:1024\/p:16x9\/FR%20CULTURE%20ITW%20SAMIR%20GUESMI%20V8%20NO%20MIX%2CVideo%20Mixdown%2C2_frame_1595.jpg",
+                    "created_at": "2021-07-01 07:28:34",
+                    "updated_at": "2021-07-01 07:28:34"
+                },
+                {
+                    "id": 181,
+                    "user_id": 1,
+                    "category_id": 10,
+                    "title": "Britney Spears demande à la justice la levée de sa tutelle",
+                    "description": "\nPlacée sous tutelle en 2008 à la suite d'une grave dépression, la chanteuse pop n'a plus aucun contrôle sur les décisions la concernant. Britney Spears conteste l'emprise de son père sur sa vie et sa carrière et se dit \"traumatisée\" par cette mesure judiciaire.\n",
+                    "pubDate": "2021-06-24 08:42:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/b24b84a6-d4c4-11eb-b311-005056a964fe\/w:1024\/p:16x9\/063_1325139149.jpg",
+                    "created_at": "2021-07-01 07:28:34",
+                    "updated_at": "2021-07-01 07:28:34"
+                },
+                {
+                    "id": 182,
+                    "user_id": 1,
+                    "category_id": 10,
+                    "title": "De Tahar Rahim à Mylène Farmer, le Festival de Cannes dévoile le jury qui décernera la Palme d'Or",
+                    "description": "\nLa direction du Festival de Cannes a révélé, jeudi 24 juin, la composition du jury de la 74e édition qui si tiendra du 6 au 17 juillet. Sous la présidence du réalisateur américain Spike Lee, ses membres devront désigner la nouvelle Palme d'Or.\n",
+                    "pubDate": "2021-06-24 07:15:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/3125bc5e-d4db-11eb-aa67-005056a964fe\/w:1024\/p:16x9\/Jury.jpg",
+                    "created_at": "2021-07-01 07:28:34",
+                    "updated_at": "2021-07-01 07:28:34"
+                },
+                {
+                    "id": 183,
+                    "user_id": 1,
+                    "category_id": 10,
+                    "title": "Le film \"Minari\" raconte un rêve américain pas tout à fait comme les autres",
+                    "description": "\nDans cette nouvelle édition 100 % cinéma de A \"À l’Affiche !\", Thomas Baurez et Laure Manent se penchent sur \"Minari\", le film-événement de Lee Isaac Chung, pour lequel la Sud-Coréenne Youn Yuh-jung, 74 ans, a remporté l'Oscar de la meilleure actrice dans un second rôle.\n",
+                    "pubDate": "2021-06-23 14:16:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/796d81da-a63d-11eb-a68e-005056a964fe\/w:1024\/p:16x9\/PREMIOS%20OSCAR%204.jpg",
+                    "created_at": "2021-07-01 07:28:34",
+                    "updated_at": "2021-07-01 07:28:34"
+                },
+                {
+                    "id": 184,
+                    "user_id": 1,
+                    "category_id": 10,
+                    "title": "BD : l'Américain Chris Ware, roi du \"comic strip\", sacré au Festival d'Angoulême",
+                    "description": "\nMaître incontesté du \"comic strip\", l'Américain Chris Ware, qui a réinventé une riche tradition de la bande dessinée aux États-Unis, a été récompensé, mercredi, du Grand Prix de la Ville d'Angoulême.\n",
+                    "pubDate": "2021-06-23 09:18:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/546e9c6c-d3ff-11eb-8b67-005056a98db9\/w:1024\/p:16x9\/Chris%20Ware.jpg",
+                    "created_at": "2021-07-01 07:28:34",
+                    "updated_at": "2021-07-01 07:28:34"
+                },
+                {
+                    "id": 185,
+                    "user_id": 1,
+                    "category_id": 10,
+                    "title": "Jimmy Jean-Louis fête les 60 ans du festival de Monte-Carlo",
+                    "description": "\nC’est le plus ancien festival de télévision au monde. Genie Godula, de notre canal anglophone, est à Monaco pour cette édition anniversaire. Elle reçoit pour \"À l’Affiche\" l’acteur Jimmy Jean-Louis, avec qui elle coprésente la cérémonie de clôture.\n",
+                    "pubDate": "2021-06-22 14:14:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/6f055882-d34a-11eb-9f68-005056bfd1d9\/w:1024\/p:16x9\/FR%20NW%20PKG%20F24%20VERSION%20COURTE%20MONTE%20CARLO_frame_7983.png",
+                    "created_at": "2021-07-01 07:28:34",
+                    "updated_at": "2021-07-01 07:28:34"
+                },
+                {
+                    "id": 186,
+                    "user_id": 1,
+                    "category_id": 10,
+                    "title": "Vincent Macaigne : \"Sortir pour aller voir de la culture, c'est de la vérité\"",
+                    "description": "\nLe comédien français Vincent Macaigne est l'invité de Paris Direct à l'occasion de la sortie de son dernier film, \"Médecin de nuit\" d'Élie Wajeman. Il nous emmène dans un Paris étouffant et dans le sillage d'un docteur noctambule qui essaie à tout prix de ne pas sombrer. Entretien.\n",
+                    "pubDate": "2021-06-22 11:08:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/fccab616-d323-11eb-877c-005056bf87d6\/w:1024\/p:16x9\/FRAN210622-0816-Live_CS0816.jpg",
+                    "created_at": "2021-07-01 07:28:34",
+                    "updated_at": "2021-07-01 07:28:34"
+                },
+                {
+                    "id": 187,
+                    "user_id": 1,
+                    "category_id": 10,
+                    "title": "La chanteuse Maïna et le promoteur Dudu Sarr au service de la musique sénégalaise",
+                    "description": "\nLa jeune chanteuse sénégalaise Maïna présente son premier projet \"Digué\". En duplex de Dakar å l'occasion de la fête de la musique, Dudu Sarr, promoteur de la deuxième édition de Dakar Music Expo (concerts, débats, masterclass), revient sur la richesse de la scène sénégalaise et confie son espoir de voir Dakar devenir un \"hub de la musique africaine\". À découvrir aussi, \"Irremplaçable\", une chanson dans laquelle JB Mpiana, leader du groupe Wenge BCBG, rend hommage à la légende de la rumba congolaise Papa Wemba décédé en 2016.\n",
+                    "pubDate": "2021-06-21 14:51:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/acb37ffe-d29d-11eb-867d-005056bf87d6\/w:1024\/p:16x9\/ALAFFICHE.jpg",
+                    "created_at": "2021-07-01 07:28:34",
+                    "updated_at": "2021-07-01 07:28:34"
+                },
+                {
+                    "id": 188,
+                    "user_id": 1,
+                    "category_id": 10,
+                    "title": "L’Afrique à l’honneur au festival du film d’animation d’Annecy",
+                    "description": "\nPour son 60e anniversaire, le festival international du film d’animation d’Annecy met l’Afrique à l’honneur, sous le marrainage de Marguerite Abouet, écrivaine, scénariste et réalisatrice ivoirienne. Il s'agit du premier événement culturel de cette envergure à se tenir en France depuis la fin du dernier confinement – même si seulement 5 000 participants ont pu y assister, au lieu des 12 000 venus en 2019. Malgré la situation sanitaire, certains talents ont pu se rendre sur place.\n",
+                    "pubDate": "2021-06-18 14:23:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/b07c2cb6-cf6a-11eb-b146-005056bf87d6\/w:1024\/p:16x9\/CULTURE%20CLEAN%20B%20-%2017-06-2021%20%20110700_frame_12484.jpg",
+                    "created_at": "2021-07-01 07:28:34",
+                    "updated_at": "2021-07-01 07:28:34"
+                },
+                {
+                    "id": 189,
+                    "user_id": 1,
+                    "category_id": 10,
+                    "title": "Nix, la force tranquille",
+                    "description": "\n Rendez-vous avec le rappeur sénégalais Nix, à l’occasion de la sortie de son nouveau single \"Moonwalk\". Retour sur ses 20 ans de carrière, son évolution artistique, ses nombreuses collaborations avec des stars du monde entier (Wyclef, Oxmo Puccino, Disiz, Omzo Dollar...), sa plateforme panafricaine de streaming Deedo et son label de production. Dans cet épisode c’est la tante de Nix, Nadine Diatta, qui offre la vidéo mystère.\n",
+                    "pubDate": "2021-06-18 13:20:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/0674b81a-d031-11eb-8fc8-005056bf87d6\/w:1024\/p:16x9\/VIGNETTE%20YOUTUBE-42.jpg",
+                    "created_at": "2021-07-01 07:28:34",
+                    "updated_at": "2021-07-01 07:28:34"
+                },
+                {
+                    "id": 190,
+                    "user_id": 1,
+                    "category_id": 10,
+                    "title": "Plongée dans les transidentités avec \"En infiltré.e.s\", une série documentaire signée Océan",
+                    "description": "\nDans cette édition 100% séries de \"A l‘Affiche\", Laure Manent et Nina Masson évoquent la suite de la web-série documentaire d'Océan. Assigné fille à la naissance, le réalisateur et comédien avait filmé sa transition dans une première saison éponyme, et toujours disponible sur le site de France.tv Slash.\n",
+                    "pubDate": "2021-06-17 15:16:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/a48420a0-cf77-11eb-ba90-005056bf87d6\/w:1024\/p:16x9\/CLEAN%20A%20L%20AFFICHE%200617_frame_26163.jpg",
+                    "created_at": "2021-07-01 07:28:34",
+                    "updated_at": "2021-07-01 07:28:34"
+                },
+                {
+                    "id": 191,
+                    "user_id": 1,
+                    "category_id": 10,
+                    "title": "Festival de Cannes 2021 : le réalisateur Spike Lee, président du jury, mis à l'honneur",
+                    "description": "\nAprès avoir mis à l'honneur Agnès Varda pour l'affiche de son édition 2019, le Festival de Cannes a choisi d'honorer l'Américain Spike Lee, président du jury de la 74e édition, ont annoncé jeudi les organisateurs. \n",
+                    "pubDate": "2021-06-17 13:53:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/578f1ff8-cf71-11eb-80ce-005056a98db9\/w:1024\/p:16x9\/000_9CE28R.jpg",
+                    "created_at": "2021-07-01 07:28:34",
+                    "updated_at": "2021-07-01 07:28:34"
+                },
+                {
+                    "id": 192,
+                    "user_id": 1,
+                    "category_id": 10,
+                    "title": "Avec \"La Nuée\", Just Philippot signe un film fantastique sur des sauterelles sanguinaires",
+                    "description": "\nDans cette édition 100% cinéma de À L’Affiche, Laure Manent et Thomas Baurez reçoivent Just Philippot, le réalisateur de \"La Nuée\". Le film raconte l’histoire de Virginie, une éleveuse de sauterelles qui ne s’en sort pas. Jusqu’à cet accident… Les sauterelles qui ont goûté à son sang commencent enfin à grossir et prospérer. Film fantastique, \"La Nuée\" décrit un monde agricole accaparé par les difficultés.\n",
+                    "pubDate": "2021-06-16 13:45:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/8467b266-ce9e-11eb-aeba-005056a964fe\/w:1024\/p:16x9\/CLEAN%20A%20L%20AFFICHE%200616_frame_96782.jpg",
+                    "created_at": "2021-07-01 07:28:35",
+                    "updated_at": "2021-07-01 07:28:35"
+                },
+                {
+                    "id": 193,
+                    "user_id": 1,
+                    "category_id": 10,
+                    "title": "Debora Waldman pointe sa baguette sur les compositrices oubliées par l'Histoire",
+                    "description": "\nElle est l'une des rares femmes cheffe d'orchestre en France, et la première à être nommée à la tête d'un orchestre national : celui d'Avignon-Provence. Debora Waldman cosigne avec Pauline Sommelet \"La symphonie oubliée\" (éd. Robert Laffont). Elle s'est donnée la mission de faire connaître les œuvres des compositrices tombées aux oubliettes de l'Histoire, comme la Française Charlotte Sohy, dont la symphonie dite de la Grande guerre, composée en 1917, n'a jamais été jouée de son vivant. Debora Waldman la dirigera, le 1er juillet à l'auditorium de Radio France.\n",
+                    "pubDate": "2021-06-15 14:02:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/f8990d42-cddb-11eb-bcea-005056a964fe\/w:1024\/p:16x9\/CLEAN%20A%20L%20AFFICHE%2015-06-2021%2011-01-00_frame_119047.jpg",
+                    "created_at": "2021-07-01 07:28:35",
+                    "updated_at": "2021-07-01 07:28:35"
+                },
+                {
+                    "id": 194,
+                    "user_id": 1,
+                    "category_id": 10,
+                    "title": "L'autrice congolaise Lilia Bongi et le rappeur burkinabé Smockey : regards croisés sur l'Afrique",
+                    "description": "\nAmobé Mévégué accueille Serge Bambara, plus connu sous son nom de scène Smockey, de passage à Paris. Musicien de hip-hop, rappeur, acteur et militant politique basé à Ouagadougou, il nous parle de sa première pièce musicale \"Le syndrome de la pintade\", une satire politique des élites africaines.\n",
+                    "pubDate": "2021-06-14 14:01:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/fa0c5956-cd16-11eb-aeda-005056bf87d6\/w:1024\/p:16x9\/CLEAN%20A%20L%20AFFICHE%2014-06-2021%2011-01-00_frame_113132%20%281%29.jpg",
+                    "created_at": "2021-07-01 07:28:35",
+                    "updated_at": "2021-07-01 07:28:35"
+                },
+                {
+                    "id": 195,
+                    "user_id": 1,
+                    "category_id": 10,
+                    "title": "Joëlle Épée Mandengue : \"Il n'y a pas une BD africaine, mais des bandes dessinées des Afriques\"",
+                    "description": "\nNotre invitée du jour est Joëlle Épée Mandengue, alias Elyon's, est Camerounaise, dessinatrice, autrice de bande dessinée, autrice notamment de \"La vie d'Ebène Duta\" (éd. maduta). Elle a monté le Bilili Festival à Brazzaville et conçu l’exposition \"Kubuni, les bandes dessinées d'Afrique.s\" à voir à Angoulême jusqu’au 24 juillet.\n",
+                    "pubDate": "2021-06-14 12:53:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/ac854d82-ccf3-11eb-89df-005056a98db9\/w:1024\/p:16x9\/FR%20PARIS%20DIRECT%2014-06-2021%2007-59-30_frame_26128.png",
+                    "created_at": "2021-07-01 07:28:35",
+                    "updated_at": "2021-07-01 07:28:35"
+                },
+                {
+                    "id": 196,
+                    "user_id": 1,
+                    "category_id": 10,
+                    "title": "Omar Sy évoque la modernité de \"Lupin\" et revient sur ses engagements",
+                    "description": "\nDans cette édition 100% séries de l'émission À l'Affiche, on jette un œil à la deuxième partie de la saison 1 de \"Lupin\", sur Netflix. Nina Masson a pu s’entretenir avec Omar Sy, qui incarne le personnage principal. Ensemble, ils évoquent ce que ce nouveau Lupin a de moderne par rapport au gentleman cambrioleur inventé par Maurice Leblanc au début du siècle dernier.\n",
+                    "pubDate": "2021-06-11 14:37:00",
+                    "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/0bb59174-cab8-11eb-a086-005056a98db9\/w:1024\/p:16x9\/CLEAN%20A%20L%20AFFICHE%2011-06-2021%2011-01-00_frame_107141.jpg",
+                    "created_at": "2021-07-01 07:28:35",
+                    "updated_at": "2021-07-01 07:28:35"
+                }
+            ]
+        }
+    ],
+    "links": {
+        "first": "http:\/\/localhost\/api\/categories?page=1",
+        "last": "http:\/\/localhost\/api\/categories?page=2",
+        "prev": null,
+        "next": "http:\/\/localhost\/api\/categories?page=2"
+    },
+    "meta": {
+        "current_page": 1,
+        "from": 1,
+        "last_page": 2,
+        "path": "http:\/\/localhost\/api\/categories",
+        "per_page": 10,
+        "to": 10,
+        "total": 12
+    }
+}
+```
+
+### HTTP Request
+`GET api/categories`
+
+
+<!-- END_109013899e0bc43247b0f00b67f889cf -->
+
+<!-- START_2335abbed7f782ea7d7dd6df9c738d74 -->
+## api/categories
+> Example request:
+
+```bash
+curl -X POST "http://localhost/api/categories" 
+```
+
+```javascript
+const url = new URL("http://localhost/api/categories");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "POST",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`POST api/categories`
+
+
+<!-- END_2335abbed7f782ea7d7dd6df9c738d74 -->
+
+<!-- START_34925c1e31e7ecc53f8f52c8b1e91d44 -->
+## api/categories/{category}
+> Example request:
+
+```bash
+curl -X GET -G "http://localhost/api/categories/1" 
+```
+
+```javascript
+const url = new URL("http://localhost/api/categories/1");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (200):
+
+```json
+{
+    "data": {
+        "id": 1,
+        "name": "Monde",
+        "created_at": "2021-07-01 07:11:50",
+        "updated_at": "2021-07-01 07:11:50",
+        "user": null,
+        "news": [
+            {
+                "id": 1,
+                "user_id": 1,
+                "category_id": 1,
+                "title": "L'expansionnisme chinois, une politique qui doit plus à la \"tradition\" qu'au Parti communiste",
+                "description": "\nLe Parti communiste chinois fête jeudi son centenaire, dans un contexte de méfiance internationale à l'égard des velléités expansionnistes de l'empire du Milieu. Si le président chinois Xi Jinping a réitéré mercredi sa volonté de \"hisser\" son pays \"au premier rang du monde\" à l'horizon 2049, cette stratégie appartient, selon Jean-Vincent Brisset, chercheur associé à l'Iris, davantage à la \"tradition\" chinoise qu'à l'idéologie du parti.\n",
+                "pubDate": "2021-07-01 04:38:00",
+                "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/87eea21e-d9b6-11eb-a648-005056a90284\/w:1024\/p:16x9\/000_9DK92X.jpg",
+                "created_at": "2021-07-01 07:12:39",
+                "updated_at": "2021-07-01 07:12:39"
+            },
+            {
+                "id": 2,
+                "user_id": 1,
+                "category_id": 1,
+                "title": "Covid-19 : un certificat européen pour faciliter les déplacements cet été",
+                "description": "\nLe certificat sanitaire européen entre officiellement en vigueur jeudi. Ce document a vocation à faciliter les voyages au sein de l’Union européenne (UE) et relancer le tourisme, secteur durement affecté par la pandémie de Covid-19. Mais la propagation du variant Delta suscite des craintes. \n",
+                "pubDate": "2021-07-01 05:42:00",
+                "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/47d319c4-9c69-11eb-945d-005056bff430\/w:1024\/p:16x9\/Roissy%20CDG%20Covid-19.jpg",
+                "created_at": "2021-07-01 07:12:39",
+                "updated_at": "2021-07-01 07:12:39"
+            },
+            {
+                "id": 3,
+                "user_id": 1,
+                "category_id": 1,
+                "title": "Concerts, prix du gaz, chômage, congé paternité : ce qui change au 1er juillet",
+                "description": "\nFrance 24 fait le point sur les mesures qui entrent en vigueur en France à partir du 1er juillet marqué notamment par le grand retour des concerts debout, interdits depuis mars 2020.\n",
+                "pubDate": "2021-07-01 05:51:00",
+                "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/ba01e774-da2f-11eb-af1c-005056a97e36\/w:1024\/p:16x9\/000_Par7430103.jpg",
+                "created_at": "2021-07-01 07:12:39",
+                "updated_at": "2021-07-01 07:12:39"
+            },
+            {
+                "id": 4,
+                "user_id": 1,
+                "category_id": 1,
+                "title": "Janez Jansa, le \"Maréchal Twitto\" slovène qui prend la présidence de l'Union européenne",
+                "description": "\nJanez Jansa, le Premier ministre slovène, va prendre jeudi la présidence tournante de l'Union européenne. Peu connu du grand public, cet admirateur de Viktor Orban et de Donald Trump est surnommé “Maréchal Twitto” en référence à l’ex-dictateur yougoslave Tito et à sa propension à twitter plus vite que son ombre. \n",
+                "pubDate": "2021-06-30 14:54:00",
+                "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/673e5d20-d9a7-11eb-bb91-005056a97e36\/w:1024\/p:16x9\/300621-jansa-slovenia-prime-m.jpg",
+                "created_at": "2021-07-01 07:12:39",
+                "updated_at": "2021-07-01 07:12:39"
+            },
+            {
+                "id": 5,
+                "user_id": 1,
+                "category_id": 1,
+                "title": "Le congé paternité de 28 jours entre en vigueur en France",
+                "description": "\nAnnoncé en septembre par Emmanuel Macron, cet allongement du congé paternité doit permettre aux jeunes pères de s'impliquer davantage auprès de leur enfant et de réduire les inégalités entre les femmes et les hommes.\n",
+                "pubDate": "2021-07-01 05:34:00",
+                "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/bed77a20-da2a-11eb-ac20-005056bf30b7\/w:1024\/p:16x9\/000_Par7661100.jpg",
+                "created_at": "2021-07-01 07:12:39",
+                "updated_at": "2021-07-01 07:12:39"
+            },
+            {
+                "id": 6,
+                "user_id": 1,
+                "category_id": 1,
+                "title": "Centrafrique : sept morts dans l’attaque d’une ville par des rebelles",
+                "description": "\nUn groupe rebelle armé a attaqué lundi une ville située à 300 kilomètres de Bangui, la capitale centrafricaine. Sept personnes sont mortes, a déclaré mercredi à l'AFP le porte-parole des Casques bleus de la Mission de l'ONU en Centrafrique (Minusca). \n",
+                "pubDate": "2021-07-01 06:20:00",
+                "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/532e5ada-450d-11eb-a082-005056a98db9\/w:1024\/p:16x9\/000_8XM3QV.jpg",
+                "created_at": "2021-07-01 07:12:39",
+                "updated_at": "2021-07-01 07:12:39"
+            },
+            {
+                "id": 7,
+                "user_id": 1,
+                "category_id": 1,
+                "title": "Afghanistan : \"Une possibilité réelle de voir les Taliban au pouvoir dans les prochains mois\"",
+                "description": "\nAprès une percée fulgurante dans le nord-est de l'Afghanistan, les Taliban continuent de conquérir de nouveaux territoires dans le pays, alors que le retrait des troupes américaines est presque achevé. Ils espèrent provoquer un effondrement du gouvernement afghan.\n",
+                "pubDate": "2021-06-30 13:06:00",
+                "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/6d387250-d99e-11eb-ac77-005056bf30b7\/w:1024\/p:16x9\/2021-06-29T113707Z_469064130_RC2AAO9KVJBY_RTRMADP_3_AFGHANISTAN-TALIBAN.JPG",
+                "created_at": "2021-07-01 07:12:39",
+                "updated_at": "2021-07-01 07:12:39"
+            },
+            {
+                "id": 8,
+                "user_id": 1,
+                "category_id": 1,
+                "title": "Euro-2021 : Vladimir Petkovic, sélectionneur dénigré à l'origine du plus bel exploit de la Suisse",
+                "description": "\nIl est l'artisan en chef de l'élimination des Bleus en huitième de finale de l'Euro-2021. Le sélectionneur Vladimir Petkovic a écrit avec ses hommes la plus belle page de l'histoire du football suisse. Portrait d'un technicien qui n'a jamais fait l'unanimité dans son pays mais qui pourrait lui offrir un nouvel exploit contre l'Espagne, vendredi 2 juillet.\n",
+                "pubDate": "2021-07-01 05:03:00",
+                "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/2d2f23aa-d9e1-11eb-904c-005056a97e36\/w:1024\/p:16x9\/Petkovic%281%29.jpg",
+                "created_at": "2021-07-01 07:12:40",
+                "updated_at": "2021-07-01 07:12:40"
+            },
+            {
+                "id": 9,
+                "user_id": 1,
+                "category_id": 1,
+                "title": "Euro-2021 : les favoris accrochés, une pluie de buts... le bilan des huitièmes de finale",
+                "description": "\nLes huitièmes de finale de l'Euro-2021 se sont terminés, mardi, et ils n'ont pas été avares en surprises et en spectacle. De l'avalanche de buts à l'élimination de la France et des Pays-Bas, France 24 dresse le bilan de cette phase de la compétition.\n",
+                "pubDate": "2021-06-29 21:54:00",
+                "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/70b9e4e0-d921-11eb-9fff-005056a90284\/w:1024\/p:16x9\/000_9DF9GL.jpg",
+                "created_at": "2021-07-01 07:12:40",
+                "updated_at": "2021-07-01 07:12:40"
+            },
+            {
+                "id": 10,
+                "user_id": 1,
+                "category_id": 1,
+                "title": "Euro-2021 : le calendrier et les résultats",
+                "description": "\nDu 11 juin au 11 juillet, les 24 meilleures équipes d'Europe ont rendez-vous pour disputer l'Euro-2021 de football. Qui prendra la succession du Portugal en tant que champion d'Europe ? Retrouvez le calendrier de la compétition et tous les résultats.\n",
+                "pubDate": "2021-06-11 09:48:00",
+                "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/750e4ace-ca0b-11eb-b3c3-005056a98db9\/w:1024\/p:16x9\/main-F24-FR.png",
+                "created_at": "2021-07-01 07:12:40",
+                "updated_at": "2021-07-01 07:12:40"
+            },
+            {
+                "id": 11,
+                "user_id": 1,
+                "category_id": 1,
+                "title": "Algérie : le ministre des Finances Aïmene Benabderrahmane nommé Premier ministre",
+                "description": "\nLe ministre algérien des Finances Aïmene Benabderrahmane a été désigné Premier ministre mercredi, en remplacement d'Abdelaziz Djerad, à la suite des élections législatives anticipées du 12 juin. Le président Tebboune souhaite ainsi enrayer la grave crise économique qui mine la première économie du Maghreb.\n",
+                "pubDate": "2021-06-30 14:19:00",
+                "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/410b24c4-d9b3-11eb-95e6-005056bfb2b6\/w:1024\/p:16x9\/000_9DL6DF%20%281%29.jpg",
+                "created_at": "2021-07-01 07:12:40",
+                "updated_at": "2021-07-01 07:12:40"
+            },
+            {
+                "id": 12,
+                "user_id": 1,
+                "category_id": 1,
+                "title": "Covid-19 : les tests seront payants en France à partir du 7 juillet pour les touristes étrangers",
+                "description": "\nLes tests de détection du Covid-19 deviendront payants pour les touristes étrangers venant en France, à partir du le 7 juillet. Ils seront facturés à hauteur de 49 euros pour les PCR et 29 euros pour les antigéniques. Le gouvernement envisage également de ne plus rembourser les tests \"de confort\" aux Français.\n",
+                "pubDate": "2021-06-30 17:30:00",
+                "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/a4af7dca-d9d3-11eb-94ae-005056a90284\/w:1024\/p:16x9\/Covid-tests-payant.jpg",
+                "created_at": "2021-07-01 07:12:40",
+                "updated_at": "2021-07-01 07:12:40"
+            },
+            {
+                "id": 13,
+                "user_id": 1,
+                "category_id": 1,
+                "title": "Donald Rumsfeld, secrétaire à la Défense du président George W. Bush, est mort à 88 ans",
+                "description": "\nDonald Rumsfeld, ancien secrétaire à la Défense et pilier de l'administration américaine sous George W. Bush, est décédé à 88 ans dans l'État du Nouveau-Mexique, a annoncé, mercredi 30 juin, sa famille dans un communiqué.\n",
+                "pubDate": "2021-06-30 19:49:00",
+                "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/d27d309c-d9da-11eb-a9b7-005056a97e36\/w:1024\/p:16x9\/Donald%20Rumsfeld.jpg",
+                "created_at": "2021-07-01 07:12:40",
+                "updated_at": "2021-07-01 07:12:40"
+            },
+            {
+                "id": 14,
+                "user_id": 1,
+                "category_id": 1,
+                "title": "Covid-19 en France : levée des dernières restrictions, mais crainte d'une 4e vague à la rentrée",
+                "description": "\nFin des jauges dans les cinémas, restaurants ou magasins : les dernières restrictions ont été levées, mercredi 30 juin, en France, en dépit d'une montée des inquiétudes sur une quatrième vague de Covid-19 après l'été, sous l'effet du variant Delta, beaucoup plus contagieux.\n",
+                "pubDate": "2021-06-30 16:07:00",
+                "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/162fe458-d9bb-11eb-b6a2-005056bf30b7\/w:1024\/p:16x9\/AP21160479396529.jpg",
+                "created_at": "2021-07-01 07:12:40",
+                "updated_at": "2021-07-01 07:12:40"
+            },
+            {
+                "id": 15,
+                "user_id": 1,
+                "category_id": 1,
+                "title": "Forum de l'ONU : 40 milliards de dollars pour promouvoir l'égalité femmes-hommes",
+                "description": "\nLe \"Forum génération égalité\", une conférence de l'ONU sur l'égalité des sexes, s'est ouvert mercredi à Paris, et 40 milliards de dollars d'investissements ont déjà été rassemblés. Emmanuel Macron et le secrétaire général de l'ONU Antonio Guterres avaient dénoncé en préambule le \"vent mauvais\" de \"forces patriarcales\" qui menace de faire régresser les droits des femmes dans le monde.\n",
+                "pubDate": "2021-06-30 12:11:00",
+                "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/542d6698-d9cc-11eb-a76b-005056bfb2b6\/w:1024\/p:16x9\/2021-06-30T144804Z_939827373_RC22BO9P2F2X_RTRMADP_3_FRANCE-GENDER-EQUALITY.JPG",
+                "created_at": "2021-07-01 07:12:40",
+                "updated_at": "2021-07-01 07:12:40"
+            },
+            {
+                "id": 16,
+                "user_id": 1,
+                "category_id": 1,
+                "title": "Bill Cosby sort de prison après l'annulation de sa condamnation pour agression sexuelle",
+                "description": "\nAprès près de trois ans de prison, Bill Cosby est libre. La Cour suprême de Pennsylvanie a annulé mercredi la condamnation de l'acteur américain pour agression sexuelle. Une décision technique, sur la forme et non sur le fond du dossier.\n",
+                "pubDate": "2021-06-30 20:47:00",
+                "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/602cd274-d9e2-11eb-9623-005056bf30b7\/w:1024\/p:16x9\/AP21181606734915.jpg",
+                "created_at": "2021-07-01 07:12:40",
+                "updated_at": "2021-07-01 07:12:40"
+            },
+            {
+                "id": 17,
+                "user_id": 1,
+                "category_id": 1,
+                "title": "La spectatrice qui a provoqué une chute dans le peloton en garde à vue",
+                "description": "\nLa spectatrice qui a causé avec sa pancarte la chute de très nombreux cyclistes du Tour de France, dont plusieurs ont été blessés, samedi en Bretagne, a été placée mercredi en garde à vue.\n",
+                "pubDate": "2021-06-30 15:26:00",
+                "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/20efee8c-d9b2-11eb-bb43-005056bf30b7\/w:1024\/p:16x9\/000_9D86N3.jpg",
+                "created_at": "2021-07-01 07:12:40",
+                "updated_at": "2021-07-01 07:12:40"
+            },
+            {
+                "id": 18,
+                "user_id": 1,
+                "category_id": 1,
+                "title": "Euro-2021 : quelles sont les affiches des quarts de finale ?",
+                "description": "\nLes huitièmes de finale se sont achevés mardi 29 juin. Les huit quarts-de-finaliste sont désormais connus. Après avoir défait le Portugal, la Belgique a droit à un deuxième choc face à l'Italie.\n",
+                "pubDate": "2021-06-29 21:39:00",
+                "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/e13a921e-d45d-11eb-aed3-005056a98db9\/w:1024\/p:16x9\/000_9BD248.jpg",
+                "created_at": "2021-07-01 07:12:40",
+                "updated_at": "2021-07-01 07:12:40"
+            },
+            {
+                "id": 19,
+                "user_id": 1,
+                "category_id": 1,
+                "title": "Au Canada, une canicule historique fait plusieurs dizaines de morts",
+                "description": "\nLa vague de chaleur qui s'abat sur l'ouest du Canada a provoqué la mort de dizaines personnes ces derniers jours, ont annoncé les autorités. Un nouveau record de chaleur absolu a été établi dans le pays avec près de 50°C au nord-est de Vancouver.\n",
+                "pubDate": "2021-06-30 05:40:00",
+                "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/9adb6adc-d962-11eb-8e83-005056a90284\/w:1024\/p:16x9\/000_9DK4CV.jpg",
+                "created_at": "2021-07-01 07:12:40",
+                "updated_at": "2021-07-01 07:12:40"
+            },
+            {
+                "id": 20,
+                "user_id": 1,
+                "category_id": 1,
+                "title": "Pogacar gagne le contre-la-montre, Van Der Poel garde le maillot jaune",
+                "description": "\nLe tenant du titre Tadej Pogacar a frappé un grand coup en remportant la 5e étape du Tour de France qui se disputait sous la forme d'un contre-la-montre individuel. L'autre belle performance de la journée c'est celle de Mathieu van der Poel qui a terminé 5e de l'étape, ce qui lui permet de conserver sa tunique jaune pour seulement 8 secondes.\n",
+                "pubDate": "2021-06-30 16:28:00",
+                "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/02f5e234-d9bb-11eb-aa42-005056a90284\/w:1024\/p:16x9\/000_9DL7BM.jpg",
+                "created_at": "2021-07-01 07:12:40",
+                "updated_at": "2021-07-01 07:12:40"
+            },
+            {
+                "id": 21,
+                "user_id": 1,
+                "category_id": 1,
+                "title": "L'obésité des jeunes en forte progression en France",
+                "description": "\nUne enquête publiée mercredi révèle que l'obésité a presque doublé chez les 18-24 ans en France. Chez les adultes, près de la moitié de la population française est concernée par l'obésité ou le surpoids.\n",
+                "pubDate": "2021-06-30 15:48:00",
+                "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/023d584e-d9b2-11eb-ad55-005056bfb2b6\/w:1024\/p:16x9\/000_9L0VP.jpg",
+                "created_at": "2021-07-01 07:12:40",
+                "updated_at": "2021-07-01 07:12:40"
+            },
+            {
+                "id": 22,
+                "user_id": 1,
+                "category_id": 1,
+                "title": "RD Congo : une attaque kamikaze, une première, aggrave l’angoisse générale à Béni",
+                "description": "\nLa vie reprenait timidement dans la ville de Béni, dans l’est de la République démocratique du Congo, ce mercredi 30 juin. C’est la fin du couvre-feu de 48 heures décrété dimanche par les autorités locales après les explosions de bombes artisanales dont un kamikaze qui ont secoué plusieurs quartiers de la capitale de la province du Nord-Kivu au cours du week-end. Un mode opératoire jamais vu, dans cette région touchée par des massacres depuis une vingtaine d’années.\n",
+                "pubDate": "2021-06-30 17:17:00",
+                "thumbnail_url": "https:\/\/s.observers.france24.com\/media\/display\/2b8ecfd6-d9c4-11eb-a9b9-005056a90284\/w:1024\/p:16x9\/RD%20Congo%20B%C3%A9ni.jpg",
+                "created_at": "2021-07-01 07:12:41",
+                "updated_at": "2021-07-01 07:12:41"
+            },
+            {
+                "id": 23,
+                "user_id": 1,
+                "category_id": 1,
+                "title": "Guerre des Balkans : deux ex-chefs espions serbes condamnés par la justice internationale",
+                "description": "\nDeux figures clé du régime nationaliste de Slobodan Milosevic ont été condamnés à 12 ans de prison chacun mercredi par la justice internationale à la Haye aux Pays-Bas pour crimes contre l'humanité et crimes de guerre. Après avoir été acquittés en 2013, ils étaient à nouveau jugés pour leur rôle dans l'organisation et le financement de groupes paramilitaires qui ont semé la terreur et la mort après l'implosion de la Yougoslavie, en 1991. \n",
+                "pubDate": "2021-06-30 08:09:00",
+                "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/e5bbf234-d975-11eb-bae0-005056bf30b7\/w:1024\/p:16x9\/AP962464399316.jpg",
+                "created_at": "2021-07-01 07:12:41",
+                "updated_at": "2021-07-01 07:12:41"
+            },
+            {
+                "id": 24,
+                "user_id": 1,
+                "category_id": 1,
+                "title": "Covid-19 en France : une quatrième vague moins forte à la rentrée, selon le Pr Delfraissy",
+                "description": "\nLa France devrait connaître une quatrième vague de contaminations au Covid-19 en raison de la propagation du variant Delta mais elle sera plus \"nuancée\" que les trois premières en raison du développement de la vaccination, a estimé mercredi Jean-François Delfraissy, le président du Conseil scientifique.\n",
+                "pubDate": "2021-06-30 09:27:00",
+                "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/94201102-d980-11eb-ad89-005056a97e36\/w:1024\/p:16x9\/AP21168567633367.jpg",
+                "created_at": "2021-07-01 07:12:41",
+                "updated_at": "2021-07-01 07:12:41"
+            },
+            {
+                "id": 25,
+                "user_id": 1,
+                "category_id": 1,
+                "title": "Immeuble effondré en Floride : les sauveteurs dans l'attente d'un \"miracle\"",
+                "description": "\nAlors que le président Joe Biden est attendu jeudi à Surfside, les sauveteurs continuent leur travail acharné, mais après six jours de recherches les chances de retrouver des survivants s'amenuisent. Le dernier bilan fait état de 12 morts et 149 personnes portées disparues. Le reportage de Matthieu Mabin, notre envoyé spécial en Floride aux États-Unis.\n",
+                "pubDate": "2021-06-30 06:06:00",
+                "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/6d969e02-d967-11eb-ae2e-005056bf30b7\/w:1024\/p:16x9\/thumbnail%20%287%29.jpg",
+                "created_at": "2021-07-01 07:12:41",
+                "updated_at": "2021-07-01 07:12:41"
+            },
+            {
+                "id": 26,
+                "user_id": 1,
+                "category_id": 1,
+                "title": "Après 70 ans de lutte, la Chine a réussi a éradiquer le paludisme",
+                "description": "\nC'est officiel, la Chine est définitivement débarrassée du paludisme, a annoncé l'OMS mercredi. Le pays, qui recensait 30 millions de cas par an dans les années 1940, n'a pas signalé un seul cas indigène depuis 2017.\n",
+                "pubDate": "2021-06-30 13:32:00",
+                "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/475505cc-d9a2-11eb-b307-005056a97e36\/w:1024\/p:16x9\/000_APH2002100409937.jpg",
+                "created_at": "2021-07-01 07:12:41",
+                "updated_at": "2021-07-01 07:12:41"
+            },
+            {
+                "id": 27,
+                "user_id": 1,
+                "category_id": 1,
+                "title": "Covid-19 : Kim Jong-un limoge des responsables nord-coréens après un \"grave incident\"",
+                "description": "\nLe numéro un nord-coréen Kim Jong-un a réprimandé des hauts responsables au pouvoir à Pyongyang pour des manquements dans la lutte contre l'épidémie qui ont entraîné un \"incident grave\" et mis en danger la sécurité du pays et de sa population, a rapporté mercredi l'agence de presse officielle nord-coréenne.\n",
+                "pubDate": "2021-06-30 11:11:00",
+                "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/9c39c082-d98e-11eb-a99f-005056a97e36\/w:1024\/p:16x9\/000_9DK47K.jpg",
+                "created_at": "2021-07-01 07:12:41",
+                "updated_at": "2021-07-01 07:12:41"
+            },
+            {
+                "id": 28,
+                "user_id": 1,
+                "category_id": 1,
+                "title": "Anne Hidalgo annonce la fermeture aux toxicomanes d'un parc du nord de Paris",
+                "description": "\nLa maire de Paris Anne Hidalgo a assuré, mardi, que les toxicomanes allaient quitter le jardin d'Éole, un parc dans lequel ils avaient été autorisés à venir consommer de la drogue, essentiellement du crack. Elle souhaite rendre ce lieu aux habitants, en expliquant que différents projets sont à l'étude pour prendre en charge les toxicomanes.\n",
+                "pubDate": "2021-06-30 09:28:00",
+                "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/a3d97fac-cf5d-11eb-a367-005056bfd1d9\/w:1024\/p:16x9\/DSC_5732.jpg",
+                "created_at": "2021-07-01 07:12:41",
+                "updated_at": "2021-07-01 07:12:41"
+            },
+            {
+                "id": 29,
+                "user_id": 1,
+                "category_id": 1,
+                "title": "Santé : Emmanuel Macron annonce un plan de 7 milliards pour la recherche et l’innovation",
+                "description": "\nAlors que le système de santé français a été mis à rude épreuve par la pandémie, Emmanuel Macron a annoncé, mardi, un plan d'investissement de l'ordre de sept milliards d'euros pour favoriser l’innovation afin de faire de la France un leader européen à l'horizon 2030. \n",
+                "pubDate": "2021-06-30 06:19:00",
+                "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/809e2b4e-1943-11eb-bac9-005056a98db9\/w:1024\/p:16x9\/db8f293fe10d924fb4427704908f11c7d4df2e37.jpg",
+                "created_at": "2021-07-01 07:12:41",
+                "updated_at": "2021-07-01 07:12:41"
+            },
+            {
+                "id": 30,
+                "user_id": 1,
+                "category_id": 1,
+                "title": "En Côte d'Ivoire, la vie quotidienne rythmée par les coupures d'électricité",
+                "description": "\nVoilà plus plusieurs semaines que la Côte d'Ivoire vit avec des coupures d'électricité quotidiennes. Une situation exceptionnelle dans ce pays qui se veut un leader régional dans ce secteur énergétique et qui n'a pas connu telle situation depuis les années 80. Les particuliers comme les entreprises doivent composer tant bien que mal avec cette difficulté.\n",
+                "pubDate": "2021-06-30 07:05:00",
+                "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/865964d6-d96e-11eb-a4d8-005056a97e36\/w:1024\/p:16x9\/thumbnail%20%281%29.jpg",
+                "created_at": "2021-07-01 07:12:41",
+                "updated_at": "2021-07-01 07:12:41"
+            }
+        ]
+    }
+}
+```
+
+### HTTP Request
+`GET api/categories/{category}`
+
+
+<!-- END_34925c1e31e7ecc53f8f52c8b1e91d44 -->
+
+<!-- START_549109b98c9f25ebff47fb4dc23423b6 -->
+## api/categories/{category}
+> Example request:
+
+```bash
+curl -X PUT "http://localhost/api/categories/1" 
+```
+
+```javascript
+const url = new URL("http://localhost/api/categories/1");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "PUT",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`PUT api/categories/{category}`
+
+`PATCH api/categories/{category}`
+
+
+<!-- END_549109b98c9f25ebff47fb4dc23423b6 -->
+
+<!-- START_7513823f87b59040507bd5ab26f9ceb5 -->
+## api/categories/{category}
+> Example request:
+
+```bash
+curl -X DELETE "http://localhost/api/categories/1" 
+```
+
+```javascript
+const url = new URL("http://localhost/api/categories/1");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "DELETE",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+
+### HTTP Request
+`DELETE api/categories/{category}`
+
+
+<!-- END_7513823f87b59040507bd5ab26f9ceb5 -->
+
+<!-- START_57886bb47061f4d722d60978f64d46ef -->
+## api/newsbycategories/{category}
+> Example request:
+
+```bash
+curl -X GET -G "http://localhost/api/newsbycategories/1" 
+```
+
+```javascript
+const url = new URL("http://localhost/api/newsbycategories/1");
+
+let headers = {
+    "Accept": "application/json",
+    "Content-Type": "application/json",
+}
+
+fetch(url, {
+    method: "GET",
+    headers: headers,
+})
+    .then(response => response.json())
+    .then(json => console.log(json));
+```
+
+
+> Example response (200):
+
+```json
+{
+    "data": [
+        {
+            "title": "L'expansionnisme chinois, une politique qui doit plus à la \"tradition\" qu'au Parti communiste",
+            "description": "\nLe Parti communiste chinois fête jeudi son centenaire, dans un contexte de méfiance internationale à l'égard des velléités expansionnistes de l'empire du Milieu. Si le président chinois Xi Jinping a réitéré mercredi sa volonté de \"hisser\" son pays \"au premier rang du monde\" à l'horizon 2049, cette stratégie appartient, selon Jean-Vincent Brisset, chercheur associé à l'Iris, davantage à la \"tradition\" chinoise qu'à l'idéologie du parti.\n",
+            "pubDate": "2021-07-01 04:38:00",
+            "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/87eea21e-d9b6-11eb-a648-005056a90284\/w:1024\/p:16x9\/000_9DK92X.jpg",
+            "created_at": "2021-07-01 07:12:39",
+            "updated_at": "2021-07-01 07:12:39",
+            "category": {
+                "id": 1,
+                "name": "Monde",
+                "user_id": 1,
+                "created_at": "2021-07-01 07:11:50",
+                "updated_at": "2021-07-01 07:11:50"
+            }
+        },
+        {
+            "title": "Covid-19 : un certificat européen pour faciliter les déplacements cet été",
+            "description": "\nLe certificat sanitaire européen entre officiellement en vigueur jeudi. Ce document a vocation à faciliter les voyages au sein de l’Union européenne (UE) et relancer le tourisme, secteur durement affecté par la pandémie de Covid-19. Mais la propagation du variant Delta suscite des craintes. \n",
+            "pubDate": "2021-07-01 05:42:00",
+            "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/47d319c4-9c69-11eb-945d-005056bff430\/w:1024\/p:16x9\/Roissy%20CDG%20Covid-19.jpg",
+            "created_at": "2021-07-01 07:12:39",
+            "updated_at": "2021-07-01 07:12:39",
+            "category": {
+                "id": 1,
+                "name": "Monde",
+                "user_id": 1,
+                "created_at": "2021-07-01 07:11:50",
+                "updated_at": "2021-07-01 07:11:50"
+            }
+        },
+        {
+            "title": "Concerts, prix du gaz, chômage, congé paternité : ce qui change au 1er juillet",
+            "description": "\nFrance 24 fait le point sur les mesures qui entrent en vigueur en France à partir du 1er juillet marqué notamment par le grand retour des concerts debout, interdits depuis mars 2020.\n",
+            "pubDate": "2021-07-01 05:51:00",
+            "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/ba01e774-da2f-11eb-af1c-005056a97e36\/w:1024\/p:16x9\/000_Par7430103.jpg",
+            "created_at": "2021-07-01 07:12:39",
+            "updated_at": "2021-07-01 07:12:39",
+            "category": {
+                "id": 1,
+                "name": "Monde",
+                "user_id": 1,
+                "created_at": "2021-07-01 07:11:50",
+                "updated_at": "2021-07-01 07:11:50"
+            }
+        },
+        {
+            "title": "Janez Jansa, le \"Maréchal Twitto\" slovène qui prend la présidence de l'Union européenne",
+            "description": "\nJanez Jansa, le Premier ministre slovène, va prendre jeudi la présidence tournante de l'Union européenne. Peu connu du grand public, cet admirateur de Viktor Orban et de Donald Trump est surnommé “Maréchal Twitto” en référence à l’ex-dictateur yougoslave Tito et à sa propension à twitter plus vite que son ombre. \n",
+            "pubDate": "2021-06-30 14:54:00",
+            "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/673e5d20-d9a7-11eb-bb91-005056a97e36\/w:1024\/p:16x9\/300621-jansa-slovenia-prime-m.jpg",
+            "created_at": "2021-07-01 07:12:39",
+            "updated_at": "2021-07-01 07:12:39",
+            "category": {
+                "id": 1,
+                "name": "Monde",
+                "user_id": 1,
+                "created_at": "2021-07-01 07:11:50",
+                "updated_at": "2021-07-01 07:11:50"
+            }
+        },
+        {
+            "title": "Le congé paternité de 28 jours entre en vigueur en France",
+            "description": "\nAnnoncé en septembre par Emmanuel Macron, cet allongement du congé paternité doit permettre aux jeunes pères de s'impliquer davantage auprès de leur enfant et de réduire les inégalités entre les femmes et les hommes.\n",
+            "pubDate": "2021-07-01 05:34:00",
+            "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/bed77a20-da2a-11eb-ac20-005056bf30b7\/w:1024\/p:16x9\/000_Par7661100.jpg",
+            "created_at": "2021-07-01 07:12:39",
+            "updated_at": "2021-07-01 07:12:39",
+            "category": {
+                "id": 1,
+                "name": "Monde",
+                "user_id": 1,
+                "created_at": "2021-07-01 07:11:50",
+                "updated_at": "2021-07-01 07:11:50"
+            }
+        },
+        {
+            "title": "Centrafrique : sept morts dans l’attaque d’une ville par des rebelles",
+            "description": "\nUn groupe rebelle armé a attaqué lundi une ville située à 300 kilomètres de Bangui, la capitale centrafricaine. Sept personnes sont mortes, a déclaré mercredi à l'AFP le porte-parole des Casques bleus de la Mission de l'ONU en Centrafrique (Minusca). \n",
+            "pubDate": "2021-07-01 06:20:00",
+            "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/532e5ada-450d-11eb-a082-005056a98db9\/w:1024\/p:16x9\/000_8XM3QV.jpg",
+            "created_at": "2021-07-01 07:12:39",
+            "updated_at": "2021-07-01 07:12:39",
+            "category": {
+                "id": 1,
+                "name": "Monde",
+                "user_id": 1,
+                "created_at": "2021-07-01 07:11:50",
+                "updated_at": "2021-07-01 07:11:50"
+            }
+        },
+        {
+            "title": "Afghanistan : \"Une possibilité réelle de voir les Taliban au pouvoir dans les prochains mois\"",
+            "description": "\nAprès une percée fulgurante dans le nord-est de l'Afghanistan, les Taliban continuent de conquérir de nouveaux territoires dans le pays, alors que le retrait des troupes américaines est presque achevé. Ils espèrent provoquer un effondrement du gouvernement afghan.\n",
+            "pubDate": "2021-06-30 13:06:00",
+            "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/6d387250-d99e-11eb-ac77-005056bf30b7\/w:1024\/p:16x9\/2021-06-29T113707Z_469064130_RC2AAO9KVJBY_RTRMADP_3_AFGHANISTAN-TALIBAN.JPG",
+            "created_at": "2021-07-01 07:12:39",
+            "updated_at": "2021-07-01 07:12:39",
+            "category": {
+                "id": 1,
+                "name": "Monde",
+                "user_id": 1,
+                "created_at": "2021-07-01 07:11:50",
+                "updated_at": "2021-07-01 07:11:50"
+            }
+        },
+        {
+            "title": "Euro-2021 : Vladimir Petkovic, sélectionneur dénigré à l'origine du plus bel exploit de la Suisse",
+            "description": "\nIl est l'artisan en chef de l'élimination des Bleus en huitième de finale de l'Euro-2021. Le sélectionneur Vladimir Petkovic a écrit avec ses hommes la plus belle page de l'histoire du football suisse. Portrait d'un technicien qui n'a jamais fait l'unanimité dans son pays mais qui pourrait lui offrir un nouvel exploit contre l'Espagne, vendredi 2 juillet.\n",
+            "pubDate": "2021-07-01 05:03:00",
+            "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/2d2f23aa-d9e1-11eb-904c-005056a97e36\/w:1024\/p:16x9\/Petkovic%281%29.jpg",
+            "created_at": "2021-07-01 07:12:40",
+            "updated_at": "2021-07-01 07:12:40",
+            "category": {
+                "id": 1,
+                "name": "Monde",
+                "user_id": 1,
+                "created_at": "2021-07-01 07:11:50",
+                "updated_at": "2021-07-01 07:11:50"
+            }
+        },
+        {
+            "title": "Euro-2021 : les favoris accrochés, une pluie de buts... le bilan des huitièmes de finale",
+            "description": "\nLes huitièmes de finale de l'Euro-2021 se sont terminés, mardi, et ils n'ont pas été avares en surprises et en spectacle. De l'avalanche de buts à l'élimination de la France et des Pays-Bas, France 24 dresse le bilan de cette phase de la compétition.\n",
+            "pubDate": "2021-06-29 21:54:00",
+            "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/70b9e4e0-d921-11eb-9fff-005056a90284\/w:1024\/p:16x9\/000_9DF9GL.jpg",
+            "created_at": "2021-07-01 07:12:40",
+            "updated_at": "2021-07-01 07:12:40",
+            "category": {
+                "id": 1,
+                "name": "Monde",
+                "user_id": 1,
+                "created_at": "2021-07-01 07:11:50",
+                "updated_at": "2021-07-01 07:11:50"
+            }
+        },
+        {
+            "title": "Euro-2021 : le calendrier et les résultats",
+            "description": "\nDu 11 juin au 11 juillet, les 24 meilleures équipes d'Europe ont rendez-vous pour disputer l'Euro-2021 de football. Qui prendra la succession du Portugal en tant que champion d'Europe ? Retrouvez le calendrier de la compétition et tous les résultats.\n",
+            "pubDate": "2021-06-11 09:48:00",
+            "thumbnail_url": "https:\/\/s.france24.com\/media\/display\/750e4ace-ca0b-11eb-b3c3-005056a98db9\/w:1024\/p:16x9\/main-F24-FR.png",
+            "created_at": "2021-07-01 07:12:40",
+            "updated_at": "2021-07-01 07:12:40",
+            "category": {
+                "id": 1,
+                "name": "Monde",
+                "user_id": 1,
+                "created_at": "2021-07-01 07:11:50",
+                "updated_at": "2021-07-01 07:11:50"
+            }
+        }
+    ],
+    "links": {
+        "first": "http:\/\/localhost\/api\/newsbycategories\/1?page=1",
+        "last": "http:\/\/localhost\/api\/newsbycategories\/1?page=3",
+        "prev": null,
+        "next": "http:\/\/localhost\/api\/newsbycategories\/1?page=2"
+    },
+    "meta": {
+        "current_page": 1,
+        "from": 1,
+        "last_page": 3,
+        "path": "http:\/\/localhost\/api\/newsbycategories\/1",
+        "per_page": 10,
+        "to": 10,
+        "total": 30
+    }
+}
+```
+
+### HTTP Request
+`GET api/newsbycategories/{category}`
+
+
+<!-- END_57886bb47061f4d722d60978f64d46ef -->
+
+
