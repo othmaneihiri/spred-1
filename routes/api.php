@@ -20,9 +20,9 @@ Route::get('user', 'AuthController@getAuthUser');
 
 // Category
 Route::apiResource('categories', 'CategoryController');
-//Route::get('categories/{category}/news', 'CategoryController@getNewsInCategory');
 Route::get('newsbycategories/{category}','CategoryController@getNewsInCategory');
 
 // News
-Route::post('categories/{category}/news', 'NewsController@store')->middleware('auth:api');
+//Route::post('categories/{category}/news', 'NewsController@store')->middleware('auth:api');
+//Route::get('categories/{category}/news', 'CategoryController@getNewsInCategory');
 
